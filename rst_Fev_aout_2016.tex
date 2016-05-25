@@ -234,70 +234,96 @@ Par ailleurs, j’ai pu bénéficier d’un encadrement étroit en préparant de
 \end{itemize}
 \textsc{14\textsuperscript{ème} et 15\textsuperscript{ème} semaine :}
 \begin{itemize}
-\item Etude des methode d'optimisation du tail d'antenne.
+\item Etude des methode d'optimisation du tailet performance d'antenne.
 \item simulation sur CST du 2eme prototype d'antenne
 \end{itemize}
 \textsc{16\textsuperscript{ème} et 17\textsuperscript{ème} semaine :}
 \begin{itemize}
-\item Etude des methode d'optimisation du performance d'antenne.
 \item simulation sur CST du 3eme prototype d'antenne
+\item Redaction du rapport
 \end{itemize}
-\textsc{18\textsuperscript{ème} semaine :}
-\begin{itemize}
-\item Redaction du rapport.
-\end{itemize}
+
 
 
 \chapter{Contexte Général du projet}
-Ce chapitre décrit le cahier de charge imposé par l'entreprise d'accueil ainsi que les différentes étapes suivies lors de la réalisation du projet pour finir avec le planning.
+Le but de ce chapitre est de présenter la problématique du projet, le cahier des charges, la démarche suivie pour répondre au besoin de l’ensemble des parties prenantes du projet et le plan d’action.
 \section{Cahier des charges}
 \subsection{Objectif}
-Ce cahier de charge régit la conception de la partie commande et communication d’un micro-onduleur, pour pouvoir superviser un champ photovoltaïque, faciliter son maintenance et de contrôler chaque panneau individuellement.
-\subsection{Prestations demandés}
-Pendant la période de mon stage, je suis amenée à faire du développement et recherche en concevant une extension d’un micro-onduleur lui donnant la possibilité du communiquer à travers un réseau, avec une centrale. Je suis appelé à réaliser les tâches suivantes :
-\begin{itemize}
-\item Choix du support de communication adéquat.
-\item Conception du circuit imprimé en optant les moyens de communication choisis.
-\end{itemize}
+L’objectif de ce projet est l'étude et la réalisation d’une solution RFID UHF qui assure l’identification et la traçabilité des entrées et sorties des palettes. Choisire les tags adaptés aux besoins en respectant les conditions d’utilisation et type de lecteur et de devolopper un logiciel de gestion des palettes. 
+Et comme deuxième axe,la réalisation d’un transpondeur RFID UHF et une application Android pour gestion du secteur d'agriculture qui permet a
+l’utilisateur de profiter des fonctions offerte par le système à distance. \\
 
-\section{Étapes de réalisation}
-Durant les 2 mois de mon stage, mes tâches relatives à mon projet sont organisées de la façon suivante :\\
+\subsection{Mise au point de la problématique}
+Ce projet consiste à développer un système de traçabilité des entrées et sorties des palettes. Trouver les causes racines, choisir les solutions optimales pour un problème ou une situation nécessite une grande compréhension du problème. Dans ce sens, la méthode QQOQCP permet d'avoir des informations élémentaires suffisantes sur toutes les dimensions du problème, pour identifier ses aspects essentiels.\\
+
+
+\begin{longtable}{|l|c|}
+  \hline
+  Quoi & Activité : Développement d’un un système de traçabilité \\
+       &  Produit : logiciel de reconnaissance faciale, Application Android, Tag UHF \\
+  \hline
+  Qui & Division : Client MAcIR\\
+  \hline
+  Où & MAcIR\\
+  \hline
+  Quand & Du 15/02/2016 au 15/06/2015\\
+  \hline
+  Comment & Etat d’art sur les techniques RFID \\
+          &  existantes afin de développer un autre plus adapté.\\
+  \hline
+  Pourquoi & Fournir un système de traçabilité des entrées et sorties des palettes.\\
+  \hline
+  
+\caption{QQOQCP}
+\end{longtable}
+
+
+\section{Plan d’action}
+Afin d’organiser notre travail de plus on s’est basé sur le diagramme de Gantt pour définir les tâches et de mettre un plan à respecter et surtout avec les différentes dates de livraison.
+
+Le diagramme qu’on avait tracé contient plusieurs tâches qu’on a organisées comme suit :
 
 \begin{longtable}{|p{0.35\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}| p{0.15\textwidth}|}
 \hline
 \textbf{Tâche} & \textbf{Date de début} & \textbf{Date de fin} & \textbf{Durée} \\
 \hline
-Visites et réunions & 24/06/15 & 26/06/15 & 3 jours \\
+Visites et réunions & 16/02/16 & 18/02/16 & 3 jours \\
 \hline
-Bibliographie micro-onduleur & 29/06/15 & 29/06/15 & 1 journée \\
+Bibliographie RFID & 15/02/16 & 26/02/16 & 10 jours \\
 \hline
-L'avancement du micro-onduleur & 30/06/15 & 30/16/15 & 1 journée \\
+Etude du marcher et choix des tags et lecteur rfid & 29/02/16 & 04/03/16 & 5 jours \\
 \hline
-Résolution des problèmes & 01/07/15 & 08/07/15 & 8 jours \\
+Participer Ã  la resolution des problemes du lecteur existant.
+ & 07/03/16 & 11/03/16 & 5 jours \\
 \hline
-Recherche des supports de communication & 09/07/15 & 10/07/15 & 2 jours \\
+Etude et familiarisation avec le language \emph{.NET C\#} & 14/03/16 & 18/03/15 & 5 jours \\
 \hline
-Comparaison entre les supports de communication & 13/07/15 & 14/07/15 & 2 jours \\
+Realisation d'un prototype de test de lecture de tages & 14/03/15 & 25/03/15 & 10 jours \\
 \hline
-Choix du modulateur PLC & 15/07/15 & 16/07/15 & 1.5 jours \\
+ Etude et proposition d'algorithme pour amelioration des performance de la commincation client-lecteur
+ & 28/03/16 & 30/03/16 & 3 jours \\
 \hline
-Choix du microcontrôleur & 16/07/15 & 20/07/15 & 1.5 jours \\
+Implementation final du prototype du nouveau protocol de communiation client lecteur.
+ & 30/03/16 & 10/04/16 & 11 jours \\
 \hline
-Simulation du filtre passe-bande de transmission et de réception & 21/07/15 & 23/07/15 & 3 jours \\
+Developpement d'une interface utilisateur pour le control du flux des donnee et gestion de stockage.
+ & 11/04/16 & 19/04/16 & 7 jours \\
 \hline
-Conception du schéma de transmission et de réception PLC & 24/07/15 & 27/07/15 & 2 jours \\
+Etude du marcher marcaine de l'agrigulture et Etude de besoin & 20/04/15 & 22/04/15 & 3s jours \\
 \hline
-Conception du schéma de la partie commande & 28/07/15 & 02/08/15 & 3 jours \\
+Developpement de la Version une de l'application SmartFlah. & 20/04/15 & 25/04/15 & 5 jours \\
 \hline
-Conception de communication Ethernet (RJ-45) et série (RS-232) & 03/08/15 & 04/07/15 & 2 jours \\
+Etude Profondis sur les Tag RFID UHF  & 25/04/15 & 29/04/15 & 2 jours \\
 \hline
-Réalisation de la liste des composants (BOM) & 05/08/15 & 05/08/15 & 1 journée \\
+Amelioration de la version une de l'application SmartFlah & 02/05/15 & 04/05/15 & 3 jours \\
 \hline
-Conception du circuit imprimé & 06/08/15 & 10/08/15 & 4 jours \\
+Realisation du 1er prototype d'antenne UHF RFID & 05/05/15 & 13/05/15 & 7 jours \\
 \hline
-Compilation de MQX OS & 11/08/15 & 12/08/15 & 2 jours \\
+Etude des methode d'optimisation du tailet performance d'antenne. & 16/05/15 & 20/05/15 & 2 jours \\
 \hline
-Conception du programme & 13/08/15 & 19/08/15 & 6 jours \\
+simulation sur CST du 2eme prototype d'antenne & 23/05/15 & 25/05/15 & 3 jours \\
+\hline
+simulation sur CST du 3eme prototype d'antenne & 25/08/15 & 31/05/15 & 3 jours \\
 \hline
 \caption{Répartition des tâches}
 \end{longtable}
