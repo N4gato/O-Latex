@@ -35,14 +35,14 @@
 %end of title
 
 \author{Réalisé par : \\ Otmane BOUAYAD \vspace*{1truecm} \\ Encadré par : \\ Mme Ilham BOUZIDA : Encadrante professionnelle\\ }
-\date{(Du 15 Fev au 25 Août  2016)}
+\date{(Du 15 Février au 25 Août  2016)}
 
 \begin{document}
 \maketitle
 \pagestyle{plain}
 %Dedicas
 
-\chapter*{Dedicace}
+\chapter*{Dédicace}
 
 I would like to dedicate this work to my wife, Oumaima, for her love, encouragement, and continuous support,my parents, who has taught me many things in life and include the one thing I’ve tried to live by: 
 \emph{“Never give up on your dreams. Hard work and diligence will see you through so long as you never give up.”}
@@ -76,9 +76,9 @@ Finalement , nous remercions l’ensemble des employés de la Fondation MAScIR p
 \chapter*{Introduction}
 \addcontentsline{toc}{section}{Introduction}
 Le terme RFID englobe toutes les techniques qui utilisent les ondes radio pour identifier automatiquement des objets ou des personnes.
-Le système RFID autrement dit l'identification par radiofréquence est une technique qui permet de mémoriser et de récupérer des informations à distance grâce à une étiquette qui émet des ondes radio.\\
-Le système RFID (radiofrequency identification) est une technique très attractive pour l'entreprise qui offre la possibilité d'une gestion automatique du nombre conséquent d'informations qu'elle doit traiter. Les équipements adaptés à ce système permettent de synchroniser les flux physiques avec les flux d'informations.\\\\
-Dans le cadre du projet de fin d'études, j'ai eu l'opportunité de travailler sur cette technique avec la fondation MAScIR qui occupe une position leader sur le marché de la microélectronique.\\\\
+Le système RFID autrement dit l'identification par radio fréquence est une technique qui permet de mémoriser et de récupérer des informations à distance grâce à une étiquette qui émet des ondes radio.\\
+Le système RFID (audiofréquence identification) est une technique très attractive pour l'entreprise qui offre la possibilité d'une gestion automatique du nombre conséquent d'informations qu'elle doit traiter. Les équipements adaptés à ce système permettent de synchroniser les flux physiques avec les flux d'informations.\\\\
+Dans le cadre du projet de fin d'études, j'ai eu l'opportunité de travailler sur cette technique avec la fondation MAScIR qui occupe une position leader sur le marché de la micro-électronique.\\\\
 Le projet de fin d’études porte alors, sur l'étude et la réalisation d’une solution RFID UHF qui assure l’identification et la traçabilité des entrées et sorties des palettes. Choisire les tags adaptés aux besoins en respectant les conditions d’utilisation et type de lecteur. Devolopper un logiciel de gestion des palettes. D’autre part, la réalisation d’un transpondeur RFID UHF et une application Android pour gestion du secteur d'agriculture.\\\\
 Le mémoire que je présente est organisé en 6 chapitres.
 
@@ -251,11 +251,16 @@ Le but de ce chapitre est de présenter la problématique du projet, le cahier d
 L’objectif de ce projet est l'étude et la réalisation d’une solution RFID UHF qui assure l’identification et la traçabilité des entrées et sorties des palettes. Choisire les tags adaptés aux besoins en respectant les conditions d’utilisation et type de lecteur et de devolopper un logiciel de gestion des palettes. 
 Et comme deuxième axe,la réalisation d’un transpondeur RFID UHF et une application Android pour gestion du secteur d'agriculture qui permet a
 l’utilisateur de profiter des fonctions offerte par le système à distance. \\
-
+\subsection{Cachier des charges}
+Assurer l’identification et la traçabilité des entrées / sorties palettes
+\begin{itemize}
+\item Choix des puces/tags adaptés aux besoins (conditions d’utilisation et type de lecteur).
+\item Etablir un pgr de gestion des palettes en assurant la traçabilité de leur mouvement.
+\item Réalisation et test d’un proto.\\
+\end{itemize}
 \subsection{Mise au point de la problématique}
-Ce projet consiste à développer un système de traçabilité des entrées et sorties des palettes. Trouver les causes racines, choisir les solutions optimales pour un problème ou une situation nécessite une grande compréhension du problème. Dans ce sens, la méthode QQOQCP permet d'avoir des informations élémentaires suffisantes sur toutes les dimensions du problème, pour identifier ses aspects essentiels.\\
-
-
+Ce projet consiste à développer un système de traçabilité des entrées et sorties des palettes. Trouver les causes racines, choisir les solutions optimales pour un problème ou une situation nécessite une grande compréhension du problème. Dans ce sens, la méthode QQOQCP permet d'avoir des informations élémentaires suffisantes sur toutes les dimensions du problème, pour identifier ses aspects essentiels.\\\\\\\
+        
 \begin{longtable}{|l|c|}
   \hline
   Quoi & Activité : Développement d’un un système de traçabilité \\
@@ -276,10 +281,9 @@ Ce projet consiste à développer un système de traçabilité des entrées et s
 \caption{QQOQCP}
 \end{longtable}
 
-
 \section{Deroulement chronologique du stage}
 Durant les 4 mois de mon stage, les tˆaches relatives `a mon projet de stage sont organis de la facon suiavante:
-
+\subsection{Etapes	de	réalisaion}
 \begin{longtable}{|p{0.35\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}| p{0.15\textwidth}|}
 \hline
 \textbf{Tâche} & \textbf{Date de début} & \textbf{Date de fin} & \textbf{Durée} \\
@@ -326,7 +330,8 @@ Redaction du rapport & 11/06/16 & 15/06/16 & 4 jours \\
 \hline
 \caption{Répartition des tâches}
 \end{longtable}
-
+\subsection{Diagrammes	de	Gantt}
+When you write a scientific article, you should lay out your ideas in such a way that your readers can follow them easily. Every new concept should flow directly from the previous material. Yet more often than not, scientific prose can be difficult to understand. What is going on? Readers expect certain pieces of information in certain positions in a sentence. Satisfy these expectations, and your readers will find your writing clear and convincing. Violate them, and your readers will be confused. All readers expect more or less the same things in the same places. And writers commonly violate these expectations. The two most important expectations readers have concern the kind of material that is presented at the beginning of a sentence, in the topic position, and at the end, in the stress position [1]. Here I present my take on how to make the best use of these positions to produce clear and coherent prose.
 \section{Décomposition du projet}
 Le projet est décomposé principalement en 3 parties :
 \begin{itemize}
@@ -337,10 +342,66 @@ Le projet est décomposé principalement en 3 parties :
 
 Chaque partie sera étudiée indépendamment dans les chapitres qui suivent.
 
-\chapter{Developpement du Middleware et interface graphique}
-Ce chapitre est dédié au choix et études des supports de communication.
-\section{Supports de communication potentielles}
-Une étude a été établit en vue de choisir le support de communication le plus adapté au projet. Plusieurs supports de communication ont fait l’objet d’une comparaison en suivant un certain nombre de facteurs caractéristiques :
+\chapter{Etude	détaillée du Projet}
+RFID ou identification par fréquence radio, est une technologie en croissance rapide qui a le potentiel de faire de grands impacts économiques sur de nombreuses industries. Bien que la RFID est une technologie relativement ancienne, les progrès les plus récents dans la technologie de fabrication de puces RFID font pratique pour de nouvelles applications et paramètres.\\
+Ce chapitre est dédié a l'etude	détaillée de la solution RFID.
+\section{Description de la solution}
+Cette section présente les bases des systèmes RFID et offre la taxonomie des différents types de systèmes RFID. Nous discutons brièvement deux normes RFID majeures et comment ils se rapportent à la pratique.
+\subsection{Le system de base RFID}
+La discussion de la technologie RFID a tendance à se concentrer uniquement sur les étiquettes. Il est plus exact de voir RFID comme un système complet qui comprend non seulement des étiquettes, mais aussi d'autres éléments importants. Les systèmes RFID sont constitués d'au moins trois composants principaux:
+\begin{itemize}
+\item Les étiquettes RFID ou transpondeurs, qui transportent des données d'objet d'identification.
+\item Lecteurs RFID, ou des émetteurs-récepteurs, lire et écrire des données dans l'étiquette.
+\item Bases de données associés pour l'enregistrements de la donnée d'identification\\
+\end{itemize}
+
+Nous illustrons l'interaction de ces composants dans la figure 3.1. Sur cette figure, trois étiquettes sont lisibles par un ou les deux lecteurs, A et B. Par exemple, l'étiquette 1 est lisible que par A, tandis que l'étiquette 2 est lisible par A et B, peut-être en raison de restrictions l'accès. Les lecteurs peuvent alors se connecter à des bases de données avec des enregistrements associés à des données d'identification. Dans ce cas, deux bases de données ont chacun leur propre record.\\
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{shema}
+\caption{Illustration du système RFID}
+\end{figure}
+\subsection{Les composants essential d'un system RFID}
+\subsubsection{Les tags}
+Les tags sont attachés à tous les objets à identifier dans un système RFID. Un tag est généralement
+composé d'une antenne ou un élément de couplage, et un circuit intégré. Un important
+distinction qui sera discuté plus tard est la source d'alimentation d'un tag. Souvent, les étiquettes ne portent pas une source d'alimentation et doit passivement récolter toute l'énergie d'un signal RF.\\
+
+Il existe plusieurs types de tag qui offrent des fonctionnalités différentes, ont des puissances différentes
+de sources ou fonctionnent à des fréquences radio différentes. Chacune de ces variables permet de déterminer
+quelles applications une étiquette particulière peut être approprié. Ces différences seront examinées plus loin dans ce chapitre.\\
+
+Les étiquettes modernes ont tendance à mettre en œuvre la fonctionnalité d'identification sur un circuit intégré (IC) qui
+assure le calcul et le stockage. Dans le procédé de fabrication, ce circuit intégré est fixé ou
+"Attaché" à une antenne avant d'être emballés dans un facteur de forme, comme une capsule de verre ou d'une feuille, qui est intégré dans un produit final.\\
+Dans la pratique, les différents fournisseurs effectuent souvent chacune de ces étapes de fabrication. Autres RFID
+dessins peuvent être «chipless» ou avoir des informations d'identification au moment de la fabrication, à savoir
+"Écriture une fois, lecture nombreuse". \\
+\begin{figure}[h!]
+\centering
+\includegraphics[height=3cm]{tag}
+\caption{Tag RFID}
+\end{figure}
+\subsubsection{Reader/Lecteur}
+Les lecteurs RFID communiquent avec des tag à travers un canal RF pour obtenir l'identification
+. Selon le type d'étiquette, cette communication peut être un simple ping ou peut être un protocole plus complexe de caractaire multi-tour. Dans les environnements avec de nombreux points, un lecteur peut avoir à effectuer une algorithme d'anti-collision pour veiller à ce que les conflits ne peuvent pas se produire. Les protocoles anti-collision permettent aux lecteurs de communiquer rapidement avec beaucoup de tag en série.
+
+Les lecteurs alimentent souvent ce que l'on appelle les étiquettes passives à travers leur canal de communication RF.
+Ces types d'étiquettes ne portent aucune puissance à bord et comptent uniquement sur un lecteur pour fonctionner. Étant donné que ces tag sont si limitées, il compter sur un lecteur pour effectuer des calculs.
+Les lecteurs se présentent sous plusieurs formes, fonctionnent sur de nombreuses fréquences différentes, et peuvent offrir un large éventail de fonctionnalités. Les lecteurs peuvent avoir leur propre puissance de traitement et de stockage interne, et peuvent offrir une connectivité réseau. Les lecteurs pourraient être une simple conduit à un système externe, ou pourraient stocker toutes les données pertinentes au niveau local.
+
+À l'heure actuelle, de nombreuses applications reposent sur des dispositifs de lecture fixes. Les premiers essais de EPC à une grande chaîne de supermarchés intégrés dans les lecteurs entrées accueil baies fixes. Ces lecteurs scannent les étiquettes au niveau de la palette que les livraisons de produits arrivent. 
+
+À long terme, les lecteurs peuvent être intégrés à un niveau d'étagère comme une «étagère intelligente». étagères intelligentes seraient scanner pour les balises au niveau de l'article et de surveiller quand ils sont ajoutés et supprimés d'une étagère.
+
+Les lecteurs RFID peuvent également être intégrés dans des appareils mobiles portatifs. Ces lecteurs mobiles permettraient à quelqu'un, par exemple, faire l'inventaire d'un entrepôt en marchant à travers ses allées. Le fabricant de téléphone cellulaire Nokia propose déjà des fonctionnalités RFID de lecture dans certains de leurs téléphones cellulaires [16]. Si les balises de type EPC deviennent très réussie, intéressante et les applications grand public utiles pourraient se poser. Si cela se produit, la fonctionnalité de lecture RFID pourrait devenir une caractéristique commune sur les téléphones, PDA, ou d'autres dispositifs informatiques portables cellulaires
+\begin{figure}[h!]
+\centering
+\includegraphics[height=4cm]{reader}
+\caption{Interaction du Lecteur RFID avec son environement}
+\end{figure}
+.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 \subsection{Paires torsadés}
 C’est une ligne de transmission formée de deux fils conducteurs enroulés en hélice l’un autour de l’autre, pour maintenir précisément la distance entre les fils et de diminuer la diaphonie.
 \begin{figure}[h!]

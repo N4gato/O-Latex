@@ -15,45 +15,52 @@
 \contentsline {chapter}{\numberline {2}Contexte G\IeC {\'e}n\IeC {\'e}ral du projet}{21}
 \contentsline {section}{\numberline {2.1}Cahier des charges}{21}
 \contentsline {subsection}{\numberline {2.1.1}Objectif}{21}
-\contentsline {subsection}{\numberline {2.1.2}Mise au point de la probl\IeC {\'e}matique}{21}
+\contentsline {subsection}{\numberline {2.1.2}Cachier des charges}{21}
+\contentsline {subsection}{\numberline {2.1.3}Mise au point de la probl\IeC {\'e}matique}{21}
 \contentsline {section}{\numberline {2.2}Deroulement chronologique du stage}{22}
+\contentsline {subsection}{\numberline {2.2.1}Etapes de r\IeC {\'e}alisaion}{22}
+\contentsline {subsection}{\numberline {2.2.2}Diagrammes de Gantt}{23}
 \contentsline {section}{\numberline {2.3}D\IeC {\'e}composition du projet}{23}
-\contentsline {chapter}{\numberline {3}Support de communication}{25}
-\contentsline {section}{\numberline {3.1}Supports de communication potentielles}{25}
-\contentsline {subsection}{\numberline {3.1.1}Paires torsad\IeC {\'e}s}{25}
-\contentsline {subsection}{\numberline {3.1.2}Fibre optique}{25}
-\contentsline {subsection}{\numberline {3.1.3}Wifi}{26}
-\contentsline {subsection}{\numberline {3.1.4}Power Line Communication}{26}
-\contentsline {subsection}{\numberline {3.1.5}Tableau Comparative}{26}
-\contentsline {section}{\numberline {3.2}Power Line Communication (PLC)}{27}
-\contentsline {subsection}{\numberline {3.2.1}Principe}{27}
-\contentsline {subsection}{\numberline {3.2.2}Caract\IeC {\'e}ristique du Modulateur/D\IeC {\'e}modulateur choisi}{27}
-\contentsline {subsection}{\numberline {3.2.3}M\IeC {\'e}thode d\IeC {\textquoteright }acc\IeC {\`e}s \IeC {\`a} ST7538Q}{28}
-\contentsline {subsection}{\numberline {3.2.4}Circuit de couplage et d\IeC {\textquoteright }injection}{29}
-\contentsline {subsubsection}{Partie de transmission}{30}
-\contentsline {subsubsection}{Partie de r\IeC {\'e}ception}{33}
-\contentsline {section}{\numberline {3.3}Ethernet}{33}
-\contentsline {subsection}{\numberline {3.3.1}Contr\IeC {\^o}le d'acc\IeC {\`e}s au support}{33}
-\contentsline {subsection}{\numberline {3.3.2}PHY chip}{34}
-\contentsline {chapter}{\numberline {4}La partie commande}{35}
-\contentsline {section}{\numberline {4.1}Micro-onduleur}{35}
-\contentsline {section}{\numberline {4.2}Architecture existante}{35}
-\contentsline {section}{\numberline {4.3}Architecture propos\IeC {\'e}e}{36}
-\contentsline {section}{\numberline {4.4}Choix du microcontr\IeC {\^o}leur}{37}
-\contentsline {subsection}{\numberline {4.4.1}Ethernet}{37}
-\contentsline {subsection}{\numberline {4.4.2}RS-232}{38}
-\contentsline {chapter}{\numberline {5}Algorithme et implantation}{39}
-\contentsline {section}{\numberline {5.1}Syst\IeC {\`e}me d'exploitation MQX}{39}
-\contentsline {section}{\numberline {5.2}Les t\IeC {\^a}ches}{40}
-\contentsline {subsection}{\numberline {5.2.1}Maximum Power Point Tracking (MPPT)}{40}
-\contentsline {subsection}{\numberline {5.2.2}R\IeC {\'e}gulation}{40}
-\contentsline {subsection}{\numberline {5.2.3}Communication}{41}
-\contentsline {section}{Conclusion}{43}
-\contentsline {chapter}{\numberline {A}CENELEC - EN 50065-1}{45}
-\contentsline {paragraph}{Scope}{45}
-\contentsline {chapter}{\numberline {B}CSMA}{47}
-\contentsline {paragraph}{CSMA/CA (Collision Avoidance)}{48}
-\contentsline {paragraph}{CSMA/CR (Collision Resolution)}{49}
-\contentsline {chapter}{\numberline {C}Description de MPPT}{51}
-\contentsline {chapter}{\numberline {D}Sch\IeC {\'e}ma du Daughter-card}{53}
-\contentsline {chapter}{\numberline {E}Sch\IeC {\'e}ma du circuit imprim\IeC {\'e}}{55}
+\contentsline {chapter}{\numberline {3}Etude d\IeC {\'e}taill\IeC {\'e}e du Projet}{25}
+\contentsline {section}{\numberline {3.1}Description de la solution}{25}
+\contentsline {subsection}{\numberline {3.1.1}Le system de base RFID}{25}
+\contentsline {subsection}{\numberline {3.1.2}Les composants essential d'un system RFID}{26}
+\contentsline {subsubsection}{Les tags}{26}
+\contentsline {subsubsection}{Reader/Lecteur}{27}
+\contentsline {subsection}{\numberline {3.1.3}Paires torsad\IeC {\'e}s}{28}
+\contentsline {subsection}{\numberline {3.1.4}Fibre optique}{28}
+\contentsline {subsection}{\numberline {3.1.5}Wifi}{29}
+\contentsline {subsection}{\numberline {3.1.6}Power Line Communication}{29}
+\contentsline {subsection}{\numberline {3.1.7}Tableau Comparative}{29}
+\contentsline {section}{\numberline {3.2}Power Line Communication (PLC)}{29}
+\contentsline {subsection}{\numberline {3.2.1}Principe}{29}
+\contentsline {subsection}{\numberline {3.2.2}Caract\IeC {\'e}ristique du Modulateur/D\IeC {\'e}modulateur choisi}{30}
+\contentsline {subsection}{\numberline {3.2.3}M\IeC {\'e}thode d\IeC {\textquoteright }acc\IeC {\`e}s \IeC {\`a} ST7538Q}{31}
+\contentsline {subsection}{\numberline {3.2.4}Circuit de couplage et d\IeC {\textquoteright }injection}{31}
+\contentsline {subsubsection}{Partie de transmission}{32}
+\contentsline {subsubsection}{Partie de r\IeC {\'e}ception}{35}
+\contentsline {section}{\numberline {3.3}Ethernet}{36}
+\contentsline {subsection}{\numberline {3.3.1}Contr\IeC {\^o}le d'acc\IeC {\`e}s au support}{36}
+\contentsline {subsection}{\numberline {3.3.2}PHY chip}{36}
+\contentsline {chapter}{\numberline {4}La partie commande}{39}
+\contentsline {section}{\numberline {4.1}Micro-onduleur}{39}
+\contentsline {section}{\numberline {4.2}Architecture existante}{39}
+\contentsline {section}{\numberline {4.3}Architecture propos\IeC {\'e}e}{40}
+\contentsline {section}{\numberline {4.4}Choix du microcontr\IeC {\^o}leur}{41}
+\contentsline {subsection}{\numberline {4.4.1}Ethernet}{41}
+\contentsline {subsection}{\numberline {4.4.2}RS-232}{42}
+\contentsline {chapter}{\numberline {5}Algorithme et implantation}{43}
+\contentsline {section}{\numberline {5.1}Syst\IeC {\`e}me d'exploitation MQX}{43}
+\contentsline {section}{\numberline {5.2}Les t\IeC {\^a}ches}{44}
+\contentsline {subsection}{\numberline {5.2.1}Maximum Power Point Tracking (MPPT)}{44}
+\contentsline {subsection}{\numberline {5.2.2}R\IeC {\'e}gulation}{44}
+\contentsline {subsection}{\numberline {5.2.3}Communication}{45}
+\contentsline {section}{Conclusion}{47}
+\contentsline {chapter}{\numberline {A}CENELEC - EN 50065-1}{49}
+\contentsline {paragraph}{Scope}{49}
+\contentsline {chapter}{\numberline {B}CSMA}{51}
+\contentsline {paragraph}{CSMA/CA (Collision Avoidance)}{52}
+\contentsline {paragraph}{CSMA/CR (Collision Resolution)}{53}
+\contentsline {chapter}{\numberline {C}Description de MPPT}{55}
+\contentsline {chapter}{\numberline {D}Sch\IeC {\'e}ma du Daughter-card}{57}
+\contentsline {chapter}{\numberline {E}Sch\IeC {\'e}ma du circuit imprim\IeC {\'e}}{59}
