@@ -14,7 +14,6 @@
 %\usepackage[IT]{fontenc}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
-
 \usepackage[margin=1.25in]{geometry}
 
 \usepackage{longtable}
@@ -278,10 +277,8 @@ Ce projet consiste à développer un système de traçabilité des entrées et s
 \end{longtable}
 
 
-\section{Plan d’action}
-Afin d’organiser notre travail de plus on s’est basé sur le diagramme de Gantt pour définir les tâches et de mettre un plan à respecter et surtout avec les différentes dates de livraison.
-
-Le diagramme qu’on avait tracé contient plusieurs tâches qu’on a organisées comme suit :
+\section{Deroulement chronologique du stage}
+Durant les 4 mois de mon stage, les tˆaches relatives `a mon projet de stage sont organis de la facon suiavante:
 
 \begin{longtable}{|p{0.35\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}| p{0.15\textwidth}|}
 \hline
@@ -309,21 +306,23 @@ Implementation final du prototype du nouveau protocol de communiation client lec
 Developpement d'une interface utilisateur pour le control du flux des donnee et gestion de stockage.
  & 11/04/16 & 19/04/16 & 7 jours \\
 \hline
-Etude du marcher marcaine de l'agrigulture et Etude de besoin & 20/04/15 & 22/04/15 & 3s jours \\
+Etude du marcher marcaine de l'agrigulture et Etude de besoin & 20/04/16 & 22/04/16 & 3s jours \\
 \hline
-Developpement de la Version une de l'application SmartFlah. & 20/04/15 & 25/04/15 & 5 jours \\
+Developpement de la Version une de l'application SmartFlah. & 20/04/16 & 25/04/16 & 5 jours \\
 \hline
-Etude Profondis sur les Tag RFID UHF  & 25/04/15 & 29/04/15 & 2 jours \\
+Etude Profondis sur les Tag RFID UHF  & 25/04/16 & 28/04/16 & 4 jours \\
 \hline
-Amelioration de la version une de l'application SmartFlah & 02/05/15 & 04/05/15 & 3 jours \\
+Presenation de MAsIR a SIAM  & 29/04/16 & 29/04/16 & 1 jours \\
 \hline
-Realisation du 1er prototype d'antenne UHF RFID & 05/05/15 & 13/05/15 & 7 jours \\
+Amelioration de la version une de l'application SmartFlah & 02/05/16 & 04/05/15 & 3 jours \\
 \hline
-Etude des methode d'optimisation du tailet performance d'antenne. & 16/05/15 & 20/05/15 & 2 jours \\
+Realisation du 1er prototype d'antenne UHF RFID & 05/05/16 & 13/05/16 & 7 jours \\
 \hline
-simulation sur CST du 2eme prototype d'antenne & 23/05/15 & 25/05/15 & 3 jours \\
+Etude des methode d'optimisation du tailet performance d'antenne. & 16/05/16 & 20/05/16 & 2 jours \\
 \hline
-simulation sur CST du 3eme prototype d'antenne & 25/08/15 & 31/05/15 & 3 jours \\
+simulation sur CST du 2eme et 3eme prototype d'antenne & 23/06/16 & 10/06/16 & 15 jours \\
+\hline
+Redaction du rapport & 11/06/16 & 15/06/16 & 4 jours \\
 \hline
 \caption{Répartition des tâches}
 \end{longtable}
@@ -331,14 +330,14 @@ simulation sur CST du 3eme prototype d'antenne & 25/08/15 & 31/05/15 & 3 jours \
 \section{Décomposition du projet}
 Le projet est décomposé principalement en 3 parties :
 \begin{itemize}
-\item Le support de communication : consiste à faire une comparaison entre les supports de communication, et faire une étude détaillée sur chaque support choisi.
-\item La partie commande : qui dépend fortement en choix du microcontrôleur.
-\item Le programme : la conception du programme de communication et de commande implanté dans le microcontrôleur.
+\item Developpement du Middleware et interface graphique: une partie qui consiste a assurer la communication entre le serveur et le lecteur RFID.
+\item Develeppoement de lapplication SmartFlah pour la getion des tag animal.
+\item Le transpondeur : la conception du transpondeur UHF RFID de petite taill.\\
 \end{itemize}
 
 Chaque partie sera étudiée indépendamment dans les chapitres qui suivent.
 
-\chapter{Support de communication}
+\chapter{Developpement du Middleware et interface graphique}
 Ce chapitre est dédié au choix et études des supports de communication.
 \section{Supports de communication potentielles}
 Une étude a été établit en vue de choisir le support de communication le plus adapté au projet. Plusieurs supports de communication ont fait l’objet d’une comparaison en suivant un certain nombre de facteurs caractéristiques :
