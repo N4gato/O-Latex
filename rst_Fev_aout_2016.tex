@@ -8,7 +8,6 @@
 \setlength{\evensidemargin}{0pt} \setlength{\evensidemargin}{30pt}
 \setlength{\textwidth}{430pt}
 \setlength{\marginparsep}{0pt} \setlength{\marginparwidth}{0pt}
-
 \usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
 %\usepackage[IT]{fontenc}
@@ -400,325 +399,208 @@ Les lecteurs RFID peuvent également être intégrés dans des appareils mobiles
 \includegraphics[height=4cm]{reader}
 \caption{Interaction du Lecteur RFID avec son environement}
 \end{figure}
-.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\subsubsection{La bases de donnée}
+bases de données RFID associent l'identifiant de tag avec un enregistrements. Ces enregistrements peuvent contenir des informations sur les produits, les journaux de suivi, les données de ventes, ou les dates d'expiration. Des bases de données indépendantes peuvent être construites tout au long de la chaîne d'approvisionnement par des utilisateurs indépendants, ou peuvent être intégrés dans un système de base de données centralisée ou fédérée.\\
 
-\subsection{Paires torsadés}
-C’est une ligne de transmission formée de deux fils conducteurs enroulés en hélice l’un autour de l’autre, pour maintenir précisément la distance entre les fils et de diminuer la diaphonie.
+Les bases de données sont supposées avoir une connexion sécurisée aux lecteurs. Bien qu'il existe des scénarios où les lecteurs peuvent ne pas être dignes de confiance, il est souvent utile de faire écrouler les notions de lecteur et la base de données en une seule entité. Par exemple, si les étiquettes contiennent toutes les informations de produits en cause, il n'y a pas besoin de faire un appel à une base de données hors site.
+On peut imaginer un système fédéré de bases de données back-end, peut-être où chaque fabricant de produit conserve son propre service de consultation produit. Dans ces paramètres, il peut être utile de déployer un service Object Naming (ONS) pour localiser les bases de données associées à une valeur d'identification d'étiquette. Un ONS permet au lecteur de trouver un ensemble de bases de données associées à une valeur d'identification d'étiquette particulière. Ceci est analogue à l'Internet Domain Naming Service (DNS) qui renvoie les adresses des serveurs de noms qui peuvent se traduire les noms de domaine en adresses IP numériques. ONS n'a pas encore été largement adopté dans la pratique.
+\subsection{Source d'énergie d'un Tag}
+Comme brièvement mentionné précédemment, les étiquettes peuvent obtenir leur pouvoir de plusieurs manières différentes. La source d'énergie est une propriété essentielle d'une étiquette, car il va déterminer la distance de lecture potentielle d'une balise, la durée de vie, le coût, et quel genre de fonctionnalités qu'il peut offrir. La source d'énergie sera également important pour déterminer comment une étiquette peut être orienté et quelles formes physiques qu'il peut prendre.Il existe trois catégories principales de sources d'énergie de tag: actifs, semi-passifs, et passifs.\\
+
+ Les étiquettes actives ont leur propre source d'énergie, telle qu'une batterie, et peuvent initier une communication à un lecteur ou d'autres balises actives. Parce qu'ils contiennent leur propre source d'alimentation, les étiquettes actives ont généralement une plage de fonctionnement beaucoup plus large que passifs-tags. Une caractéristique clé de balises actives est qu'ils sont en mesure de lancer leur propre communication avec les lecteurs. Les balises actives avancées, pourraient même former des réseaux ad hoc les uns avec les autres. Une application utile est les balises actives dans des conteneurs d'expédition , qui peuvent tomber hors navires sur les mers agitées. Ces conteneurs manquants parfois ne sont pas reconnus jusqu'à ce que le navire à quai . Une étiquette à puce avec un capteur accéléromètre pouvait détecter quand il est tombé et distribuer un journal de sa disparition avant de sombrer dans l'océan.\\
+ 
+Par contre, un semi-passif (ou semi-actif) tag ont une batterie interne, mais ne sont pas en mesure d'initier des communications. Cela garantit que les étiquettes semi-passives ne sont actives que lorsqu'il est interrogé par un lecteur. Parce que les étiquettes semi-passives ont une source d'énergie interne, ils offrent une lecteur plus large que les passives, mais à un coût plus élevé.
+Un exemple d'application qui utilise souvent des étiquettes semi-passives est \emph {tollbooths} électroniques. les étiquettes passives sont généralement collée à l'intérieur du pare-brise d'une voiture. Lorsque la voiture passe par un péage, il lancera une requête à l'étiquette et lire un compte identifiant de l'étiquette. La batterie de bord permet la balise être lues à une distance considérable. Cependant, étant donné que l'étiquette ne doit diffuser lorsqu'il est interrogé, il peut rester inactif la plupart du temps et économiser de l'énergie. Les étiquettes semi-passives sont également souvent utilisés dans les palettes au niveau de suivi ou de suivi des composants tels que des pièces d'automobile lors de la fabrication.\\
+
+Les étiquettes passives ont ni leur propre source d'énergie, ni la capacité d'initier la communication. Les étiquettes passives obtiennent de l'énergie par la récolte à partir d'un signal de communication RF entrant. À des fréquences plus basses, cette énergie est typiquement récoltées par induction, tandis qu'à des fréquences plus élevées, il est récolté par capacité.
+
+Bien que les étiquettes passives ont la plus courte distance de lecture de tous les trois types alimentant, ils sont les moins chers à fabriquer et plus facile à intégrer dans des produits. Les batteries sont relativement coûteux et ne peuvent pas facilement être incorporés dans certains articles, comme les emballages en papier. Pour cette raison, les étiquettes passives sont des balises les plus courantes.
+
+En l'absence d'une source d'énergie interne dicte de nombreuses propriétés des étiquettes passives. D'abord, ils ne peuvent pas fonctionner sans la présence d'un lecteur, bien que étiquette passive pourrait temporairement en cache un peu d'énergie dans un condensateur. En raison de leur faible nécessairement signal de réponse, les étiquettes passives sont souvent plus sensibles au bruit ambiant ou des interférences. Le tableau 1 compare diverses propriétés des étiquettes passives, semi-passives et actives.\\
+
+\begin{longtable}{|p{0.35\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}| p{0.15\textwidth}| p{0.15\textwidth}|}
+\hline
+\textbf{Type} & \textbf{Passif} & \textbf{Semi-Passif} & \textbf{Active} \\
+\hline
+\textbf{Source d'énergie} & énergie récolté du RF & Batterie & Batterie \\
+\hline
+\textbf{Communication} & Réponse seulement & Réponse seulement & Répondre ou initier \\
+\hline
+\textbf{Max Range} & 10 M & 100 M &  100 M \\
+\hline
+\textbf{Coût relatif} & Le moins cher & Plus cher & Très cher \\
+\hline
+\textbf{Exemple Applications} & EPC cartes de proximité & télé péage &  \emph {Livestock tracking} \\
+\hline
+\caption{Comparaison de tag passif , semi- passif et actif}
+\end{longtable}
+
+
+\subsection{Fréquences de fonctionnement}
+Les systèmes RFID a une variété de fréquences radio. Chaque bande de fréquences offre sa propre avantage d'exploitation, les exigences de puissance et de performance. Différentes gammes peuvent être soumis à des règlements ou des restrictions qui limitent ce que les applications peuvent être utilisés pour.
+Les métaux et les liquides présentent généralement le plus gros problème dans la pratique. En particulier, les balises actives dans l'ultra-haute fréquence (UHF) ne fonctionnent pas correctement à proximité de liquides ou de métal.
+
+Fréquence de fonctionnement est également important dans la détermination des dimensions physiques d'une étiquette RFID. Différentes tailles et formes des antennes fonctionnent à des fréquences différentes. La fréquence de fonctionnement détermine également la possibilité d'interagir physiquement avec les autres. Par exemple, l'empilage des étiquettes plates feuille d'incrustation sur le dessus de l'autre peut interférer ou empêcher les balises de la lecture correctement. Le tableau 2 énumère les fréquences standard et leurs distances de lecture passifs respectifs.\\
+\begin{longtable}{|p{0.35\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
+\hline
+\textbf{Gamme de fréquences} & \textbf{fréquences} & \textbf{Distance de lecture} \\
+\hline
+Basse fréquence & 120-140 KHz & 10-20 cm  \\
+\hline
+Haute Fréquence (HF) & 13,56 MHz & 10-20 cm \\
+\hline
+Ultra-haute fréquence (UHF) & 868-928 MHz & 3 mètres \\
+\hline
+Micro onde & 2,45 et 5,8 GHz & 3 mètres \\
+\hline
+Ultra-Wideband (UWB) & 3,1-10,6 GHz & 10 m \\
+\hline
+\caption{fréquences de fonctionnement RFID}
+\end{longtable}
+\subsubsection{Basse fréquence (LF)}
+Basse fréquence (LF) étiquettes RFID fonctionnent généralement dans la gamme 120-140 kilohertz. Le plus souvent, les balises LF sont passivement alimentés par induction. En conséquence, ils ont généralement de très courts intervalles de lecture 10-20 centimètres.
+
+Les balises LF peuvent être utilisés dans des environnements difficiles et peuvent fonctionner à proximité de métal, des liquides, ou de la saleté. Cela les rend utiles pour des applications comme les étiquettes d'identification pour animaux de compagnie implantables ou des étiquettes de gestion de blanchisserie. Un inconvénient de balises LF est qu'ils ont une très faible taux de lecture de données par rapport à d'autres fréquences de fonctionnement.
+
+LF balises sont souvent utilisés dans les systèmes d'immobilisation de la voiture et de contrôle d'accès. Dans ces systèmes, une voiture ne démarre que si une balise de LF, généralement attaché à la clé de contact, est à proximité de l'allumage. Cela prend avantage de courte portée de lecture de LF et l'utilise comme un élément de sécurité.
+
+En 20016, LF étiquettes passives peuvent être achetés en vrac pour 10 DH par tag ou moins. Deux grands fabricants de balises LF sont Texas Instruments et Phillips Semiconductor. La norme \emph{ISO 18000-2 standard} [11] offre des spécifications pour les étiquettes RFID LF.
+
+\subsubsection{Haute fréquence}
+Haute fréquence (HF) étiquettes RFID fonctionnent à la fréquence de 13,56 MHz. étiquettes HF sont souvent emballés dans un facteur d'incrustation de feuille ou sous forme de carte de crédit. Cela rend les balises HF utiles pour la construction de contrôle d'accès, les cartes de crédit sans contact, et des badges d'identification. Encore une fois.
+
+Les étiquettes HF sont également utilisés dans de nombreuses applications de suivi. Les bibliothèques et les librairies utilisent souvent HF incrustations de feuilles pour suivre les livres. Certains aéroports ont commencé à utiliser HF RFID étiquettes à bagages pour les applications de manutention de bagages.
+
+les étiquettes HF offrent un taux de lecture de données plus élevé que les balises LF, mais ne réussissent pas aussi bien que les balises de LF à proximité de métaux ou de liquides. balises HF font, cependant, offrent de meilleures performances à proximité de métaux ou de liquides que les tags UHF font.
+
+La gamme de fréquence HF se trouve sur une partie fortement réglementée du spectre radio. Les signaux transmis par les lecteurs doivent fonctionner dans une bande de fréquence étroite. Cela pose un problème pour les environnements électroniques sensibles, tels que les équipements médicaux, qui fonctionnent sur des fréquences voisines. Cela rend les balises HF inappropriée pour les environnements comme les hôpitaux.
+
+En 2016, HF étiquettes passives peuvent être achetés pour 5DH ou moins par étiquette en quantité. Texas Instruments et Phillips offrent tous deux lignes tag HF, bien qu'il existe de nombreux fabricants plus petits et spécialisés ou intégrateurs dans l'espace de HF.
+Organisation internationale de normalisation (ISO) spécifications pour les étiquettes RFID HF sont spécifiées par la norme \emph{ISO 18000-3 norme} [11]. spécifications connexes HF sans contact des cartes à puce et les cartes de proximité apparaissent dans les normes ISO 14443 [9] et 15693 [10].
+\subsubsection{Ultra-haute fréquence}
+Ultra-haute fréquence (UHF) étiquettes RFID fonctionnent dans la gamme de 868 à 928 mégahertz. balises européennes fonctionnent généralement dans la gamme 868-870 MHz, tandis que les États-Unis et au Canada fonctionnent à 902-928 MHz. tags UHF sont les plus couramment utilisés pour les applications de suivi et de gestion de la chaîne logistique article. Ceci est en grande partie parce qu'ils offrent une gamme plus lu et sont moins chers à fabriquer en vrac que LF ou HF tags. Les étiquettes EPC de première génération fonctionnent à des fréquences UHF.
+
+Un inconvénient majeur de tags UHF est qu'ils éprouvent des interférences à proximité de liquides ou de métaux. De nombreuses applications telles que le suivi des animaux, suivi des conteneurs en métal, ou même de nombreux systèmes de contrôle d'accès sont irréalisables avec des étiquettes UHF. Certains matériaux ont été développés qui peuvent protéger les tags UHF de distorsion liés à métal, mais ceux-ci peuvent être coûts prohibitifs à utiliser dans la pratique. lecteurs UHF peuvent également interférer avec l'électronique sensible comme l'équipement médical.
+
+tags UHF sont une technologie relativement récente que LF ou HF, et les coûts de lecteur sont généralement plus élevés que les lecteurs de LF faible largeur de bande. En 2016, les tags UHF peuvent être achetés en quantités pour moins de 1DH par étiquette passive. étiquettes UHF coûts aussi bas  0.5DH sont susceptibles d'arriver sur le marché dans les prochaines années. Spécifications pour les étiquettes RFID fonctionnant à des fréquences UHF sont définies à la fois par l'ISO 18000-6 [11] et à la norme EPCGlobal [6].
+\subsubsection{Micro-ondes} 
+étiquettes de micro-ondes fonctionnent soit à 2,45 ou 5,8 gigahertz. Cette gamme de fréquences est parfois appelée fréquences de super-haute (SHF). La technologie RFID de micro-ondes est entré en usage assez récemment et se développe rapidement. étiquettes à micro-ondes utilisées dans la pratique sont généralement semi-passif ou actif, mais peuvent aussi se présenter sous forme passive. balises à micro-ondes semi-passives sont souvent utilisés dans l'identification de la flotte et des applications de télépéage.
+Les systèmes à micro-ondes offrent plus les taux de lecture que UHF et gammes équivalentes de lecture passive. Plages de lecture semi-passives et actives des systèmes de micro-ondes sont souvent plus grandes que leurs homologues UHF. Certains micro-ondes balises actives peuvent être lues à partir des distances allant jusqu'à 30 mètres, ce qui est moins de tags UHF comparables. Cependant, les implémentations physiques des micro-ondes étiquettes RFID peuvent être beaucoup plus petit et compact que basse fréquence des étiquettes RFID.
+Il y a plusieurs inconvénients à des balises à micro-ondes. La première est qu'ils consomment relativement plus d'énergie que leurs homologues de fréquence inférieure. étiquettes de micro-ondes sont généralement plus chers que les tags UHF. Commercialement balises actives disponibles coûtent autant que 250 DH par tag en 2016.
+Un autre problème est que le sans fil 802.11b / g réseaux (WiFi) peuvent interférer avec les systèmes micro-ondes RFID. Dispositifs d'application de la ZigBee 802.15 prochaine norme sans fil pourraient potentiellement entrer en conflit avec des dispositifs micro-ondes RFID ainsi.
+L'ISO 18000-4 et ISO 18000-5 rejeté [11] Les normes offrent des spécifications respectives pour 2,45 et 5,8 gigahertz étiquettes RFID.
+\subsubsection{Ultra-Wideband}
+Ultra-wideband (UWB) appliquée à la RFID est assez récente. Plutôt que d'envoyer un signal fort sur une fréquence particulière, UWB utilise des signaux de faible puissance sur une très large gamme de fréquences. Le signal sur une fréquence particulière utilisée par UWB est très faible, mais dans l'ensemble, la communication est assez robuste. Dans la pratique, certaines implémentations de UWB fonctionnent de 3,1 à 10,6 GHz.
+Les avantages de l'UWB sont qu'il a une très longue portée en ligne de mire de lecture, peut-être 200 mètres dans certains contextes. UWB est également compatible avec le métal ou les liquides. Comme le signal sur une fréquence particulière est très faible, UWB ne pas interférer avec les équipements sensibles. Par conséquent, une application anticipée était suivi des actifs dans un milieu hospitalier.
+Un inconvénient d'implémentations actuelles de UWB est qu'il doit être actif ou au moins semi-passive. Cependant, étant donné que les balises UWB diffusent des signaux très faibles, ils ont relativement faible consommation d'énergie. En 2006, il est difficile de savoir si la technologie existe pour créer un UWB tag2 passive.
+La technologie RFID UWB est encore dans ses premières phases et il y a peu de produits disponibles dans le commerce. Les coûts de 50DH par tag en vrac sont raisonnables dans un proche avenir.
+\subsection{Fonctionnalité}
+La fonctionnalité RFID de base est l'identification. Lorsqu'il a été interrogé par un lecteur, les balises retournent un autre identificateur qui peut être utilisé pour récupérer d'autres enregistrements de données. Cependant, les étiquettes peuvent offrir d'autres fonctionnalités utiles dans différentes applications. Les principes et les technologies de ces différents types de balises sous-jacentes sont si étroitement liés aux étiquettes RFID strictes, qu'ils ont souvent collectivement appelés «RFID». Bien que pas strictement RFID, nous discutons de plusieurs classes majeures d'appareils liés à la RFID.
+
+Nous avons partagé des étiquettes RFID de style en cinq grandes catégories: EAS, en lecture seule EPC, EPC, étiquettes de capteurs, et motes. Ceux-ci seront appelés classes A à E. EPCglobal propose cinq classes similaires de tag basé sur la fonctionnalité baptisée classe 0 à la classe 4 [6]. Les classes EPCglobal aligner étroitement avec les nôtres, mais diffèrent quelque peu. Ces cinq classes sont résumés dans le tableau 3.\\
+
+\begin{longtable}{|p{0.1\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}| p{0.15\textwidth}|p{0.2\textwidth}|}
+\hline
+\textbf{Classe} & \textbf{Nom} & \textbf{Mémoire} & \textbf{Source d'énergie} & \textbf{Caractéristi-ques} \\
+\hline
+A & EAS & Aucun & Passif & article surveillance \\
+\hline
+B & Lecture seule EPC & Lecture seulement & Passif & identification seulement \\
+\hline
+C & EPC & Lire et écrire & Passif & Enregistrement de données \\
+\hline
+D & capteur Balises & Lire écrire & Semi-passif & capteurs environnementaux \\
+\hline
+E & motes & Lire écrire & actif & Réseautage ad hoc \\
+\hline
+\caption{Classes de fonctionnalité des Tags}
+\end{longtable}
+
+\subsection{Normes}
+
+Les deux normes RFID les plus pertinents sont l'Organisation internationale de la norme ISO / IEC 18000 de normalisation norme [11] et les normes de EPCglobal [6]. Ces normes ne sont pas en concurrence, et il est concevable que la norme EPCglobal pourrait éventuellement être adopté dans une norme ISO.
+EPCglobal définit des spécifications pour les étiquettes de type EPC fonctionnant dans la gamme UHF.
+La norme ISO 18000 a 6 parties d'adressage différentes gammes de fréquences:
+\begin{itemize}
+\item Partie 1 - Généralités normes
+\item Partie 2 - LF
+\item Partie 3 - HF
+\item Partie 4 - Micro-ondes, 2,45 GHz
+\item Partie 5 - Micro-ondes, 5,8 GHz
+\item Partie 6 - UHF\\
+\end{itemize}
+\subsection{Modes de transfert d’énergie et de communication}
+Dans ce premier cas ( figure 3.4) , l’onde RF se propageant de la base station vers le tag n’a pour but unique que de fournir de l’énergie au tag de façon à charger la  capacité d’alimentation  présente à son bord afin que celle-ci puisse être capable d’alimenter l’ensemble du tag pour assurer son bon fonctionnement. Aprés cette phase d'alimentation, le tag est apte à recevoir des ordres de commande provenant de la base station et de retourner des informations vers celle-ci. Puis le cycle recommence et il est à nouveau nécessaire de lui fournir de l'énergie pour continuer la communication et ainsi de suite. Bien évidemment, ceci prend du temps et manque parfois de souplesse.\\
 \begin{figure}[h!]
 \centering
-\includegraphics[width=\textwidth]{twistedPair}
-\caption{Paires torsadés}
+\includegraphics[width=\textwidth]{figa}
+\caption{Mode de transfert d'énergie non simultané}
 \end{figure}
-Elle permet une connexion permanente sans interruption avec un débit qui peut atteindre les 10 Gbits/s. La longueur du câble ne doit pas dépasser 100m, les répétiteurs s'avèrent indispensables si on dépasse cette longueur.
-\subsection{Fibre optique}
-C'est un fil en verre ou en plastique très fin qui a la propriété d'un conducteur de lumière et sert dans la transmission de données et de lumière.\\
 
-Le fibre optique présente un avantage au niveau de la portée du signal avec un débit très élevé. Son insensibilité au champs électromagnétique lui permet de fonctionner sans problème dans les milieux industriels (présence des moteurs...). Mais, un câble fibre optique contient un cœur très fragile ne lui permettant pas d'être courbé. De plus, son coût élevé présente un majeur point négatif.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.4\textwidth]{opticalFibre}
-\caption{Fibre optique}
-\end{figure}
-\subsection{Wifi}
-C'est un réseau sans-fil qui relie des appareils informatiques par des ondes électromagnétiques, donc absence de câbles et facilité d'installation avec un coût moins élevé. L'atténuation des signaux avec la présence des obstacles et le problème des interférences provoquent des ruptures de connexions fréquentes donc une instabilité de connexion.
-\subsection{Power Line Communication}
-C'est une technique de communication qui utilise les câbles du réseau électrique pour transmettre et recevoir les données en mode half-duplex. Il présente une technologique pratique pour des applications sur les smart-grids :
-\begin{itemize}
-\item Automated meter reading (AMR).
-\item Communications SCADA (Supervisory control and data acquisition).
-\end{itemize}
-\subsection{Tableau Comparative}
-Le tableau suivant représente un récapitulatif comparatif entre les différents supports cités dessus suivant les critères suivants :
-\begin{longtable}{|p{0.1\textwidth}|p{0.225\textwidth}|p{0.225\textwidth}| p{0.225\textwidth}|p{0.225\textwidth}|}
-\hline
- & \textbf{Paires torsadés} & \textbf{Fibre optique} & \textbf{Wifi} & \textbf{Power line Communication} \\
-\hline
-\textbf{Débit} & Jusqu'à 10Gbits/s & Dépassant le 1Gbits/s & 450Mbits/s & 500Mbits/s \\
-\hline
-\textbf{Portée} & Câbles \textless 100m & \texttildelow Kms & \texttildelow 140m & \texttildelow Kms \\
-\hline
-\textbf{Coût} & Moyen & Elevé & Faible & Faible \\
-\hline
-\textbf{Points forts} & Protocole de communication très connu et facile à implanter & Insensible aux champs électromagnétique & Installation facile & Pas d'installation, développée pour les smart-grids \\
-\hline
-\textbf{Points faibles} & & Cœur fragile & Interférences, instabilité de connexion & Ne fonctionne pas en triphasé, communication half-duplex \\
-\hline
-\caption{Tableau comparatif}
-\end{longtable}
-Après une discussion rigoureuse, le support de communication opté pour ce projet est la communication \textbf{Ethernet (Paires torsadés)}, et \textbf{Power Line Communication (PLC)}.
-\section{Power Line Communication (PLC)}
-\subsection{Principe}
-La technologie PLC consiste à superposer au signal électrique (50Hz), un 2ème signal à plus haute fréquence (de 1KHz à des MHz) et de faible énergie, ce signal se propage sur l'installation électrique et qui peut être reçu et décodé à distance.
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{PLC}
-\caption{Principe du PLC}
-\end{figure}
-Pour faire communiquer deux équipements par un réseau PLC, il faut que chaque dispositif dispose d’un modulateur/démodulateur et un circuit de couplage et d'injection du signal dans le réseau.
-\subsection{Caractéristique du Modulateur/Démodulateur choisi}
-Le modulateur choisi est ST7538Q du fabriquant ST Microelectronics, c'est un modem FSK
-\footnotemark \ qui fonctionne en mode Half Duplex, il est conçu pour les applications PLC. Il est commandé par une interface série synchrone ou asynchrone.\\
+Dans ce deuxième cas ( figure 3.5), au travers des principes et types de modulation utilisés, l'onde provenant de la base station est capable pendant la phase de l'échange base station vers tag d'assurer simultanément la fourniture de l'énergie et l'échange des informations (données).\\
 
-\footnotetext{Frequency-Shift Keying}
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
-\includegraphics[width=\textwidth]{st7538Q}
-\caption{Diagramme de ST7538Q}
+\includegraphics[width=\textwidth]{figb}
+\caption{Mode de transfert d'énergie simultané}
 \end{figure}
-Ses principales caractéristiques sont :
-\begin{itemize}
-\item Modulation par déplacement de fréquence (FSK) Half duplex.
-\item Une seule tension alimentation (entre 7.5V et 12.5V).
-\item Consommation très faible (5mA).
-\item 8 fréquences de modulation programmables.
-\item Vitesse de transmission allant jusqu’à 4800B/s.
-\item Sensibilité de réception jusqu’à 250 µVrms.
-\item Conforme avec la norme EN 50065 CENELEC.
-\item CSMA/CA\footnotemark.
-\item Compatible avec les interfaces UART et SPI.
-\end{itemize}
-\footnotetext{Carrier Sense Multiple Access (Collision Avoidance)}
 
-Dans ce projet, on utilisera la fréquence porteuse maximale (132.5KHz) avec une vitesse de transmission de 4800B/s et une déviation de 1.
-\begin{equation}
-\Delta f=Baud \cdot Deviation = 4.8 KHz
-\end{equation}
-Les fréquences mark et space utilisées sont défini par les formules suivantes :
-\begin{equation}
-F(0) = f + \dfrac{\Delta f}{2} = 134.9KHz
-\end{equation}
-\begin{equation}
-F(1) = f - \dfrac{\Delta f}{2} = 130.1KHz
-\end{equation}
 \begin{center}
 \textbf{\emph{Note :}}\\
-\emph{Pour plus d'informations sur les fréquences et les débits supportées par ST7538Q consulter son datasheet.}
-\end{center}
-\subsection{Méthode d’accès à ST7538Q}
-Ce modulateur échange les données avec le microcontrôleur à travers une des deux communications séries :
-\begin{itemize}
-\item Synchrone à l'aide du protocole SPI
-\item Asynchrone à l'aide du protocole UART
-\end{itemize}
-Les pins \texttt{RxD} et \texttt{TxD} sont pour recevoir et envoyer respectivement les documents du microcontrôleur vers le modem.
-\texttt{RxTx} est pour spécifier si on est en mode réception(1) ou transmission(0),
-\texttt{REG\_ DATA} est pour spécifier si les données vont être modulées et injecté ou une configuration de registre, finalement, \texttt{CLR/T} est le signal d'horloge imposé par le modem dans le mode synchrone.
-\\
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{interfSt7538Q}
-\caption{Interface synchrone et asynchrone entre Microcontrôleur et ST7538Q}
-\end{figure}
-Le protocole utilisé dans ce projet est la communication asynchrone moyennant l'UART.
-\subsection{Circuit de couplage et d’injection}
-Le circuit de couplage lie le modulateur avec la ligne pour transmettre et recevoir le signal modulé efficacement, et il contient un système de filtrage de la tension de réseau (220V\texttildelow 50Hz ou 110V\texttildelow 60Hz) et les bruits qui vont surgir lors du transfert.
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{couplingCircuit}
-\caption{Circuit de couplage}
-\end{figure}
-\\
-
-Il est possible de mettre en œuvre différentes topologies de circuits de couplage. Une première classification est comprise entre une solution isolée avec un transformateur de ligne ou une double capacité et une solution non isolé avec un seul condensateur de découplage à haute tension. La dernière est plus simple et plus économique, tandis que la première permet d'obtenir de meilleures performances en utilisant efficacement la puissance de sortie différentiel des dispositifs.\\
-
-La solution de différentiel a été également plus pratique pour l'avantage pour réduire les harmoniques paires des signaux transmis.\\
-
-La solution implémentée est conforme à la norme \textsc{cerelec - en 50065-1}, il est composé d’un circuit isolé avec un transformateur 1:1 et une capacité de class X2\footnotemark \ pour éliminer la fréquence 50Hz (220V). Le circuit de transmission n'a aucune influence sur le circuit de réception, donc les deux structures peuvent être analysées séparément. Les filtres sont dimensionnés pour la fréquence 132.5 kHz et pour avoir une communication fiable.
-\footnotetext{Une capacité conçue pour opérer entre la phase et le neutre (200V-240V)}
-\subsubsection{Partie de transmission}
-La fonction du circuit de transmission et d'injecter le signal sortant de l'amplificateur de puissance (\texttt{ATOP1}/\texttt{ATOP2}) du modem dans le réseau électrique avec une efficacité maximale en filtrant les bruit suivant la norme \textsc{cenelec} ({\textsc{en}50065-1, \textsc{section 7 : disturbances limits}).\\
-
-Le filtre utilisé dans la transmission est un filtre de 4\textsuperscript{ème} ordre (4 pôles et 2 zeros). Pour avoir une bonne bonne distribution d'échauffement et une insensibilité à la variation de la charge, le filtre a une bande de 60kHz (voir figure \ref{fig:filterCharacteristic}). Pour avoir cette caractéristique les deux pôle vont être mis dans les deux fréquences 100kHz et 160kHz.\\
-
-Pour un dimensionnement correcte, l'influence entre les composants doit être prise en considération : L'inductance de fuite du transformateur (de 0.1µH à 10µH), la capacité interne du diode Transil (presque 2nF), la résistance équivalente en série des capacités et bobines (entre 100m$\Omega$ et 1$\Omega$).\\
-
-De plus il faut prendre en considération les impédances existant dans le réseau électrique, le réseau artificiel \textsc{cispr16-1} :
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.25\textwidth]{cispr}
-\caption{Réseau artificiel \textsc{cispr16-1}}
-\end{figure}
-Pour une première approximation des valeurs des composants, on considérera que les parties réactives, et que le transformateur T1 est idéal :
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{simplifiedTransmission}
-\caption{Schéma simplifié du filtre de transmission}
-\end{figure}
-Les formules des quatre pôles est données par :
-\begin{equation}
-\label{equ:pole12}
-f_{p1}=f_{p2}\cong \dfrac{1}{2\pi \cdot \sqrt{L_4\cdot C_A}}\cong 160kHz
-\end{equation}
-\begin{equation}
-\label{equ:pole34}
-f_{p3}=f_{p4}\cong \dfrac{1}{2\pi \cdot \sqrt{L_B\cdot C_B}}\cong 160kHz
-\end{equation}
-\begin{center}
-avec : $\dfrac{1}{C_A}=\dfrac{1}{C_8}+\dfrac{1}{C_{10}}$;
-$\dfrac{1}{C_B}=\dfrac{1}{C_8}+\dfrac{1}{C_4}$
-\end{center}
-Pour que l'ESR\footnotemark \ des bobines soit le plus faible, que leurs inductances soit faible aussi (\textbf{$L_4$=10µH et $L_2$=22µH}).
-\footnotetext{Equivalent series resistance : Résistance équivalente en série}
-\\
-
-Une autre contrainte concerne la capacité $C_4$. Il est une capacité de classe X2 qui a une fonction principale de découpler le transformateur du réseau électrique.  Il est préférable que sa valeur soit la plus faible possible pour des raisons économique, tout en gardant le courant de la fréquence 50Hz très faible pour éviter la saturation du transformateur. La valeur choisi est \textbf{33nF}. Donc le courant passant par le transformateur est d'ordre de :
-\begin{equation}
-|I_{rms}|\cong 220V_{rms}\cdot 2\pi \cdot 50Hz\cdot C_4=2.3mA_{rms}
-\end{equation}
-Après ces suppositions et en utilisant les équations \ref{equ:pole12} et \ref{equ:pole34}, on obtient \textbf{$C_8$=100nF} et \textbf{$C_{10}$=220nF}.
-La résistance $R_2$ est ajouté pour ajuster l'impédance de sortie du filtre de réception.
-\begin{figure}[H]
-\label{fig:filterCharacteristic}
-\centering
-\includegraphics[width=\textwidth]{filterCharacteristic}
-\caption{Fonction caractéristique du filtre de transmission}
-\end{figure}
-
-\subsubsection{Partie de réception}
-Le filtre de réception a pour but de filtrer les bruit venant du réseau qui peuvent dépasser les grandeurs maximales supportés par l'entrée \texttt{RAI}, ou dégrader les performances de démodulation (\textsc{en50065-2-1, section 7.2.3: narrow-band conducted interference}).\\
-
-La solution adopté est un filtre passif de second ordre ($C_{12}$, $L_3$, $R_4$), $C_{11}$ est une capacité de découplage.\\
-
-En mode de réception, la sortie \texttt{ATOP1} est en haute impédance tandis que la sortie \texttt{ATOP2} est lié à la masse (avec une résistance de quelque milliohm). Avec cette configuration, $L_2$, $C_4$, $L_4$, $C_8$ et $R_2$ peuvent être négligés.
-Avec ces hypothèses, le dimensionnement du filtre de réception dépend principalement de $C_{12}$, $L_3$ et $R_4$, qui constitue un filtre passe-bande de second ordre d'une fréquence de :
-\begin{equation}
-\label{equ:recevingFilter}
-f_0\cong \dfrac{1}{2\pi \cdot \sqrt{L_3\cdot C_{13}}}=132.5kHz
-\end{equation}
-Un autre paramètre à prendre en considération est le facteur de qualité(Q) qui doit être le plus grand possible :
-\begin{equation}
-\label{equ:qualityFactor}
-Q\cong R_4\cdot \sqrt{\dfrac{C_{12}}{L_3}}
-\end{equation}
-Pour ne pas influencer la partie de transmission et de réduire le courant qui va parcourir le transformateur, la valeur de $R_4$ doit être assez grande sans qu'elle participe à l'augmentation du bruit blanc. la valeur \textbf{750$\Omega$} satisfait ces deux conditions. En fixant cette résistance en peux facilement déduire les valeur de $C_{12}$ et $L_3$ à partir des deux équations \ref{equ:recevingFilter} et \ref{equ:qualityFactor}:
-\begin{center}
-\textbf{$C_{12}$=4.7nF} et \textbf{$L_3$=330µH}
-\end{center}
-\section{Ethernet}
-Physiquement, les composants qui participant à la communication Ethernet sont : Le processeur, Contrôle d'accès au support\footnotemark \ et le PHY chip.
-\footnotetext{Media Access Control en anglais ou MAC}
-\subsection{Contrôle d'accès au support}
-C'est la moitié basse de la couche liaison de données du modèle OSI, elle sert d'interface entre la partie logicielle contrôlant la liaison d'un nœud (Contrôle de liaison logique) et la couche physique. Le rôle de la sous-couche MAC est principalement de :
-\begin{itemize}
-\item reconnaître le début et la fin des trames dans le flux binaire reçu de la couche physique ;
-\item délimiter les trames envoyées en insérant des informations (comme des bits supplémentaires) dans ou entre celles-ci, afin que leur destinataire puisse en déterminer le début et la fin ;
-\item détecter les erreurs de transmission, par exemple à l'aide d'une somme de contrôle (checksum) insérée par l'émetteur et vérifiée par le récepteur ;
-\item insérer les adresses MAC de source et de destination dans chaque trame transmise ;
-\item filtrer les trames reçues en ne gardant que celles qui lui sont destinées, en vérifiant leur adresse MAC de destination ;
-\item contrôler l'accès au média physique lorsque celui-ci est partagé.
-\end{itemize}
-\subsection{PHY chip}
-C'est un composant qui opère dans la couche physique du modèle OSI. Techniquement, Le PHY est un circuit intégré qui envoi et reçoit les trames Ethernet, il est l'interface entre le domaine analogique de la modulation en ligne et le domaine numérique. Souvent on trouve que le MAC et le PHY sont groupé dans un seul circuit intégré comme le cas \texttt{DP83816} de Texas Instrument.
-\begin{center}
-\textbf{\emph{Note :}}\\
-\emph{Dans ce projet le composant MAC/PHY est intégré dans le microcôntroleur choisi, et il sera discuté dans le paragraphe \ref{sec:ethernet}}.
+\emph{À noter que la trés grande majorité des tags du commerce fonctionnent selon ce dernier principe.}
 \end{center}
 
-\chapter{La partie commande}
-Dans ce chapitre, on s'intéresse à la conception de la partie commande du micro-onduleur pour pouvoir intégrer la partie communication efficacement.
-\section{Micro-onduleur}
-Le micro-onduleur est un onduleur qui fonctionne avec un seul panneau photovoltaïque, il convert le courant issue de ce dernier et le convertit en sinusoïdale de fréquence 50Hz ou 60Hz pour un but d'alimentation, stockage ou injection dans le réseau électrique.\\
-
-Les micro-onduleurs ont plusieurs avantages sur les onduleurs classiques. Le principal avantage est que la présence de petites quantités d'ombrage, de débris ou de neige sur une quelconque module solaire, ou même un échec complet pour le module, ne réduisent pas de façon disproportionnée la sortie de l'ensemble du réseau. Chaque micro-onduleur récolte la puissance optimale en effectuant le suivi du point de puissance maximale(MPPT) pour son module connecté.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{microinverter}
-\caption{Structure d'un micro-onduleur}
-\end{figure}
-
-\section{Architecture existante}
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.85\textwidth]{existingMicroinverter}
-\caption{Structure du micro-onduleur existante}
-\end{figure}
-Le micro-onduleur existant est composé de deux parties, chacune des parties est réalisé dans un circuit imprimé(PCB).\\
-
-La première partie est l'optimiseur. Elle composé de deux hacheurs élévateurs de tension en parallèle qui sont commandé par un signal PWM venant du microcontrôleur PIC18 à travers des Drivers. Ce microcontrôleur fait aussi une lecture de tension et courant généré par le panneau photovoltaïque pour pouvoir exécuter l'algorithme MPPT. Elle contient aussi des régulateur à l'entrée pour extraire une tension pour alimenter le microcontrôleur(5V) et une autre pour commander les MOSFETs(15V).\\
-
-La deuxième partie contient un pont en H pour générer une ondulation commandé par un deuxième microcontrôleur PIC16 à travers des Drivers.
-\section{Architecture proposée}
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.85\textwidth]{newMicroinverter}
-\caption{Structure du micro-onduleur proposé}
-\end{figure}
-Pour ajouter la partie communication au micro-onduleur, il faut un microcontrôleur capable de communiquer en utilisant les deux supports de communication cité précédemment, Or l'existence de deux unités de commande rend l'appareil encombrante et plus coûteuse, sachant bien que la tâche fournit ne demande pas trop de calcul. Pour cela une seule unité de commande s'occupant de ces tâche est préférable.\\
-
-La partie puissance est implanté dans un seul circuit imprimé, alors que la partie commande et la partie communication sont implanté dans un seul circuit imprimé appelé Carte-fille, cela donnera une flexibilité pour un futur changement(Par exemple changement de support de communication, ajout d'un écran...).\\
-Cette solution fait appel à plus de convertisseur analogique numérique(ADC). Ils vont être utilisé pour faire une lecture du courant et tension à l'entrée de l'optimiseur, déduisant ainsi la puissance produite par le panneau solaire. La lecture de la tension à la sortie de l'optimiseur sera utile pour maintenir la tension de sortie à 220V. La lecture de la tension et le courant à la sortie de l'onduleur permettra de calculer la puissance fournie.
-\section{Choix du microcontrôleur}
-La topologie proposé précédemment et les supports de communications choisis nous indique les critère suivantes :
+\subsection{Liaison montante et liaison descendante}
+Intéressons-nous d’abord aux échanges ayant lieu entre bases stations et tags. Ils sont de deux sortes et seront définis une fois pour toutes dans cet ouvrage de la manière suivante :
 \begin{itemize}
-\item Avoir un module PWM de 6 canaux, et d'être compatible avec un DMA de préférence.
-\item Un convertisseur analogique numérique de 5 canaux.
-\item Deux module d'UART.
-\item Un module d'Ethernet.
+\item de la base station vers le tag, dits liaison montante ;
+\item du tag vers la base station, dits liaison descendante. \\
 \end{itemize}
-Après une étude détaillé, le microcontrôleur adapté à ces contraintes est MCF52230 d'architecture Coldfire V2 de Freescale. Il est principalement caractérisé par :
+De plus afin d’éviter quelques problèmes de compréhension, quelle que soit l’intelligence embarquée dans le tag, nous supposerons que celui-ci ne fonctionne que sous des ordres commandes provenant de la base station. 
+\subsubsection{Liaison montante ( forward link) de la base station vers le tag}
+La liaison montante (de la base station vers le tag) a pour mission :
 \begin{itemize}
-\item Noyau Coldfire V2 avec 56 MIPS @ 60MHz en exécutant à partir de la mémoire Flash interne.
-\item Fast Ethernet Controller(FEC)
-\item Ethernet Transceiver(EPHY)
-\item Trois universal asynchronous/synchronous receiver/transmitters(UARTs)
-\item 8 canaux de 12bits d'ADC
-\item 4 canaux de direct memory access(DMA)
-\item 8/4 canaux de 8/16 bits PWM
+\item d'assurer, si cela est possible, le transport de l'énergie vers le tag afin que celui-ci puisse assurer la taÌ‚che qui lui incombe ;
+\item de servir de support à l'envoi de données de la base station vers le tag ;
+\item d'assurer, si cela est possible, le transport de l'énergie vers le tag afin que celui-ci puisse assurer
+\item dans le cas des systèmes fonctionnant en mode passif (voir définition un peu plus loin), lors de la phase de communication en liaison descendante, d'assurer la présence d'un support physique à la communication du tag vers la base station.
 \end{itemize}
-\subsection{Ethernet}
-Ce microcontrôleur dispose d'un Fast Ethernet Controller(FEC) qui s'occupe de la communication avec le protocole Ethernet. Ce module utilise les broches suivantes :
-\begin{itemize}
-\item \texttt{PHY\_RXN} et \texttt{PHY\_RXP} pour la réception.
-\item \texttt{PHY\_TXN} et \texttt{PHY\_TXP} pour la transmission.
-\item \texttt{PHY\_VDDA}, \texttt{PHY\_VDDTX} et \texttt{PHY\_VDDRX} pour l'alimentation, ils ont lié à la masse à travers une capacité de découplage de 100nF.
-\item \texttt{PHY\_RBIAS} pour une tension de référencement, doit être lié à une résistance lié à la masse de 12.4k$\Omega$ 1\%.
-\item \texttt{PHY\_VSSA}, \texttt{PHY\_VSSTX} et \texttt{PHY\_VSSRX} lié directement à la masse.
-\item \texttt{PHY\_ACT} et \texttt{PHY\_LNK} pour commander les LEDs d'activité et de connexion.
-\end{itemize}
+La communication montante est par principe assurée par un dispositif – la base station – qui émet une onde radiofréquence. Celle-ci est donc dotée d’un émetteur, un TRANSmitter. De par la présence de cet émetteur, la liaison montante est dite active. De plus, la base station comporte également à son bord un récepteur, un reCEIVER. La base station est donc un TRANSCEIVER. Dans le sens montant, la base station doit se faire comprendre par le tag au travers d’un co- dage numérique (binaire), d’un protocole de communication et d’un système de modulation de la fréquence porteuse ne devant pas ou peu affecter (le plus faiblement possible) la qualité d’une hypothétique télé-alimentation simultanée. Pour cela on peut employer des techniques de modulation de fréquence FSK \footnote{Frequency-Shift Keying}, ou encore de nombreuses méthodes de modulation d’amplitude ASK \footnote{Amplitude-Shift Keying}
+\subsubsection{Liaison descendante de la modulation}
+Contrairement à ce qu'on pourrait initialement penser, le transpondeur ne peut pas se comporter comme un émetteur de signaux RF. En effet, il ne dispose pas, dans son interface RF, des mécanismes permettant d'émettre un signal radio-fréquence vers la station de base.Les transpondeurs utilisent ce qu'on appelle la réflexion d'ondes pour se faire comprendre des lecteurs. \\
 
-\begin{figure}[h]
+Pour cela, les tags utilisent une modulation différente que l'on nomme modulation de charge (Load Modulation) qui consiste à faire varier la charge résistive du circuit. Effectivement, en faisant varier la charge, le tag fait varier l'intensité du courant dans son circuit et donc l'intensité qui circule dans l'antenne. La consommation d'énergie qu'il représente dans le champ magnétique s'en trouve alors également modifiée et, par couplage magnétique, cela influe sur l'intensité du courant dans l'antenne de la station de base. De proche en proche, les signaux RF reçus de la station de base, qui sont réfléchis par le transpondeur, permettent donc de transporter des réponses en faisant varier l'intensité du circuit du lecteur.\\
+
+Il s'agit ici d'un procédé assez complexe mais qui repose à la base sur de la modulation. Cette modulation de charge résistive à l'origine de la transmission de la réponse s'appuie sur une modulation courante appelée OOK \footnote{On Off Keying} et correspond à la modulation d'amplitude "tout ou rien". A l'aide d'une modulation de type OOK, comme présentée précédemment, on crée une modulation de charge qui fait varier la charge résistive du circuit et donc la tension aux bornes du circuit RF du transpondeur comme montré dans la figure 3.5.
+
+\begin{figure}[h!]
 \centering
-\includegraphics[width=\textwidth]{ethernet}
-\caption{La connexion du connecteur RJ-45}
-\end{figure}
-Les broches \texttt{PHY\_RXN}, \texttt{PHY\_RXP}, \texttt{PHY\_TXN} et \texttt{PHY\_TXP} sont connecté aux \texttt{RD-}, \texttt{RD+}, \texttt{TD-} et \texttt{TD+} respectivement avec une résistance de rappel d'une valeur de 49.9k$\Omega$.
-Les résistances $R_{23}$ et $R_{24}$ limite le courant pour les LEDs. Le connecteur RJ-45 inclue des transformateurs de d'isolement.
-\label{sec:ethernet}
-\subsection{RS-232}
-Le schéma de la communication RS-232 est assez simple, il fait appel à un circuit intégré qui fait la conversion de 3.3V issue du microcontrôleur à $\pm$12V et inversement.
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{rs232}
-\caption{La communication RS-232}
+\includegraphics[width=\textwidth]{ook}
+\caption{On Off Keying}
 \end{figure}
 
-\chapter{Algorithme et implantation}
-Ce chapitre va cerner le programme avec toute ses parties (algorithme, système d'exploitation...) qui sera implanté dans le microcontrôleur.
-\section{Système d'exploitation MQX}
-Freescale MQX est un système d'exploitation temps réel (RTOS) qui offre des performances en temps réel dans des microcontrôleurs de taille petite. Il est très intégré avec les derniers microcontrôleurs 32bit de Freescale.\\
 
-MQX est conçu pour avoir une architecture microkernel basé sur des blocs, permettant ainsi une personnalisation des options, de la taille et la vitesse en activant seulement les blocs voulu.
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{mqxBlocs}
-\caption{Blocs personnalisables de MQX RTOS}
-\end{figure}
-La robustesse et la fiabilité de MQX RTOS donne une plateforme de confiance pour les applications critiques. MQX est certifié pour les applications médicales (\textsc{(cfr 820.30 part 21, iec 60601-1)} et aérospatiales \textsc{(do-178b)}. Les applications critiques de sécurité basé sur MQX comprennent l'équipement de chirurgie de l'œil, matériel d'injection de drogues, de l'équipement de surveillance de la dose de rayonnement, les systèmes de freinages des avions, et les équipements de navigation de l'avion.
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{mqx}
-\caption{Solution Freescale MQX}
-\end{figure}
-\section{Les tâches}
-En utilisant le système d'exploitation MQX RTOS, tout ce qui reste à faire dans la partie programme est de créer des sous-programmes appelés les tâches. Ces tâches seront exécuté en parallèles par ordre de priorité en utilisant l'algorithme Round-Robin. Durant ce stage, je n'ai pas pu réaliser les programmes, par faute de temps. Mais, je vais présenter brièvement les tâches planifiés.
-\subsection{Maximum Power Point Tracking (MPPT)}
-C'est une tâche qui s'occupera de la maximisation de la puissance en utilisant l'algorithme P\&O. cette tâche sera exécuté périodiquement suivant un intervalle qui varie selon le changement de puissance. L'annexe \ref{apdx:MPPT} présente en détail l'algorithme de la MPPT.
-\subsection{Régulation}
-La tâche de la régulation consiste à maintenir la tension sinusoïdale de sortie à 220V. il s'occupera de la lecture de la tension de sortie, prendre une décision, et agir sur les signaux PWM.
 
-\subsection{Communication}
-La tâche de la communication va devoir s'occuper de trouver le serveur qui va stocker les informations collecté régulièrement. Ces informations seront éventuellement la puissance délivré par le panneau, la puissance absorbé par les charges, les valeurs de tensions et courant mesuré au fil du temps... Elle doit aussi exécuter des commandes délivré par le serveur qui seront défini ultérieurement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \chapter*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
@@ -807,14 +689,14 @@ Dans l'étape suivante, vous pouvez essayer de couler courant encore plus élev�
 La prochaine étape est analogique — c'est dans le cas où la puissance de sortie du panneau solaire est plus faible (Pn) — Retournez et essayer de trouver le point où la puissance provenant du panneau est la plus élevée.
 Les flèches de la figure \ref{fig:mppt}} montrent la direction de déplacement du nouveau point de puissance. Le pas d'incrémentation dépend du changement de la puissance à l'étape précédente. Si la variation de puissance est plus élevée, le pas suivante est plus élevée. Si la variation de puissance est plus faible, le pas de la prise de courant est également plus petit suivant.
 La puissance en haut de la courbe (dans le point Pmax) est horizontalement plat. Cela signifie que la variation de puissance est faible et la variation du pas est également faible. Ainsi, le point de puissance maximale est prise très précis. La fréquence de la vérification de la puissance délivrée par le panneau solaire doit être suffisamment élevée pour suivre correctement le MPP lorsque les conditions d'éclairage sont rapidement changées.
-\begin{figure}[h]
-\label{fig:mppt}
-\centering
-\includegraphics[width=\textwidth]{mppt}
-\caption{l'algorithme MPPT}
-\end{figure}
+%\begin{figure}[h]
+%\label{fig:mppt}
+%\centering
+%\includegraphics[width=\textwidth]{mppt}
+%\caption{l'algorithme MPPT}
+%\end{figure}
 
-\chapter{Schéma du Daughter-card}
+\chapter{Schéma du Daughtercard}
 %\includepdf[pages=1,landscape]{fsk.pdf}
 %\includepdf[pages=1,landscape]{mcu.pdf}
 
