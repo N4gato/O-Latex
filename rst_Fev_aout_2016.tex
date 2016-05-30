@@ -601,6 +601,324 @@ Il s'agit ici d'un procédé assez complexe mais qui repose à la base sur de la
 
 
 
+.\\\\\\\\\\\\\\
+\subsection{Paires torsadés}
+C’est une ligne de transmission formée de deux fils conducteurs enroulés en hélice l’un autour de l’autre, pour maintenir précisément la distance entre les fils et de diminuer la diaphonie.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{twistedPair}
+\caption{Paires torsadés}
+\end{figure}
+Elle permet une connexion permanente sans interruption avec un débit qui peut atteindre les 10 Gbits/s. La longueur du câble ne doit pas dépasser 100m, les répétiteurs s'avèrent indispensables si on dépasse cette longueur.
+\subsection{Fibre optique}
+C'est un fil en verre ou en plastique très fin qui a la propriété d'un conducteur de lumière et sert dans la transmission de données et de lumière.\\
+
+Le fibre optique présente un avantage au niveau de la portée du signal avec un débit très élevé. Son insensibilité au champs électromagnétique lui permet de fonctionner sans problème dans les milieux industriels (présence des moteurs...). Mais, un câble fibre optique contient un cœur très fragile ne lui permettant pas d'être courbé. De plus, son coût élevé présente un majeur point négatif.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{opticalFibre}
+\caption{Fibre optique}
+\end{figure}
+\subsection{Wifi}
+C'est un réseau sans-fil qui relie des appareils informatiques par des ondes électromagnétiques, donc absence de câbles et facilité d'installation avec un coût moins élevé. L'atténuation des signaux avec la présence des obstacles et le problème des interférences provoquent des ruptures de connexions fréquentes donc une instabilité de connexion.
+\subsection{Power Line Communication}
+C'est une technique de communication qui utilise les câbles du réseau électrique pour transmettre et recevoir les données en mode half-duplex. Il présente une technologique pratique pour des applications sur les smart-grids :
+\begin{itemize}
+\item Automated meter reading (AMR).
+\item Communications SCADA (Supervisory control and data acquisition).
+\end{itemize}
+\subsection{Tableau Comparative}
+Le tableau suivant représente un récapitulatif comparatif entre les différents supports cités dessus suivant les critères suivants :
+\begin{longtable}{|p{0.1\textwidth}|p{0.225\textwidth}|p{0.225\textwidth}| p{0.225\textwidth}|p{0.225\textwidth}|}
+\hline
+ & \textbf{Paires torsadés} & \textbf{Fibre optique} & \textbf{Wifi} & \textbf{Power line Communication} \\
+\hline
+\textbf{Débit} & Jusqu'à 10Gbits/s & Dépassant le 1Gbits/s & 450Mbits/s & 500Mbits/s \\
+\hline
+\textbf{Portée} & Câbles \textless 100m & \texttildelow Kms & \texttildelow 140m & \texttildelow Kms \\
+\hline
+\textbf{Coût} & Moyen & Elevé & Faible & Faible \\
+\hline
+\textbf{Points forts} & Protocole de communication très connu et facile à implanter & Insensible aux champs électromagnétique & Installation facile & Pas d'installation, développée pour les smart-grids \\
+\hline
+\textbf{Points faibles} & & Cœur fragile & Interférences, instabilité de connexion & Ne fonctionne pas en triphasé, communication half-duplex \\
+\hline
+\caption{Tableau comparatif}
+\end{longtable}
+Après une discussion rigoureuse, le support de communication opté pour ce projet est la communication \textbf{Ethernet (Paires torsadés)}, et \textbf{Power Line Communication (PLC)}.
+\section{Power Line Communication (PLC)}
+\subsection{Principe}
+La technologie PLC consiste à superposer au signal électrique (50Hz), un 2ème signal à plus haute fréquence (de 1KHz à des MHz) et de faible énergie, ce signal se propage sur l'installation électrique et qui peut être reçu et décodé à distance.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{PLC}
+\caption{Principe du PLC}
+\end{figure}
+Pour faire communiquer deux équipements par un réseau PLC, il faut que chaque dispositif dispose d’un modulateur/démodulateur et un circuit de couplage et d'injection du signal dans le réseau.
+\subsection{Caractéristique du Modulateur/Démodulateur choisi}
+Le modulateur choisi est ST7538Q du fabriquant ST Microelectronics, c'est un modem FSK
+\footnotemark \ qui fonctionne en mode Half Duplex, il est conçu pour les applications PLC. Il est commandé par une interface série synchrone ou asynchrone.\\
+
+\footnotetext{Frequency-Shift Keying}
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{st7538Q}
+\caption{Diagramme de ST7538Q}
+\end{figure}
+Ses principales caractéristiques sont :
+\begin{itemize}
+\item Modulation par déplacement de fréquence (FSK) Half duplex.
+\item Une seule tension alimentation (entre 7.5V et 12.5V).
+\item Consommation très faible (5mA).
+\item 8 fréquences de modulation programmables.
+\item Vitesse de transmission allant jusqu’à 4800B/s.
+\item Sensibilité de réception jusqu’à 250 µVrms.
+\item Conforme avec la norme EN 50065 CENELEC.
+\item CSMA/CA\footnotemark.
+\item Compatible avec les interfaces UART et SPI.
+\end{itemize}
+\footnotetext{Carrier Sense Multiple Access (Collision Avoidance)}
+
+Dans ce projet, on utilisera la fréquence porteuse maximale (132.5KHz) avec une vitesse de transmission de 4800B/s et une déviation de 1.
+\begin{equation}
+\Delta f=Baud \cdot Deviation = 4.8 KHz
+\end{equation}
+Les fréquences mark et space utilisées sont défini par les formules suivantes :
+\begin{equation}
+F(0) = f + \dfrac{\Delta f}{2} = 134.9KHz
+\end{equation}
+\begin{equation}
+F(1) = f - \dfrac{\Delta f}{2} = 130.1KHz
+\end{equation}
+\begin{center}
+\textbf{\emph{Note :}}\\
+\emph{Pour plus d'informations sur les fréquences et les débits supportées par ST7538Q consulter son datasheet.}
+\end{center}
+\subsection{Méthode d’accès à ST7538Q}
+Ce modulateur échange les données avec le microcontrôleur à travers une des deux communications séries :
+\begin{itemize}
+\item Synchrone à l'aide du protocole SPI
+\item Asynchrone à l'aide du protocole UART
+\end{itemize}
+Les pins \texttt{RxD} et \texttt{TxD} sont pour recevoir et envoyer respectivement les documents du microcontrôleur vers le modem.
+\texttt{RxTx} est pour spécifier si on est en mode réception(1) ou transmission(0),
+\texttt{REG\_ DATA} est pour spécifier si les données vont être modulées et injecté ou une configuration de registre, finalement, \texttt{CLR/T} est le signal d'horloge imposé par le modem dans le mode synchrone.
+\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{interfSt7538Q}
+\caption{Interface synchrone et asynchrone entre Microcontrôleur et ST7538Q}
+\end{figure}
+Le protocole utilisé dans ce projet est la communication asynchrone moyennant l'UART.
+\subsection{Circuit de couplage et d’injection}
+Le circuit de couplage lie le modulateur avec la ligne pour transmettre et recevoir le signal modulé efficacement, et il contient un système de filtrage de la tension de réseau (220V\texttildelow 50Hz ou 110V\texttildelow 60Hz) et les bruits qui vont surgir lors du transfert.
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{couplingCircuit}
+\caption{Circuit de couplage}
+\end{figure}
+\\
+
+Il est possible de mettre en œuvre différentes topologies de circuits de couplage. Une première classification est comprise entre une solution isolée avec un transformateur de ligne ou une double capacité et une solution non isolé avec un seul condensateur de découplage à haute tension. La dernière est plus simple et plus économique, tandis que la première permet d'obtenir de meilleures performances en utilisant efficacement la puissance de sortie différentiel des dispositifs.\\
+
+La solution de différentiel a été également plus pratique pour l'avantage pour réduire les harmoniques paires des signaux transmis.\\
+
+La solution implémentée est conforme à la norme \textsc{cerelec - en 50065-1}, il est composé d’un circuit isolé avec un transformateur 1:1 et une capacité de class X2\footnotemark \ pour éliminer la fréquence 50Hz (220V). Le circuit de transmission n'a aucune influence sur le circuit de réception, donc les deux structures peuvent être analysées séparément. Les filtres sont dimensionnés pour la fréquence 132.5 kHz et pour avoir une communication fiable.
+\footnotetext{Une capacité conçue pour opérer entre la phase et le neutre (200V-240V)}
+\subsubsection{Partie de transmission}
+La fonction du circuit de transmission et d'injecter le signal sortant de l'amplificateur de puissance (\texttt{ATOP1}/\texttt{ATOP2}) du modem dans le réseau électrique avec une efficacité maximale en filtrant les bruit suivant la norme \textsc{cenelec} ({\textsc{en}50065-1, \textsc{section 7 : disturbances limits}).\\
+
+Le filtre utilisé dans la transmission est un filtre de 4\textsuperscript{ème} ordre (4 pôles et 2 zeros). Pour avoir une bonne bonne distribution d'échauffement et une insensibilité à la variation de la charge, le filtre a une bande de 60kHz (voir figure \ref{fig:filterCharacteristic}). Pour avoir cette caractéristique les deux pôle vont être mis dans les deux fréquences 100kHz et 160kHz.\\
+
+Pour un dimensionnement correcte, l'influence entre les composants doit être prise en considération : L'inductance de fuite du transformateur (de 0.1µH à 10µH), la capacité interne du diode Transil (presque 2nF), la résistance équivalente en série des capacités et bobines (entre 100m$\Omega$ et 1$\Omega$).\\
+
+De plus il faut prendre en considération les impédances existant dans le réseau électrique, le réseau artificiel \textsc{cispr16-1} :
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.25\textwidth]{cispr}
+\caption{Réseau artificiel \textsc{cispr16-1}}
+\end{figure}
+Pour une première approximation des valeurs des composants, on considérera que les parties réactives, et que le transformateur T1 est idéal :
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{simplifiedTransmission}
+\caption{Schéma simplifié du filtre de transmission}
+\end{figure}
+Les formules des quatre pôles est données par :
+\begin{equation}
+\label{equ:pole12}
+f_{p1}=f_{p2}\cong \dfrac{1}{2\pi \cdot \sqrt{L_4\cdot C_A}}\cong 160kHz
+\end{equation}
+\begin{equation}
+\label{equ:pole34}
+f_{p3}=f_{p4}\cong \dfrac{1}{2\pi \cdot \sqrt{L_B\cdot C_B}}\cong 160kHz
+\end{equation}
+\begin{center}
+avec : $\dfrac{1}{C_A}=\dfrac{1}{C_8}+\dfrac{1}{C_{10}}$;
+$\dfrac{1}{C_B}=\dfrac{1}{C_8}+\dfrac{1}{C_4}$
+\end{center}
+Pour que l'ESR\footnotemark \ des bobines soit le plus faible, que leurs inductances soit faible aussi (\textbf{$L_4$=10µH et $L_2$=22µH}).
+\footnotetext{Equivalent series resistance : Résistance équivalente en série}
+\\
+
+Une autre contrainte concerne la capacité $C_4$. Il est une capacité de classe X2 qui a une fonction principale de découpler le transformateur du réseau électrique.  Il est préférable que sa valeur soit la plus faible possible pour des raisons économique, tout en gardant le courant de la fréquence 50Hz très faible pour éviter la saturation du transformateur. La valeur choisi est \textbf{33nF}. Donc le courant passant par le transformateur est d'ordre de :
+\begin{equation}
+|I_{rms}|\cong 220V_{rms}\cdot 2\pi \cdot 50Hz\cdot C_4=2.3mA_{rms}
+\end{equation}
+Après ces suppositions et en utilisant les équations \ref{equ:pole12} et \ref{equ:pole34}, on obtient \textbf{$C_8$=100nF} et \textbf{$C_{10}$=220nF}.
+La résistance $R_2$ est ajouté pour ajuster l'impédance de sortie du filtre de réception.
+\begin{figure}[H]
+\label{fig:filterCharacteristic}
+\centering
+\includegraphics[width=\textwidth]{filterCharacteristic}
+\caption{Fonction caractéristique du filtre de transmission}
+\end{figure}
+
+\subsubsection{Partie de réception}
+Le filtre de réception a pour but de filtrer les bruit venant du réseau qui peuvent dépasser les grandeurs maximales supportés par l'entrée \texttt{RAI}, ou dégrader les performances de démodulation (\textsc{en50065-2-1, section 7.2.3: narrow-band conducted interference}).\\
+
+La solution adopté est un filtre passif de second ordre ($C_{12}$, $L_3$, $R_4$), $C_{11}$ est une capacité de découplage.\\
+
+En mode de réception, la sortie \texttt{ATOP1} est en haute impédance tandis que la sortie \texttt{ATOP2} est lié à la masse (avec une résistance de quelque milliohm). Avec cette configuration, $L_2$, $C_4$, $L_4$, $C_8$ et $R_2$ peuvent être négligés.
+Avec ces hypothèses, le dimensionnement du filtre de réception dépend principalement de $C_{12}$, $L_3$ et $R_4$, qui constitue un filtre passe-bande de second ordre d'une fréquence de :
+\begin{equation}
+\label{equ:recevingFilter}
+f_0\cong \dfrac{1}{2\pi \cdot \sqrt{L_3\cdot C_{13}}}=132.5kHz
+\end{equation}
+Un autre paramètre à prendre en considération est le facteur de qualité(Q) qui doit être le plus grand possible :
+\begin{equation}
+\label{equ:qualityFactor}
+Q\cong R_4\cdot \sqrt{\dfrac{C_{12}}{L_3}}
+\end{equation}
+Pour ne pas influencer la partie de transmission et de réduire le courant qui va parcourir le transformateur, la valeur de $R_4$ doit être assez grande sans qu'elle participe à l'augmentation du bruit blanc. la valeur \textbf{750$\Omega$} satisfait ces deux conditions. En fixant cette résistance en peux facilement déduire les valeur de $C_{12}$ et $L_3$ à partir des deux équations \ref{equ:recevingFilter} et \ref{equ:qualityFactor}:
+\begin{center}
+\textbf{$C_{12}$=4.7nF} et \textbf{$L_3$=330µH}
+\end{center}
+\section{Ethernet}
+Physiquement, les composants qui participant à la communication Ethernet sont : Le processeur, Contrôle d'accès au support\footnotemark \ et le PHY chip.
+\footnotetext{Media Access Control en anglais ou MAC}
+\subsection{Contrôle d'accès au support}
+C'est la moitié basse de la couche liaison de données du modèle OSI, elle sert d'interface entre la partie logicielle contrôlant la liaison d'un nœud (Contrôle de liaison logique) et la couche physique. Le rôle de la sous-couche MAC est principalement de :
+\begin{itemize}
+\item reconnaître le début et la fin des trames dans le flux binaire reçu de la couche physique ;
+\item délimiter les trames envoyées en insérant des informations (comme des bits supplémentaires) dans ou entre celles-ci, afin que leur destinataire puisse en déterminer le début et la fin ;
+\item détecter les erreurs de transmission, par exemple à l'aide d'une somme de contrôle (checksum) insérée par l'émetteur et vérifiée par le récepteur ;
+\item insérer les adresses MAC de source et de destination dans chaque trame transmise ;
+\item filtrer les trames reçues en ne gardant que celles qui lui sont destinées, en vérifiant leur adresse MAC de destination ;
+\item contrôler l'accès au média physique lorsque celui-ci est partagé.
+\end{itemize}
+\subsection{PHY chip}
+C'est un composant qui opère dans la couche physique du modèle OSI. Techniquement, Le PHY est un circuit intégré qui envoi et reçoit les trames Ethernet, il est l'interface entre le domaine analogique de la modulation en ligne et le domaine numérique. Souvent on trouve que le MAC et le PHY sont groupé dans un seul circuit intégré comme le cas \texttt{DP83816} de Texas Instrument.
+\begin{center}
+\textbf{\emph{Note :}}\\
+\emph{Dans ce projet le composant MAC/PHY est intégré dans le microcôntroleur choisi, et il sera discuté dans le paragraphe \ref{sec:ethernet}}.
+\end{center}
+
+\chapter{La partie commande}
+Dans ce chapitre, on s'intéresse à la conception de la partie commande du micro-onduleur pour pouvoir intégrer la partie communication efficacement.
+\section{Micro-onduleur}
+Le micro-onduleur est un onduleur qui fonctionne avec un seul panneau photovoltaïque, il convert le courant issue de ce dernier et le convertit en sinusoïdale de fréquence 50Hz ou 60Hz pour un but d'alimentation, stockage ou injection dans le réseau électrique.\\
+
+Les micro-onduleurs ont plusieurs avantages sur les onduleurs classiques. Le principal avantage est que la présence de petites quantités d'ombrage, de débris ou de neige sur une quelconque module solaire, ou même un échec complet pour le module, ne réduisent pas de façon disproportionnée la sortie de l'ensemble du réseau. Chaque micro-onduleur récolte la puissance optimale en effectuant le suivi du point de puissance maximale(MPPT) pour son module connecté.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{microinverter}
+\caption{Structure d'un micro-onduleur}
+\end{figure}
+
+\section{Architecture existante}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{existingMicroinverter}
+\caption{Structure du micro-onduleur existante}
+\end{figure}
+Le micro-onduleur existant est composé de deux parties, chacune des parties est réalisé dans un circuit imprimé(PCB).\\
+
+La première partie est l'optimiseur. Elle composé de deux hacheurs élévateurs de tension en parallèle qui sont commandé par un signal PWM venant du microcontrôleur PIC18 à travers des Drivers. Ce microcontrôleur fait aussi une lecture de tension et courant généré par le panneau photovoltaïque pour pouvoir exécuter l'algorithme MPPT. Elle contient aussi des régulateur à l'entrée pour extraire une tension pour alimenter le microcontrôleur(5V) et une autre pour commander les MOSFETs(15V).\\
+
+La deuxième partie contient un pont en H pour générer une ondulation commandé par un deuxième microcontrôleur PIC16 à travers des Drivers.
+\section{Architecture proposée}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{newMicroinverter}
+\caption{Structure du micro-onduleur proposé}
+\end{figure}
+Pour ajouter la partie communication au micro-onduleur, il faut un microcontrôleur capable de communiquer en utilisant les deux supports de communication cité précédemment, Or l'existence de deux unités de commande rend l'appareil encombrante et plus coûteuse, sachant bien que la tâche fournit ne demande pas trop de calcul. Pour cela une seule unité de commande s'occupant de ces tâche est préférable.\\
+
+La partie puissance est implanté dans un seul circuit imprimé, alors que la partie commande et la partie communication sont implanté dans un seul circuit imprimé appelé Carte-fille, cela donnera une flexibilité pour un futur changement(Par exemple changement de support de communication, ajout d'un écran...).\\
+Cette solution fait appel à plus de convertisseur analogique numérique(ADC). Ils vont être utilisé pour faire une lecture du courant et tension à l'entrée de l'optimiseur, déduisant ainsi la puissance produite par le panneau solaire. La lecture de la tension à la sortie de l'optimiseur sera utile pour maintenir la tension de sortie à 220V. La lecture de la tension et le courant à la sortie de l'onduleur permettra de calculer la puissance fournie.
+\section{Choix du microcontrôleur}
+La topologie proposé précédemment et les supports de communications choisis nous indique les critère suivantes :
+\begin{itemize}
+\item Avoir un module PWM de 6 canaux, et d'être compatible avec un DMA de préférence.
+\item Un convertisseur analogique numérique de 5 canaux.
+\item Deux module d'UART.
+\item Un module d'Ethernet.
+\end{itemize}
+Après une étude détaillé, le microcontrôleur adapté à ces contraintes est MCF52230 d'architecture Coldfire V2 de Freescale. Il est principalement caractérisé par :
+\begin{itemize}
+\item Noyau Coldfire V2 avec 56 MIPS @ 60MHz en exécutant à partir de la mémoire Flash interne.
+\item Fast Ethernet Controller(FEC)
+\item Ethernet Transceiver(EPHY)
+\item Trois universal asynchronous/synchronous receiver/transmitters(UARTs)
+\item 8 canaux de 12bits d'ADC
+\item 4 canaux de direct memory access(DMA)
+\item 8/4 canaux de 8/16 bits PWM
+\end{itemize}
+\subsection{Ethernet}
+Ce microcontrôleur dispose d'un Fast Ethernet Controller(FEC) qui s'occupe de la communication avec le protocole Ethernet. Ce module utilise les broches suivantes :
+\begin{itemize}
+\item \texttt{PHY\_RXN} et \texttt{PHY\_RXP} pour la réception.
+\item \texttt{PHY\_TXN} et \texttt{PHY\_TXP} pour la transmission.
+\item \texttt{PHY\_VDDA}, \texttt{PHY\_VDDTX} et \texttt{PHY\_VDDRX} pour l'alimentation, ils ont lié à la masse à travers une capacité de découplage de 100nF.
+\item \texttt{PHY\_RBIAS} pour une tension de référencement, doit être lié à une résistance lié à la masse de 12.4k$\Omega$ 1\%.
+\item \texttt{PHY\_VSSA}, \texttt{PHY\_VSSTX} et \texttt{PHY\_VSSRX} lié directement à la masse.
+\item \texttt{PHY\_ACT} et \texttt{PHY\_LNK} pour commander les LEDs d'activité et de connexion.
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{ethernet}
+\caption{La connexion du connecteur RJ-45}
+\end{figure}
+Les broches \texttt{PHY\_RXN}, \texttt{PHY\_RXP}, \texttt{PHY\_TXN} et \texttt{PHY\_TXP} sont connecté aux \texttt{RD-}, \texttt{RD+}, \texttt{TD-} et \texttt{TD+} respectivement avec une résistance de rappel d'une valeur de 49.9k$\Omega$.
+Les résistances $R_{23}$ et $R_{24}$ limite le courant pour les LEDs. Le connecteur RJ-45 inclue des transformateurs de d'isolement.
+\label{sec:ethernet}
+\subsection{RS-232}
+Le schéma de la communication RS-232 est assez simple, il fait appel à un circuit intégré qui fait la conversion de 3.3V issue du microcontrôleur à $\pm$12V et inversement.
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{rs232}
+\caption{La communication RS-232}
+\end{figure}
+
+\chapter{Algorithme et implantation}
+Ce chapitre va cerner le programme avec toute ses parties (algorithme, système d'exploitation...) qui sera implanté dans le microcontrôleur.
+\section{Système d'exploitation MQX}
+Freescale MQX est un système d'exploitation temps réel (RTOS) qui offre des performances en temps réel dans des microcontrôleurs de taille petite. Il est très intégré avec les derniers microcontrôleurs 32bit de Freescale.\\
+
+MQX est conçu pour avoir une architecture microkernel basé sur des blocs, permettant ainsi une personnalisation des options, de la taille et la vitesse en activant seulement les blocs voulu.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{mqxBlocs}
+\caption{Blocs personnalisables de MQX RTOS}
+\end{figure}
+La robustesse et la fiabilité de MQX RTOS donne une plateforme de confiance pour les applications critiques. MQX est certifié pour les applications médicales (\textsc{(cfr 820.30 part 21, iec 60601-1)} et aérospatiales \textsc{(do-178b)}. Les applications critiques de sécurité basé sur MQX comprennent l'équipement de chirurgie de l'œil, matériel d'injection de drogues, de l'équipement de surveillance de la dose de rayonnement, les systèmes de freinages des avions, et les équipements de navigation de l'avion.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{mqx}
+\caption{Solution Freescale MQX}
+\end{figure}
+\section{Les tâches}
+En utilisant le système d'exploitation MQX RTOS, tout ce qui reste à faire dans la partie programme est de créer des sous-programmes appelés les tâches. Ces tâches seront exécuté en parallèles par ordre de priorité en utilisant l'algorithme Round-Robin. Durant ce stage, je n'ai pas pu réaliser les programmes, par faute de temps. Mais, je vais présenter brièvement les tâches planifiés.
+\subsection{Maximum Power Point Tracking (MPPT)}
+C'est une tâche qui s'occupera de la maximisation de la puissance en utilisant l'algorithme P\&O. cette tâche sera exécuté périodiquement suivant un intervalle qui varie selon le changement de puissance. L'annexe \ref{apdx:MPPT} présente en détail l'algorithme de la MPPT.
+\subsection{Régulation}
+La tâche de la régulation consiste à maintenir la tension sinusoïdale de sortie à 220V. il s'occupera de la lecture de la tension de sortie, prendre une décision, et agir sur les signaux PWM.
+
+\subsection{Communication}
+La tâche de la communication va devoir s'occuper de trouver le serveur qui va stocker les informations collecté régulièrement. Ces informations seront éventuellement la puissance délivré par le panneau, la puissance absorbé par les charges, les valeurs de tensions et courant mesuré au fil du temps... Elle doit aussi exécuter des commandes délivré par le serveur qui seront défini ultérieurement.
 
 \chapter*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
@@ -689,14 +1007,14 @@ Dans l'étape suivante, vous pouvez essayer de couler courant encore plus élev�
 La prochaine étape est analogique — c'est dans le cas où la puissance de sortie du panneau solaire est plus faible (Pn) — Retournez et essayer de trouver le point où la puissance provenant du panneau est la plus élevée.
 Les flèches de la figure \ref{fig:mppt}} montrent la direction de déplacement du nouveau point de puissance. Le pas d'incrémentation dépend du changement de la puissance à l'étape précédente. Si la variation de puissance est plus élevée, le pas suivante est plus élevée. Si la variation de puissance est plus faible, le pas de la prise de courant est également plus petit suivant.
 La puissance en haut de la courbe (dans le point Pmax) est horizontalement plat. Cela signifie que la variation de puissance est faible et la variation du pas est également faible. Ainsi, le point de puissance maximale est prise très précis. La fréquence de la vérification de la puissance délivrée par le panneau solaire doit être suffisamment élevée pour suivre correctement le MPP lorsque les conditions d'éclairage sont rapidement changées.
-%\begin{figure}[h]
-%\label{fig:mppt}
-%\centering
-%\includegraphics[width=\textwidth]{mppt}
-%\caption{l'algorithme MPPT}
-%\end{figure}
+\begin{figure}[h]
+\label{fig:mppt}
+\centering
+\includegraphics[width=\textwidth]{mppt}
+\caption{l'algorithme MPPT}
+\end{figure}
 
-\chapter{Schéma du Daughtercard}
+\chapter{Schéma du Daughter-card}
 %\includepdf[pages=1,landscape]{fsk.pdf}
 %\includepdf[pages=1,landscape]{mcu.pdf}
 
