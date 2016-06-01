@@ -1,4 +1,5 @@
 \select@language {french}
+\select@language {french}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Localisation de la fondation MAScIR}}{15}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Salle blanche}}{18}
@@ -7,7 +8,14 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Illustration du syst\IeC {\`e}me RFID}}{26}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Tag RFID}}{26}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Interaction du Lecteur RFID avec son environement}}{27}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Interaction du Lecteur RFID avec son environnement}}{27}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Mode de transfert d'\IeC {\'e}nergie non simultan\IeC {\'e}}}{34}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Mode de transfert d'\IeC {\'e}nergie simultan\IeC {\'e}}}{34}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces On Off Keying}}{36}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces L'antenne propos\IeC {\'e}e}}{37}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces le circuit \IeC {\'e}quivalent pour (a) une antenne en boucle; (b) RFID tag puce}}{38}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Circuit d'adaptation L-shape}}{39}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Illustration RFID}}{40}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces UHF \IeC {\'e}tiquette consid\IeC {\'e}r\IeC {\'e}e}}{41}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces CLA avant miniaturisation}}{42}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces CLA avant miniaturisation}}{42}
+\addvspace {10\p@ }

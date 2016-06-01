@@ -1,7 +1,8 @@
 \select@language {french}
+\select@language {french}
 \contentsline {section}{Remerciements}{5}
 \contentsline {section}{Introduction}{13}
-\contentsline {chapter}{\numberline {1}Persentation de l'entreprise d'accueil}{15}
+\contentsline {chapter}{\numberline {1}Pr\IeC {\'e}sentation de l'entreprise d'accueil}{15}
 \contentsline {section}{\numberline {1.1}Pr\IeC {\'e}sentation g\IeC {\'e}n\IeC {\'e}rale de MAScIR}{15}
 \contentsline {subsection}{\numberline {1.1.1}Partenaires de la foundation}{16}
 \contentsline {subsection}{\numberline {1.1.2}Structure et hi\IeC {\'e}rarchie}{16}
@@ -33,11 +34,20 @@
 \contentsline {subsubsection}{Basse fr\IeC {\'e}quence (LF)}{30}
 \contentsline {subsubsection}{Haute fr\IeC {\'e}quence}{30}
 \contentsline {subsubsection}{Ultra-haute fr\IeC {\'e}quence}{31}
-\contentsline {subsubsection}{Micro-ondes}{31}
+\contentsline {subsubsection}{Micro-ondes}{32}
 \contentsline {subsubsection}{Ultra-Wideband}{32}
-\contentsline {subsection}{\numberline {3.1.5}Fonctionnalit\IeC {\'e}}{32}
+\contentsline {subsection}{\numberline {3.1.5}Fonctionnalit\IeC {\'e}}{33}
 \contentsline {subsection}{\numberline {3.1.6}Normes}{33}
-\contentsline {subsection}{\numberline {3.1.7}Modes de transfert d\IeC {\textquoteright }\IeC {\'e}nergie et de communication}{33}
+\contentsline {subsection}{\numberline {3.1.7}Modes de transfert d\IeC {\textquoteright }\IeC {\'e}nergie et de communication}{34}
 \contentsline {subsection}{\numberline {3.1.8}Liaison montante et liaison descendante}{34}
-\contentsline {subsubsection}{Liaison montante ( forward link) de la base station vers le tag}{34}
+\contentsline {subsubsection}{Liaison montante ( forward link) de la base station vers le tag}{35}
 \contentsline {subsubsection}{Liaison descendante de la modulation}{35}
+\contentsline {section}{\numberline {3.2}LLRP}{36}
+\contentsline {section}{\numberline {3.3}SmartFlah}{36}
+\contentsline {section}{\numberline {3.4}Antenne UHF}{37}
+\contentsline {subsection}{\numberline {3.4.1}Introduction}{37}
+\contentsline {subsection}{\numberline {3.4.2}Tag antenne et Base du die}{37}
+\contentsline {subsection}{\numberline {3.4.3}Design du Tag}{38}
+\contentsline {subsection}{\numberline {3.4.4}Conception de mise en \IeC {\oe }uvre pratique}{40}
+\contentsline {subsection}{\numberline {3.4.5}Minaturisation des antenne CLA}{41}
+\contentsline {chapter}{\numberline {4}R\IeC {\'e}alisaion et simulation du projet}{43}
