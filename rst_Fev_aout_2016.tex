@@ -719,31 +719,80 @@ Cependant, la piste d'inductance à travers le dipôle ne fournit pas d'inductan
 \caption{Distance de lecture}
 \end{longtable}
 \subsection{Minaturisation des antenne CLA}
-Le cahier de charge impose par la nature de la solution nous oblige a concevoir une antenne de petite taille (>2cm), la radiation doit être dans la bande autorise par l'ANRT et la puissance reçu au niveau de la puce doit êtres suffisante pour alimenter le circuit. Les deux antenne précédemment présenter en une taille relativement grand et les résultat de la simulation prédicte une mauvaise alimentation du circuit de la puce. donc on a était obliger de penser a une solution pour réduire la taille et améliorer les performance de l'antenne. La littérature \cite{stub} et \cite{stub}  propose deux solution possible qui peuvent 
+Le cahier de charge impose par la nature de la solution nous oblige a concevoir une antenne de petite taille (>2cm), la radiation doit être dans la bande autorise par l'ANRT et la puissance reçu au niveau de la puce doit êtres suffisante pour alimenter le circuit. Les deux antenne précédemment présenter en une taille relativement grand et les résultat de la simulation prédicte une mauvaise alimentation du circuit de la puce. donc on a était obliger de penser a une solution pour réduire la taille et améliorer les performance de l'antenne. La littérature \cite{stub} et \cite{stub}  propose une solution possible qui peuvent 
 
-miniaturiser une antenne en boucle circulaire (CLA) à l'aide de \emph{short stubs} insérés dans la partie interne de la boucle. Dans le cas d'une longueur d'onde et une demi-longueur d'onde, respectivement, l'antenne est réduite jusqu'à 83\% et 92,1\% de sa taille par rapport au type CLA général. Par ailleurs la perte de retour, la bande passante -10dB et le gain d'une longueur d'onde et une demi-longueur d'onde sont de 12MHz (1,3\%), et de 48MHz (5\%).\\
+miniaturiser une antenne en boucle circulaire (CLA) à l'aide de \emph{short stubs} insérés dans la partie interne de la boucle. Dans le cas d'une longueur d'onde et une demi-longueur d'onde, respectivement, l'antenne est réduite jusqu'à 83\% et 92,1\% de sa taille par rapport au type CLA général. Par ailleurs la perte de retour, la bande passante -10dB et le gain d'une longueur d'onde et une demi-longueur d'onde sont de 12MHz (1,3\%), et de 48MHz (5\%). la deuxième méthode sera présenter dans avec la partie simulation dans le chapitre suivant.\\
 
-La figure 3.11 présente des caractéristiques de changement de fréquence de résonance lorsqu'un \emph{short stubs} est mis en œuvre à l'intérieur de la boucle de l'antenne. La longueur du tronçon est de 20 mm et la fréquence de résonance chute 30MHz (3,3\%) à partir de 911.25MHz à 881.25MHz lorsque l'écart de la ligne de la fusée est 2mm. En effet, le courant est distribué le long du talon et de la longueur totale de la boucle est augmentée à 13\%. En outre, non seulement les capacitances sont augmentées par la dilatation de la longueur de la boucle, mais aussi les inductances sont augmentées par la structure de \emph{short stubs}. Par conséquent, l'impédance de l'antenne permet une adaptation d'impédance que la longueur de boucle est supérieure à une longueur d'onde,de sorte que la fréquence est éventuellement diminuée. Si elle est résonant à la même fréquence, le diamètre total de la boucle devient plus petit, de sorte que l'antenne cadre est miniaturisé par les bouts joints.
+La figure 3.11 présente des caractéristiques de changement de fréquence de résonance lorsqu'un \emph{short stubs} est mis en œuvre à l'intérieur de la boucle de l'antenne. La longueur du tronçon est de 20 mm et la fréquence de résonance chute 30MHz (3,3\%) à partir de 911.25MHz à 881.25MHz lorsque l'écart de la ligne de la fusée est 2mm. En effet, le courant est distribué le long du talon et de la longueur totale de la boucle est augmentée à 13\%. En outre, non seulement les capacitances sont augmentées par la dilatation de la longueur de la boucle, mais aussi les inductances sont augmentées par la structure\\\\\\\\\\\\\\\\\\\\\\\\\ de \emph{short stubs}. Par conséquent, l'impédance de l'antenne permet une adaptation d'impédance que la longueur de boucle est supérieure à une longueur d'onde,de sorte que la fréquence est éventuellement diminuée. Si elle est résonant à la même fréquence, le diamètre total de la boucle devient plus petit, de sorte que l'antenne cadre est miniaturisé par les bouts joints.
 
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=6cm]{stuba}
 \includegraphics[width=6cm]{stubb}
-\caption{CLA avant miniaturisation}
+\caption{CLA - S11}
 \end{figure}
-
-
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=6cm]{lob}
-\caption{CLA avant miniaturisation}
+\caption{far-field pattern avant miniaturisation}
 \end{figure}
 
+Au moyen d'un procédé de miniaturiser une antenne en boucle, deux types d'antennes sont conçues. Fig. 8, une antenne est miniaturisé avec les deux ergots courtes de 11,5 mm et 7 mm situés dans la boucle alternant les uns avec les autres. La largeur de la ligne est de 0.3mm et l'intervalle entre les lignes est de 0.3mm. Il est adapté à la longueur et l'intervalle d'une ligne d'alimentation série axée sur ce qui est de 8mm et 1mm. Le diamètre d'une antenne est miniaturisé à 40 mm en termes de maximisation d'un chemin de courant inséré avec des talons doubles. La longueur totale d'une antenne est de 3,9 (1281mm)\\
+\begin{figure}[h!]
+\centering
+\includegraphics[width=6cm]{structure}
+\includegraphics[width=6cm]{structurea}
+\caption{CLA après miniaturisation}
+\end{figure}
+
+
+Dans cet article, de faire une antenne de petite taille d'étiquette RFID dans la bande UHF, le CLA est proposé. Afin de faire correspondre l'impédance du CLA, l'intervalle et la durée entre l'alimentation en série entraînée sont modulés lorsque l'alimentation en série entraînée est situé à l'intérieur de la boucle. En outre, il est proposé d'augmenter la longueur de courant par un court tronçon situé à l'intérieur de la boucle. Grâce à ce résultat, nous pouvons confirmer que CLAS de type miniaturisés utilisant des talons courts sont adaptés pour miniaturisés antennes RFID tag avec la bande UHF.
+
+
 \chapter{Réalisaion et simulation du projet}
+Dans ce chapitre je présente les outils	de	réalisation	et de	simulation en suite la réalisation	du projet et les étape de test	 et vérification et finalement un plan de mise en œuvre et plan de maintenance.
+\section{Outils	de	réalisation	et de	simulation}
+\subsection{Visuel Studio et .net C sharp}
+\subsubsection{Visuel Studio}
+\subsubsection{.net C sharp}
+\subsubsection{Android Studio}
+\subsubsection{CST studio}
 
+\section{Réalisation	du	projet}
+\subsection{Antenne UHF}
+Dans cette section je vais présenter les différentes résultats et simulation sur les antennes RFID UHF. La puce utiliser est la H3 de Alien. Le logiciel de simulation est CST studio 2014 qui permet de calculer un grand nombre de paramètre d'antenne.
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{1ST}
+\caption{Illustration du systÃ¨me RFID}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{5}
+\caption{Illustration du systÃ¨me RFID}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{s11}
+\caption{Illustration du systÃ¨me RFID}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{vswr}
+\caption{Illustration du systÃ¨me RFID}
+\end{figure}
+
+\subsubsection{antenne a boucle circulaire (CLA)}
+
+\section{Test	 et vérification	}
+\section{Mise en	œuvre	 et	plan	de	de maintenance	}
+		
 \begin{thebibliography}{9}
 
 \bibitem{antennatheory} 
