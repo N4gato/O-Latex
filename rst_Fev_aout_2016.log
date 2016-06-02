@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.31)  1 JUN 2016 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.31)  2 JUN 2016 14:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1468,60 +1468,129 @@ Package pdftex.def Info: images/structurea.png used on input line 746.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[42 <./images/stuba.png> <./images/stubb.png> <./images/lob.png>] [43 <./images
-/structure.png> <./images/structurea.png>] [44
+
+Underfull \hbox (badness 10000) in paragraph at lines 751--752
+
+ []
+
+[42 <./images/stuba.png> <./images/stubb.png> <./images/lob.png>]
+<images/xray.png, id=195, 311.1625pt x 316.18124pt>
+File: images/xray.png Graphic file (type png)
+ <use images/xray.png>
+Package pdftex.def Info: images/xray.png used on input line 758.
+(pdftex.def)             Requested size: 170.71652pt x 173.47083pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 762--763
+
+ []
+
+<images/1STee.png, id=196, 359.3425pt x 335.2525pt>
+File: images/1STee.png Graphic file (type png)
+ <use images/1STee.png>
+Package pdftex.def Info: images/1STee.png used on input line 766.
+(pdftex.def)             Requested size: 170.71652pt x 159.27728pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[43 <./images/structure.png> <./images/structurea.png> <./images/xray.png>]
+<images/11.png, id=204, 521.95pt x 394.47375pt>
+File: images/11.png Graphic file (type png)
+ <use images/11.png>
+Package pdftex.def Info: images/11.png used on input line 773.
+(pdftex.def)             Requested size: 170.71652pt x 129.02106pt.
+
+<images/22.png, id=205, 510.90875pt x 392.46625pt>
+File: images/22.png Graphic file (type png)
+ <use images/22.png>
+Package pdftex.def Info: images/22.png used on input line 774.
+(pdftex.def)             Requested size: 170.71652pt x 131.13715pt.
+
+<images/33.png, id=206, 519.9425pt x 393.47pt>
+File: images/33.png Graphic file (type png)
+ <use images/33.png>
+Package pdftex.def Info: images/33.png used on input line 775.
+(pdftex.def)             Requested size: 170.71652pt x 129.19107pt.
+
+<images/44.png, id=207, 523.9575pt x 392.46625pt>
+File: images/44.png Graphic file (type png)
+ <use images/44.png>
+Package pdftex.def Info: images/44.png used on input line 776.
+(pdftex.def)             Requested size: 170.71652pt x 127.87338pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 780--781
+
+ []
+
+<images/front11.png, id=208, 354.57469pt x 361.35pt>
+File: images/front11.png Graphic file (type png)
+ <use images/front11.png>
+Package pdftex.def Info: images/front11.png used on input line 784.
+(pdftex.def)             Requested size: 170.71652pt x 173.98087pt.
+
+<images/back22.png, id=209, 352.31625pt x 359.09157pt>
+File: images/back22.png Graphic file (type png)
+ <use images/back22.png>
+Package pdftex.def Info: images/back22.png used on input line 785.
+(pdftex.def)             Requested size: 170.71652pt x 174.00029pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[44 <./images/1STee.png> <./images/11.png> <./images/22.png> <./images/33.png> 
+<./images/44.png>] [45 <./images/front11.png> <./images/back22.png>] [46
 
 ]
 Chapitre 4.
-<images/1ST.png, id=204, 269.50688pt x 272.51813pt>
+<images/1ST.png, id=225, 269.50688pt x 272.51813pt>
 File: images/1ST.png Graphic file (type png)
  <use images/1ST.png>
-Package pdftex.def Info: images/1ST.png used on input line 769.
+Package pdftex.def Info: images/1ST.png used on input line 810.
 (pdftex.def)             Requested size: 416.83289pt x 421.49637pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/5.png, id=205, 553.31718pt x 298.86656pt>
+<images/5.png, id=226, 553.31718pt x 298.86656pt>
 File: images/5.png Graphic file (type png)
  <use images/5.png>
-Package pdftex.def Info: images/5.png used on input line 775.
+Package pdftex.def Info: images/5.png used on input line 816.
 (pdftex.def)             Requested size: 416.83289pt x 225.14351pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/s11.png, id=206, 804.75656pt x 296.60812pt>
+<images/s11.png, id=227, 804.75656pt x 296.60812pt>
 File: images/s11.png Graphic file (type png)
  <use images/s11.png>
-Package pdftex.def Info: images/s11.png used on input line 781.
+Package pdftex.def Info: images/s11.png used on input line 822.
 (pdftex.def)             Requested size: 416.83289pt x 153.63063pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/vswr.png, id=207, 798.73407pt x 292.84406pt>
+<images/vswr.png, id=228, 798.73407pt x 292.84406pt>
 File: images/vswr.png Graphic file (type png)
  <use images/vswr.png>
-Package pdftex.def Info: images/vswr.png used on input line 787.
+Package pdftex.def Info: images/vswr.png used on input line 828.
 (pdftex.def)             Requested size: 416.83289pt x 152.82494pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[45] [46 <./images/1ST.png>] [47 <./images/5.png> <./images/s11.png> <./images/
-vswr.png>] [48
+[47] [48 <./images/1ST.png>] [49 <./images/5.png> <./images/s11.png> <./images/
+vswr.png>] [50
 
-] [49] (./rst_Fev_aout_2016.aux) )
+] [51] (./rst_Fev_aout_2016.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 28 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 6557 strings out of 493089
- 91105 string characters out of 6134842
+ 6597 strings out of 493089
+ 91791 string characters out of 6134842
  203202 words of memory out of 5000000
- 9872 multiletter control sequences out of 15000+600000
+ 9904 multiletter control sequences out of 15000+600000
  23217 words of font info for 51 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  38i,7n,39p,1091b,1350s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1550,10 +1619,10 @@ ve/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive
 texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on rst_Fev_aout_2016.pdf (49 pages, 3055837 bytes).
+Output written on rst_Fev_aout_2016.pdf (51 pages, 3368092 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
+ 327 PDF objects out of 1000 (max. 8388607)
+ 189 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

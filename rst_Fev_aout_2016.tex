@@ -297,7 +297,7 @@ Ce projet consiste à développer un système de traçabilité des entrées et s
 \caption{QQOQCP}
 \end{longtable}
 
-\section{Deroulement chronologique du stage}
+\section{Déroulement chronologique du stage}
 Durant les 4 mois de mon stage, les tâches relatives à mon projet de stage sont organisé de la façon suivante:
 \subsection{Etapes	de	réalisaion}
 \begin{longtable}{|p{0.35\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}| p{0.15\textwidth}|}
@@ -748,7 +748,47 @@ Au moyen d'un procédé de miniaturiser une antenne en boucle, deux types d'ante
 \end{figure}
 
 
-Dans cet article, de faire une antenne de petite taille d'étiquette RFID dans la bande UHF, le CLA est proposé. Afin de faire correspondre l'impédance du CLA, l'intervalle et la durée entre l'alimentation en série entraînée sont modulés lorsque l'alimentation en série entraînée est situé à l'intérieur de la boucle. En outre, il est proposé d'augmenter la longueur de courant par un court tronçon situé à l'intérieur de la boucle. Grâce à ce résultat, nous pouvons confirmer que CLAS de type miniaturisés utilisant des talons courts sont adaptés pour miniaturisés antennes RFID tag avec la bande UHF.
+Dans cet article, de faire une antenne de petite taille d'étiquette RFID dans la bande UHF, le CLA est proposé. Afin de faire correspondre l'impédance du CLA, l'intervalle et la durée entre l'alimentation en série entraînée sont modulés lorsque l'alimentation en série entraînée est situé à l'intérieur de la boucle. En outre, il est proposé d'augmenter la longueur de courant par un court tronçon situé à l'intérieur de la boucle. Grâce à ce résultat, nous pouvons confirmer que CLAS de type miniaturisés utilisant des talons courts sont adaptés pour miniaturisés antennes RFID tag avec la bande UHF.\\
+
+
+Une autre methode a etait concu apres des expeience de \emph{Reverse Engineering} des tag UHF recu de l'etranger. cette methode consiste a boucle l'antenne en interne de tell sorte a minimiser le diamettre sans changer la longeur les deux pole. la figure suivante presente le resulatat du  \emph{X-RAY Reverse engineering} qui permet de voire en interne sans massacre la piece. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=6cm]{xray}
+\caption{X-Ray du tag UHF}
+\end{figure}
+
+On c'est inspirer de cette méthode pour améliorer notre antenne et optimiser au niveaux de taille. le figure suivante montre la nouvelle version de l'antenne site en figure x. la taille a était réduite de 30 \% on a passe de 28 mm a 22 mm. la nouvelle structure permet un contrôle facile de fréquence et d'impédance. dans les section qui suite on présente une étude détaille sur les avantage de cette nouvelle structure et aussi quelque amélioration qui nous a permise de descendre encore plus base en terme de diamètre de l'antenne. Une étude plus parfondis a était consacre sur cette base a fin de relever toutes les secrètes de cette méthode.\\
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=6cm]{1STee}
+\caption{Tag UHF améliorer}
+\end{figure}
+comme le montre la figure 3.15 la taille a était énormément améliorer et le performance de cette antenne gardant les même. cette structure nous a permit un contrôle de fréquence bien régis. toute variation de longueur de 2mm nous donne un décalage de fréquence de 10MHz et un gain d'environ . la figure suivante montre cette... plus de détail sur la simulation seront présenter dans le chapitre suivant.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=6cm]{11}
+\includegraphics[width=6cm]{22}\\
+\includegraphics[width=6cm]{33}
+\includegraphics[width=6cm]{44}
+\caption{S11du tag UHF améliorer }
+\end{figure}
+
+la troisieme etape  consiste a realiser l'entenne de la figure x. un antenne qui rayone dans la frequence 915MHz. l'experience montre que sa distance de lecture est de 2m.\\
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=6cm]{front11}
+\includegraphics[width=6cm]{back22}
+\caption{S11du tag UHF améliorer }
+\end{figure}
+
+plus de détail sur la simulation seront présenter dans le chapitre suivant.
+
+
 
 
 \chapter{Réalisaion et simulation du projet}
@@ -763,6 +803,7 @@ Dans ce chapitre je présente les outils	de	réalisation	et de	simulation en sui
 \section{Réalisation	du	projet}
 \subsection{Antenne UHF}
 Dans cette section je vais présenter les différentes résultats et simulation sur les antennes RFID UHF. La puce utiliser est la H3 de Alien. Le logiciel de simulation est CST studio 2014 qui permet de calculer un grand nombre de paramètre d'antenne.
+\subsubsection{Le premier prototype UHF}
 
 \begin{figure}[h!]
 \centering
