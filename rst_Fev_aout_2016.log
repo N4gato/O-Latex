@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.31)  9 JUN 2016 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.31)  9 JUN 2016 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1541,30 +1541,103 @@ Underfull \vbox (badness 1552) has occurred while \output is active []
 File: images/clas11.png Graphic file (type png)
 
 <use images/clas11.png>
-Package pdftex.def Info: images/clas11.png used on input line 881.
+Package pdftex.def Info: images/clas11.png used on input line 879.
 (pdftex.def)             Requested size: 170.71289pt x 85.35657pt.
 
 <images/clapolfarfield.png, id=240, 429.10312pt x 289.08pt>
 File: images/clapolfarfield.png Graphic file (type png)
 
 <use images/clapolfarfield.png>
-Package pdftex.def Info: images/clapolfarfield.png used on input line 882.
+Package pdftex.def Info: images/clapolfarfield.png used on input line 880.
 (pdftex.def)             Requested size: 170.715pt x 85.35725pt.
 
 <images/clavswr.png, id=241, 807.015pt x 293.59688pt>
 File: images/clavswr.png Graphic file (type png)
  <use images/clavswr.png>
-Package pdftex.def Info: images/clavswr.png used on input line 883.
+Package pdftex.def Info: images/clavswr.png used on input line 881.
 (pdftex.def)             Requested size: 170.70955pt x 85.35594pt.
 
 <images/claefficency.png, id=242, 800.23969pt x 293.59688pt>
 File: images/claefficency.png Graphic file (type png)
 
 <use images/claefficency.png>
-Package pdftex.def Info: images/claefficency.png used on input line 884.
+Package pdftex.def Info: images/claefficency.png used on input line 882.
 (pdftex.def)             Requested size: 170.71721pt x 85.35594pt.
+File: images/1STee.png Graphic file (type png)
+ <use images/1STee.png>
+Package pdftex.def Info: images/1STee.png used on input line 893.
+(pdftex.def)             Requested size: 170.71652pt x 159.27728pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [50 <./images/clas11.png> <./images/clapolfarfield.png> <./images/clavswr.png>
- <./images/claefficency.png>] [51
+ <./images/claefficency.png>] <images/claaaass11.png, id=251, 804.75656pt x 296
+.60812pt>
+File: images/claaaass11.png Graphic file (type png)
+
+<use images/claaaass11.png>
+Package pdftex.def Info: images/claaaass11.png used on input line 900.
+(pdftex.def)             Requested size: 170.71072pt x 85.3579pt.
+
+<images/claPattern.png, id=252, 541.27219pt x 288.3272pt>
+File: images/claPattern.png Graphic file (type png)
+
+<use images/claPattern.png>
+Package pdftex.def Info: images/claPattern.png used on input line 901.
+(pdftex.def)             Requested size: 170.71637pt x 85.35934pt.
+
+<images/claaavswr.png, id=253, 798.73407pt x 292.84406pt>
+File: images/claaavswr.png Graphic file (type png)
+
+<use images/claaavswr.png>
+Package pdftex.def Info: images/claaavswr.png used on input line 902.
+(pdftex.def)             Requested size: 170.71289pt x 85.35603pt.
+File: images/claefficency.png Graphic file (type png)
+ <use images/claefficency.png>
+Package pdftex.def Info: images/claefficency.png used on input line 903.
+(pdftex.def)             Requested size: 170.71721pt x 85.35594pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 911--912
+
+ []
+
+File: images/front11.png Graphic file (type png)
+<use images/front11.png>
+Package pdftex.def Info: images/front11.png used on input line 915.
+(pdftex.def)             Requested size: 113.81102pt x 115.98172pt.
+File: images/back22.png Graphic file (type png)
+ <use images/back22.png>
+Package pdftex.def Info: images/back22.png used on input line 916.
+(pdftex.def)             Requested size: 113.81102pt x 115.99654pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51 <./images/claaaass11.png> <./images/claPattern.png> <./images/claaavswr.pn
+g>]
+<images/uses11.png, id=260, 393.72093pt x 292.84406pt>
+File: images/uses11.png Graphic file (type png)
+ <use images/uses11.png>
+Package pdftex.def Info: images/uses11.png used on input line 924.
+(pdftex.def)             Requested size: 170.71451pt x 85.35603pt.
+
+<images/usefar.png, id=261, 464.4853pt x 292.84406pt>
+File: images/usefar.png Graphic file (type png)
+ <use images/usefar.png>
+Package pdftex.def Info: images/usefar.png used on input line 925.
+(pdftex.def)             Requested size: 170.71579pt x 85.35603pt.
+File: images/claaavswr.png Graphic file (type png)
+
+<use images/claaavswr.png>
+Package pdftex.def Info: images/claaavswr.png used on input line 926.
+(pdftex.def)             Requested size: 170.71289pt x 85.35603pt.
+
+<images/useeff.png, id=262, 798.73407pt x 294.34969pt>
+File: images/useeff.png Graphic file (type png)
+ <use images/useeff.png>
+Package pdftex.def Info: images/useeff.png used on input line 927.
+(pdftex.def)             Requested size: 170.71289pt x 85.3592pt.
+
+[52 <./images/uses11.png> <./images/usefar.png> <./images/useeff.png>] [53
 
 ]
 (./rst_Fev_aout_2016.aux) )
@@ -1573,10 +1646,10 @@ Package pdftex.def Info: images/claefficency.png used on input line 884.
 ### simple group (level 1) entered at line 27 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 6606 strings out of 493089
- 92131 string characters out of 6134842
+ 6636 strings out of 493089
+ 92768 string characters out of 6134842
  203198 words of memory out of 5000000
- 9911 multiletter control sequences out of 15000+600000
+ 9935 multiletter control sequences out of 15000+600000
  23217 words of font info for 51 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  38i,7n,39p,1049b,1355s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1605,10 +1678,10 @@ ve/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive
 texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on rst_Fev_aout_2016.pdf (51 pages, 3487966 bytes).
+Output written on rst_Fev_aout_2016.pdf (53 pages, 3557116 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
+ 349 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 

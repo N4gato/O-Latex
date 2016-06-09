@@ -62,6 +62,8 @@
 \contentsline {subsection}{\numberline {4.2.1}Antenne UHF}{47}
 \contentsline {subsubsection}{Les param\IeC {\`e}tres de l'antenne}{47}
 \contentsline {subsubsection}{Le premier prototype UHF}{49}
-\contentsline {subsubsection}{antenne a boucle circulaire (CLA)}{50}
-\contentsline {section}{\numberline {4.3}Test et v\IeC {\'e}rification }{50}
-\contentsline {section}{\numberline {4.4}Mise en \IeC {\oe }uvre et plan de de maintenance }{50}
+\contentsline {subsubsection}{L'antenne a boucle circulaire}{50}
+\contentsline {subsubsection}{L'antenne a boucle circulaire}{51}
+\contentsline {subsubsection}{antenne a boucle circulaire (CLA)}{52}
+\contentsline {section}{\numberline {4.3}Test et v\IeC {\'e}rification }{52}
+\contentsline {section}{\numberline {4.4}Mise en \IeC {\oe }uvre et plan de de maintenance }{52}
