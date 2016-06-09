@@ -17,7 +17,6 @@
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage[margin=1.25in]{geometry}
-
 \usepackage{longtable}
 \usepackage{float}
 \usepackage{textcomp}
@@ -176,13 +175,13 @@ Le département microélectronique de MAScIR possède plusieurs laboratoires éq
 \item Laboratoire électronique
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.75\textwidth]{cleanroom}
 \caption{Salle blanche}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.75\textwidth]{labo}
 \caption{Laboratoire de fiabilité et analyse de défauts}
@@ -372,7 +371,7 @@ La discussion de la technologie RFID a tendance à se concentrer uniquement sur 
 \end{itemize}
 
 Nous illustrons l'interaction de ces composants dans la figure 3.1. Sur cette figure, trois étiquettes sont lisibles par un ou les deux lecteurs, A et B. Par exemple, l'étiquette 1 est lisible que par A, tandis que l'étiquette 2 est lisible par A et B, peut-être en raison de restrictions l'accès. Les lecteurs peuvent alors se connecter à des bases de données avec des enregistrements associés à des données d'identification. Dans ce cas, deux bases de données ont chacun leur propre record.\\
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{shema}
 \caption{Illustration du système RFID}
@@ -392,7 +391,7 @@ assure le calcul et le stockage. Dans le procédé de fabrication, ce circuit in
 "Attaché" à une antenne avant d'être emballés dans un facteur de forme, comme une capsule de verre ou d'une feuille, qui est intégré dans un produit final.Dans la pratique, les différents fournisseurs effectuent souvent chacune de ces étapes de fabrication. Autres RFID
 dessins peuvent être «chipless» ou avoir des informations d'identification au moment de la fabrication, à savoir
 "Écriture une fois, lecture nombreuse". \\
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[height=3cm]{tag}
 \caption{Tag RFID}
@@ -408,7 +407,7 @@ Les lecteurs se présentent sous plusieurs formes, fonctionnent sur de nombreuse
 À l'heure actuelle, de nombreuses applications reposent sur des dispositifs de lecture fixes. Les premiers essais de EPC à une grande chaîne de supermarchés intégrés dans les lecteurs entrées accueil baies fixes. Ces lecteurs scannent les étiquettes au niveau de la palette que les livraisons de produits arrivent. 
 
 Les lecteurs RFID peuvent également être intégrés dans des appareils mobiles portatifs. Ces lecteurs mobiles permettraient à quelqu'un, par exemple, faire l'inventaire d'un entrepôt en marchant à travers ses allées. Le fabricant de téléphone cellulaire Nokia propose déjà des fonctionnalités RFID de lecture dans certains de leurs téléphones cellulaires. les balises de type EPC deviennent très réussie, intéressante et les applications grand public utiles pourraient se poser. Si cela se produit, la fonctionnalité de lecture RFID pourrait devenir une caractéristique commune sur les téléphones, PDA, ou d'autres dispositifs informatiques portables cellulaires.
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[height=4cm]{reader}
 \caption{Interaction du Lecteur RFID avec son environnement}
@@ -556,7 +555,7 @@ La norme ISO 18000 a 6 parties d'adressage différentes gammes de fréquences:
 \end{itemize}
 \subsection{Modes de transfert d’énergie et de communication}
 Dans ce premier cas ( figure 3.4) , l’onde RF se propageant de la base station vers le tag n’a pour but unique que de fournir de l’énergie au tag de façon à charger la  capacité d’alimentation  présente à son bord afin que celle-ci puisse être capable d’alimenter l’ensemble du tag pour assurer son bon fonctionnement. Aprés cette phase d'alimentation, le tag est apte à recevoir des ordres de commande provenant de la base station et de retourner des informations vers celle-ci. Puis le cycle recommence et il est à nouveau nécessaire de lui fournir de l'énergie pour continuer la communication et ainsi de suite. Bien évidemment, ceci prend du temps et manque parfois de souplesse.\\
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figa}
 \caption{Mode de transfert d'énergie non simultané}
@@ -564,7 +563,7 @@ Dans ce premier cas ( figure 3.4) , l’onde RF se propageant de la base station
 
 Dans ce deuxième cas ( figure 3.5), au travers des principes et types de modulation utilisés, l'onde provenant de la base station est capable pendant la phase de l'échange base station vers tag d'assurer simultanément la fourniture de l'énergie et l'échange des informations (données).\\
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figb}
 \caption{Mode de transfert d'énergie simultané}
@@ -613,7 +612,7 @@ Dans cet section, une simple petite étiquette RFID passive opérant dans la fr�
 L'antenne choisie pour l'étiquette  est une antenne en boucle. La figure 1 montre une antenne en boucle ayant un diamètre D de la boucle et un fil de diamètre d. Une antenne en boucle est choisie car car elle dispose d'une structre circulaire qui permet de minimiser la taille par rapport au autre technologie comme les middredded et les Microstrip. 
 
 Une antenne dipôle électrique est  non plus possible. le problème du dipôle électrique  demi-onde pour la fréquence de fonctionnement qu'on utilise serait de trop grande taille alors qu'un  petit dipôle électrique peut être utilisé, mais l'expérience montre qu'il est difficile à l'adaptation.
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=4cm]{cla}
 \caption{L'antenne proposée}
@@ -631,7 +630,7 @@ L  = \frac{\mu_{0}D}{2}[ln(\frac{8D}{d})-2]
 
 Dans la figue 3.7b montre le circuit équivalent de la puce RFID, qui peut être représenté par une résistance R et d'un condensateur  C en parallèle . R et C utilisé dans l'analyse et la conception de l'étiquette sont 1.3 k\(\Omega\) et 1.15 pF respectivement.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=8cm]{eq}
 \caption{le circuit équivalent pour (a) une antenne en boucle; (b) RFID tag puce}
@@ -668,7 +667,7 @@ X_{2}=\dfrac{R_{p}}{Q}
 \end{equation}
 
 T et le réseau \(\Pi\) nécessitent une algorithme de contrôle plus complexe pour la conception automatique de réseau d'adaptation. Elle Nécessité de contrôler de trois composants qui le rend plus cher. Et l'inconvénient du circuit de L est qu'elle peut correspondre à des charges égale ou inférieure à 50 Ohm. Si le circuit de L est inversé, il peut correspondre à des charges égale ou supérieure à 50 Ohm. Il ne peut pas correspondre aux des deux côtés. Par exemple, si la charge est en train de changer de 35 à 100 ohms, le réseau de L inversé correspond uniquement à partir de 50 à 100 ohms et ne correspondra pas à 35-50 ohms.
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=8cm]{matcha}
 \includegraphics[width=8cm]{matchb}
@@ -688,19 +687,19 @@ La figures 3.8 montre deux différents réseaux d'adaptation qui sont utilisés 
 \subsection{Conception de mise en œuvre pratique}
 La conception a été démarré à l'aide d'une antenne en boucle et un réseau d'adaptation conçu comme indiqué dans les sections précédentes. L'étape suivante a consisté à examiner la mise en œuvre pratique de l'étiquette. Il a été décidé de mettre en œuvre la conception sur une très mince substrat avec une couche de cuivre sur l'avant côtés. La vue d'arrière du produit final est montré dans la conception figure 3.9. En utilisant le réseau d'adaptation représenté sur la figure. 3.8 b. Cela ne signifie pas que le réseau de d'adaptation représenté sur la figure 3.8a est meilleur que l'autre. Les deux réseaux d'adaptation sont équivalents à la fréquence de résonance, les raisons pour lesquelles l'une représentée sur la figure 3.8b a été choisi était parce qu'il est plus facile à mettre en œuvre par la méthode utilisée ici.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=6cm]{front}
 \includegraphics[width=6cm]{back}
 \caption{Illustration RFID}
 \end{figure}
 
-Cette conception UHF de tag est constitué d'une antenne de boucle circulaire avec un réseau d'adaptation à deux éléments pour faire correspondre les impédances de l'antenne de l'étiquette et l'étiquette puce. Des mesures plus détaillées de conception de cette balise peut être trouvée dans \cite{related} . Cependant, l'étiquette a été rendue légèrement plus grand diamètre par rapport à celui présenté dans \cite{related} en fonction de l'application étudiée. 
+Cette conception UHF de tag est constitué d'une antenne de boucle circulaire avec un réseau d'adaptation à deux éléments pour faire correspondre les impédances de l'antenne de l'étiquette et l'étiquette puce. Cependant, l'étiquette a été rendue légèrement plus grand diamètre par rapport à celui présenté dans la figure 3.10 en fonction de l'application étudiée. 
 
-La  conception UHF étiquette considérée est constituée d'une antenne à dipôle électrique avec une piste courbe d'inductance à travers le dipôle à des fins d'adaptation d'impédance. La structure et les dimensions de cette balise est représenté sur la figure 3. Cette balise est faite en utilisant une carte FR4 avec une épaisseur de substrat h = 1,6 mm et de permittivité diélectrique \(\epsilon_{r}\) = 4,4. Cette conception de l'étiquette est de simple face.
+Notre conception UHF étiquette (figure 3.10) considérée est constituée d'une antenne à dipôle électrique avec une piste courbe d'inductance à travers le dipôle à des fins d'adaptation d'impédance. La structure et les dimensions de cette balise est représenté sur la figure 3. Cette balise est faite en utilisant une carte FR4 avec une épaisseur de substrat h = 1,6 mm et de permittivité diélectrique \(\epsilon_{r}\) = 4,4. Cette conception de l'étiquette est de simple face.
 
  La structure d'antenne est simulée en utilisant CST studio 2014 et l'impédance simulée est de 20 + j152 \(\Omega\). Comme on peut le voir, l'impédance de la structure d'antenne de l'étiquette est pas exactement le conjugué de l'impédance de la puce \cite{alien} et donc, l'étiquette et l'impédance de la puce ne sont pas tout à fait adapté.
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=6cm]{dofi}
 \caption{UHF étiquette considérée}
@@ -719,76 +718,77 @@ Cependant, la piste d'inductance à travers le dipôle ne fournit pas d'inductan
 \caption{Distance de lecture}
 \end{longtable}
 \subsection{Minaturisation des antenne CLA}
-Le cahier de charge impose par la nature de la solution nous oblige a concevoir une antenne de petite taille (>2cm), la radiation doit être dans la bande autorise par l'ANRT et la puissance reçu au niveau de la puce doit êtres suffisante pour alimenter le circuit. Les deux antenne précédemment présenter en une taille relativement grand et les résultat de la simulation prédicte une mauvaise alimentation du circuit de la puce. donc on a était obliger de penser a une solution pour réduire la taille et améliorer les performance de l'antenne. La littérature \cite{stub} et \cite{stub}  propose une solution possible qui peuvent 
-
+Le cahier de charge impose par la nature de la solution  a concevoir une antenne de petite taille (>2cm), la radiation doit être dans la bande autorise par l'ANRT et la puissance reçu au niveau de la puce doit êtres suffisante pour alimenter le circuit. Les deux antenne précédemment présenter en une taille relativement grand et les résultat de la simulation prédicte une mauvaise alimentation du circuit de la puce. donc on a était obliger de penser a une solution pour réduire la taille et améliorer les performance de l'antenne. La littérature \cite{stub}  propose une solution possible qui peut
 miniaturiser une antenne en boucle circulaire (CLA) à l'aide de \emph{short stubs} insérés dans la partie interne de la boucle. Dans le cas d'une longueur d'onde et une demi-longueur d'onde, respectivement, l'antenne est réduite jusqu'à 83\% et 92,1\% de sa taille par rapport au type CLA général. Par ailleurs la perte de retour, la bande passante -10dB et le gain d'une longueur d'onde et une demi-longueur d'onde sont de 12MHz (1,3\%), et de 48MHz (5\%). la deuxième méthode sera présenter dans avec la partie simulation dans le chapitre suivant.\\
 
-La figure 3.11 présente des caractéristiques de changement de fréquence de résonance lorsqu'un \emph{short stubs} est mis en œuvre à l'intérieur de la boucle de l'antenne. La longueur du tronçon est de 20 mm et la fréquence de résonance chute 30MHz (3,3\%) à partir de 911.25MHz à 881.25MHz lorsque l'écart de la ligne de la fusée est 2mm. En effet, le courant est distribué le long du talon et de la longueur totale de la boucle est augmentée à 13\%. En outre, non seulement les capacitances sont augmentées par la dilatation de la longueur de la boucle, mais aussi les inductances sont augmentées par la structure\\\\\\\\\\\\\\\\\\\\\\\\\ de \emph{short stubs}. Par conséquent, l'impédance de l'antenne permet une adaptation d'impédance que la longueur de boucle est supérieure à une longueur d'onde,de sorte que la fréquence est éventuellement diminuée. Si elle est résonant à la même fréquence, le diamètre total de la boucle devient plus petit, de sorte que l'antenne cadre est miniaturisé par les bouts joints.
+La figure 3.11 présente des caractéristiques de changement de fréquence de résonance lorsqu'un \emph{short stubs} est mis en œuvre à l'intérieur de la boucle de l'antenne. La longueur du  \emph{short stubs} est de 20 mm et la fréquence de résonance chute 30MHz (3,3\%) à partir de 911.25MHz à 881.25MHz lorsque l'écart de la ligne est 2mm. En effet, le courant est distribué le long la longueur totale de la boucle est augmentée à 13\%. En outre, non seulement les capacitances sont augmentées par la dilatation de la longueur de la boucle, mais aussi les inductances sont augmentées par la structure de \emph{short stubs}. Par conséquent, l'impédance de l'antenne permet une adaptation d'impédance que la longueur de boucle est supérieure à une longueur d'onde,de sorte que la fréquence est éventuellement diminuée. Si elle est résonant à la même fréquence, le diamètre total de la boucle devient plus petit, de sorte que l'antenne cadre est miniaturisé par les bouts joints.
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
-\includegraphics[width=6cm]{stuba}
-\includegraphics[width=6cm]{stubb}
+\includegraphics[width=6cm, height=6cm]{stuba}
+\includegraphics[width=6cm, height=6cm]{stubb}
 \caption{CLA - S11}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=6cm]{lob}
 \caption{far-field pattern avant miniaturisation}
 \end{figure}
 
-Au moyen d'un procédé de miniaturiser une antenne en boucle, deux types d'antennes sont conçues. Fig. 8, une antenne est miniaturisé avec les deux ergots courtes de 11,5 mm et 7 mm situés dans la boucle alternant les uns avec les autres. La largeur de la ligne est de 0.3mm et l'intervalle entre les lignes est de 0.3mm. Il est adapté à la longueur et l'intervalle d'une ligne d'alimentation série axée sur ce qui est de 8mm et 1mm. Le diamètre d'une antenne est miniaturisé à 40 mm en termes de maximisation d'un chemin de courant inséré avec des talons doubles. La longueur totale d'une antenne est de 3,9 (1281mm)\\
-\begin{figure}[h!]
+Au moyen du procédé de miniaturisation de l'antenne en boucle, l'antenne de la figure 3.11 est miniaturisé avec des \emph{short stubs} de 11,5 mm et 7 mm . La largeur de la ligne est de 0.3mm et l'intervalle entre les lignes est de 0.3mm. Il est adapté à la longueur et l'intervalle de la ligne d'alimentation est de 8mm et 1mm. Le diamètre d'une antenne est miniaturisé à 40 mm.\\
+\begin{figure}[H]
 \centering
 \includegraphics[width=6cm]{structure}
 \includegraphics[width=6cm]{structurea}
 \caption{CLA après miniaturisation}
 \end{figure}
 
+Une autre méthode a était conçu après des expérience de \emph{Reverse Engineering} des tag UHF acheté du marche. cette méthode consiste a boucle l'antenne en interne de tell sorte a minimiser le diamètre sans changer la longueur les deux pôles. la figure suivante présente les résultats de l'analyse par  \emph{X-RAY Reverse engineering} qui permet de voire en interne sans massacre la pièce. Le figure suivante présente les résultats du \emph{Reverse engineering}. L'étiquète est constituer de deux couche de cuivre, la puce est fixé sur l'antenne fixage avec \emph{wire bonding}. la simulation de cette antenne sera présenter dans le chapitre suivant. \\
 
-Dans cet article, de faire une antenne de petite taille d'étiquette RFID dans la bande UHF, le CLA est proposé. Afin de faire correspondre l'impédance du CLA, l'intervalle et la durée entre l'alimentation en série entraînée sont modulés lorsque l'alimentation en série entraînée est situé à l'intérieur de la boucle. En outre, il est proposé d'augmenter la longueur de courant par un court tronçon situé à l'intérieur de la boucle. Grâce à ce résultat, nous pouvons confirmer que CLAS de type miniaturisés utilisant des talons courts sont adaptés pour miniaturisés antennes RFID tag avec la bande UHF.\\
-
-
-Une autre methode a etait concu apres des expeience de \emph{Reverse Engineering} des tag UHF recu de l'etranger. cette methode consiste a boucle l'antenne en interne de tell sorte a minimiser le diamettre sans changer la longeur les deux pole. la figure suivante presente le resulatat du  \emph{X-RAY Reverse engineering} qui permet de voire en interne sans massacre la piece. 
-
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=6cm]{xray}
 \caption{X-Ray du tag UHF}
 \end{figure}
 
-On c'est inspirer de cette méthode pour améliorer notre antenne et optimiser au niveaux de taille. le figure suivante montre la nouvelle version de l'antenne site en figure x. la taille a était réduite de 30 \% on a passe de 28 mm a 22 mm. la nouvelle structure permet un contrôle facile de fréquence et d'impédance. dans les section qui suite on présente une étude détaille sur les avantage de cette nouvelle structure et aussi quelque amélioration qui nous a permise de descendre encore plus base en terme de diamètre de l'antenne. Une étude plus parfondis a était consacre sur cette base a fin de relever toutes les secrètes de cette méthode.\\
+On c'est inspirer de cette méthode qu'on appellerait dans ce rapport \emph{bouclage interne} pour améliorer notre antenne et l'optimiser au niveaux de taille. le figure suivante montre la nouvelle version de l'antenne en figure 3.15. la taille a était réduite de 30 \% on a passé de 28 mm a 22 mm. la nouvelle structure permet un contrôle facile de fréquence et d'impédance. dans les section qui suite on présente une étude détaille sur les avantage de cette nouvelle structure et aussi quelque amélioration qui nous a permise de descendre encore plus base en terme de diamètre de l'antenne. Une étude plus parfondis a était consacre sur cette base a fin de relever toutes les secrètes de cette méthode.\\
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=6cm]{1STee}
 \caption{Tag UHF améliorer}
 \end{figure}
-comme le montre la figure 3.15 la taille a était énormément améliorer et le performance de cette antenne gardant les même. cette structure nous a permit un contrôle de fréquence bien régis. toute variation de longueur de 2mm nous donne un décalage de fréquence de 10MHz et un gain d'environ . la figure suivante montre cette... plus de détail sur la simulation seront présenter dans le chapitre suivant.
+Comme le montre la figure 3.15 la taille a était énormément améliorer et les performance de cette antenne gardant les même. cette structure nous a permit un bon contrôle de fréquence. toute variation de longueur de 2mm nous donne un décalage de fréquence de 10MHz. La figure 3.16 est le S11 après chaque coupage de boucle intérieur de 2mm.plus de détail sur la simulation seront présenter dans le chapitre suivant.\\
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=6cm]{11}
 \includegraphics[width=6cm]{22}\\
 \includegraphics[width=6cm]{33}
 \includegraphics[width=6cm]{44}
-\caption{S11du tag UHF améliorer }
+\caption{S11 apres coupage de 2mm }
 \end{figure}
 
-la troisieme etape  consiste a realiser l'entenne de la figure x. un antenne qui rayone dans la frequence 915MHz. l'experience montre que sa distance de lecture est de 2m.\\
+La troisième étape  consiste a réaliser l'antenne de la figure 3.17. 
+Avant de concevoir un prototype de tag RFID destiné à la traçabilité des palettes, un modèle a été mis à notre disponibilité pour être analysé dans les laboratoires de MAScIR.Le but de cette analyse est de caractériser le produit et de déterminer les différents matériaux utilisés.\\
 
-\begin{figure}[h!]
+Pour faire on comance pare une Analyse non destructive qui consiste a faire une analyse générale  du boitier puis une description générale du package vu de l’extérieur,Puis avec les Rayons X comme illustre la figure 3.14. En suite on procede a une l'analyse destructive qui consiste a décapsulation le package puis faire une décapsulation du System.
+
+
+
+Dans la figure suivante.Cette structure a était inspire de l'analyse avec x-ray d'une antenne acheté du marche qui rayonne dans la fréquence 915MHz. l'expérience montre que sa distance de lecture est de 2m.plus de détail sur la simulation seront présenter dans le chapitre suivant.\\
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=6cm]{front11}
-\includegraphics[width=6cm]{back22}
+\includegraphics[width=4cm]{front11}
+\includegraphics[width=4cm]{back22}
 \caption{S11du tag UHF améliorer }
 \end{figure}
 
-plus de détail sur la simulation seront présenter dans le chapitre suivant.
-
-
+Dans cette section on a discuter les notion théorique qui régie les antenne a boucle circulaire qui représente une excellente solution pour les antenne de petite taille. Une étude sur les méthode d'optimisation on était détaille dans cette section comme le \emph{Short stub} et le bouclage interne qui permettent de réduire la taille et garder le caractère omnidirectionnel, après cette étape on a élaboré un plan d'expérience qui consiste a examiner une tag achète du marche et puis l'analyser avec un \emph{X-RAY} pour s'inspirer de sa structure. le produit final de cette étude est une tag UHF marocaine d'excellente performance.
+\section{conslution}
 
 
 \chapter{Réalisaion et simulation du projet}
@@ -797,38 +797,93 @@ Dans ce chapitre je présente les outils	de	réalisation	et de	simulation en sui
 \subsection{Visuel Studio et .net C sharp}
 \subsubsection{Visuel Studio}
 \subsubsection{.net C sharp}
-\subsubsection{Android Studio}
-\subsubsection{CST studio}
+\subsection{Android Studio}
+\subsection{CST studio}
 
 \section{Réalisation	du	projet}
 \subsection{Antenne UHF}
-Dans cette section je vais présenter les différentes résultats et simulation sur les antennes RFID UHF. La puce utiliser est la H3 de Alien. Le logiciel de simulation est CST studio 2014 qui permet de calculer un grand nombre de paramètre d'antenne.
+
+Pour décrire la performance d'une antenne , les définitions des différents paramètres sont nécessaires . Certains paramètres sont interdépendants et pas tous d'entre eux doivent être indiquées pour une description complète de la performance de l'antenne. La définitions des paramètres seront donnés dans section suivante. Beaucoup de ceux sont des standard IEEE  ( IEEE Std 145-1983 ). Ensuite je vais présenter les différentes résultats et simulation sur les antennes RFID UHF. La puce utiliser est la H3 de Alien. Le logiciel de simulation est CST studio 2014 qui permet de calculer un grand nombre des paramètres d'antenne.\\
+\subsubsection{Les paramètres de l'antenne}
+\begin{itemize}
+\item \emph{RADIATION PATTERN}
+Un motif de motif ou une antenne rayonnement de l'antenne est définie comme : une fonction mathématique ou d'une représentation graphique des propriétés de rayonnement de l' antenne en fonction des coordonnées spatiales. Dans la plupart des cas, le diagramme de rayonnement est déterminée dans la région de champ \emph{Far-Field} est représentée comme une fonction des coordonnées de direction . Propriétés de rayonnement comprennent la densité de flux de puissance , l'intensité du rayonnement, l'intensité du champ , directivité , de phase ou de polarisation.
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm,height=5cm]{radpa}
+\caption{Radiation pattern}
+\end{figure}
+\item \emph{la directivité} la directivité d'une antenne est définie comme: le rapport de l'intensité du rayonnement dans une direction donnée de l'antenne à l'intensité de rayonnement moyenne de toutes les directions. L'intensité de rayonnement moyenne est égale à la puissance totale rayonnée par l'antenne divisée par 4\(\pi\) .En forme mathématique elle peut être écrit comme:
+
+\begin{equation}
+D = \dfrac{U}{U_{0}} = \dfrac{4 \pi U}{P_{rad}}
+\end{equation}
+
+Si la direction n'est pas spécifiée, elle implique la direction de l'intensité maximale de rayonnement( Directivité maximum) exprimé comme:
+
+\begin{equation}
+D_{max} = D_{0} = \dfrac{U}{U_{0}} = \dfrac{4 \pi U_{max}}{P_{rad}}
+\end{equation}
+D = directivité (sans dimension)\\
+\(D_{0}\) = directivité maximale (sans dimension)\\
+U = intensité du rayonnement ( W / unité d'angle solide )\\
+\(U_{max}\) = intensité maximale de rayonnement ( W / unité d'angle solide )\\
+\(U_{0}\) = intensité du rayonnement de la source isotrope ( W / unité d'angle solide ) Prad = puissance totale rayonnée ( W )\\
+
+\item \emph{EFFICACITÉ}
+
+elle peut êtres définit comme suite: \emph{comment bien l' antenne rayonne la puissance qui lui est donné.} Le total efficacité de l'antenne est utilisée pour prendre en compte les pertes au niveau des bornes d'entrée et à l'intérieur de la structure de l'antenne. Ces pertes peuvent être dues  à la réfection en raison de mal adaptation entre la ligne de transmission et la source de l'antenne, la conduction et diélectrique
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=4cm,height=3cm]{wellwellwell}
+\caption{réflexion,conduction,perte de diélectrique}
+\end{figure}
+D'une manière générale , le rendement global peut être écrite comme:
+
+\begin{equation}
+e_{0}=e_{r}e_{c}e_{d}
+\end{equation}
+
+\(e_{0}\) = l'efficacité totale ( dimension)\\
+\(e_{r}\) = réflexion \emph{ mismatch} \\
+\(e_{c}\) = l'efficacité de conduction ( sans dimension)\\
+\(e_{d}\) = efficacité diélectrique ( sans dimension)\\
+
+\item \emph{VSWR} 
+Pour une radio ( émetteur ou récepteur ) pour délivrer une puissance à une antenne , l'impédance de la ligne de transmission radio et doit être bien adaptée à l'impédance de l'antenne . Le paramètre ROS ou VSWR est une mesure qui décrit numériquement la façon dont l' antenne a une adaptation d'impédance à la ligne de la radio ou de la transmission , il est connecté.
+\begin{equation}
+VSWR = \dfrac{1+ |\Gamma|}{1-|\Gamma|}
+\end{equation}
+
+\item \emph{S paramètres}
+décrivent la relation d' entrée-sortie entre les ports (ou terminaux) dans un système électrique . Par exemple, si nous avons 2 ports ( intelligemment appelé Port 1 et Port 2), puis S12 représente la puissance transférée de Port 2 à Port 1. S21 représente la puissance transférée de Port 1 à Port 2. En général, SNM représente la puissance transférés de Port M à Port N dans un réseau multi- port.
+\end{itemize}
+
 \subsubsection{Le premier prototype UHF}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth]{1ST}
-\caption{Illustration du systÃ¨me RFID}
-\end{figure}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth]{5}
-\caption{Illustration du systÃ¨me RFID}
-\end{figure}
+La conception UHF étiquette considérée est constituée d’une antenne à dipôle électrique avec une piste courbe d’inductance à travers le dipôle à des fins d'adaptation d'impédance. La structure et les dimensions de cette balise est représenté sur la figure 3. Cette balise est faite en utilisant une carte FR4 avec une épaisseur de substrat h = 1,6 mm et de permittivité diélectrique \(\epsilon_{r}\) = 4,4. Cette conception de l’étiquette est de simple face.
 
-\begin{figure}[h!]
+ l'impédance simulée est de 20 + j152 \(\Omega\).l'impédance de la structure d'antenne de l'étiquette est pas exactement le conjugué de l'impédance de la puce [6] et donc, l'étiquette et l'impédance de la puce ne sont pas tout à fait adapté.\\
+ 
+ \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{s11}
-\caption{Illustration du systÃ¨me RFID}
-\end{figure}
+\includegraphics[width=6cm]{dofi}\\
+\caption{Paramettre de sumulation CLA}
+\end{figure} 
 
-\begin{figure}[h!]
+Les figures suivante représente les quatre importante paramétrés a prendre en considération pour le jugement d'une antenne. la première valeur est la s11
+\begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth]{vswr}
-\caption{Illustration du systÃ¨me RFID}
-\end{figure}
-
+\includegraphics[width=6cm,height=3cm]{clas11}
+\includegraphics[width=6cm,height=3cm]{clapolfarfield}
+\includegraphics[width=6cm,height=3cm]{clavswr}
+\includegraphics[width=6cm,height=3cm]{claefficency}
+\caption{Paramettre de sumulation CLA}
+\end{figure} 
+%talke about seuille values and compared them to what we got
+% bandwith power related to s11, (feathers or capabilities)
 \subsubsection{antenne a boucle circulaire (CLA)}
 
 \section{Test	 et vérification	}
@@ -840,11 +895,7 @@ Dans cette section je vais présenter les différentes résultats et simulation 
 C. A. Balanis, "Antenna Theory: Analysis and
 Design",2ndEdition,1997,JohnWiley and Sons.
  
-\bibitem{related} 
-A SMALL PASSIVE UHF RFID TAG FOR LIVESTOCK IDENTIFICATION
-Mun Leng Ng, Member, IEEE, Kin Seong Leong, David M Hal, Peter H.Cole 
-Department of Electrical and Electronic Engineering, Auto-IDLabs, University of Adelaide
-(mng,kleong,dhal,cole)@Jeleceng.adelaide.edu.au
+
 
 
 \bibitem{j}  J. Landt, “The history of RFID,” Potentials, IEEE, vol. 24, no. 4, pp. 8–11, 2005.

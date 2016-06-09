@@ -9,9 +9,9 @@
 \contentsline {section}{\numberline {1.2}Pr\IeC {\'e}sentation du d\IeC {\'e}partement micro\IeC {\'e}lectronique}{17}
 \contentsline {subsection}{\numberline {1.2.1}Mission}{17}
 \contentsline {subsection}{\numberline {1.2.2}Laboratoires}{17}
-\contentsline {subsection}{\numberline {1.2.3}\IeC {\'E}quipements}{17}
-\contentsline {section}{\numberline {1.3}Description et d\IeC {\'e}roulement du stage}{18}
-\contentsline {subsection}{\numberline {1.3.1}Activit\IeC {\'e}s exerc\IeC {\'e}es}{18}
+\contentsline {subsection}{\numberline {1.2.3}\IeC {\'E}quipements}{18}
+\contentsline {section}{\numberline {1.3}Description et d\IeC {\'e}roulement du stage}{19}
+\contentsline {subsection}{\numberline {1.3.1}Activit\IeC {\'e}s exerc\IeC {\'e}es}{19}
 \contentsline {subsection}{\numberline {1.3.2}R\IeC {\'e}partition des t\IeC {\^a}ches}{19}
 \contentsline {chapter}{\numberline {2}Contexte G\IeC {\'e}n\IeC {\'e}ral du projet}{21}
 \contentsline {section}{\numberline {2.1}Cahier des charges}{21}
@@ -27,20 +27,20 @@
 \contentsline {subsection}{\numberline {3.1.1}Le system de base RFID}{25}
 \contentsline {subsection}{\numberline {3.1.2}Les composants essential d'un system RFID}{26}
 \contentsline {subsubsection}{Les tags}{26}
-\contentsline {subsubsection}{Reader/Lecteur}{27}
+\contentsline {subsubsection}{Reader/Lecteur}{26}
 \contentsline {subsubsection}{La bases de donn\IeC {\'e}e}{27}
 \contentsline {subsection}{\numberline {3.1.3}Source d'\IeC {\'e}nergie d'un Tag}{28}
 \contentsline {subsection}{\numberline {3.1.4}Fr\IeC {\'e}quences de fonctionnement}{29}
 \contentsline {subsubsection}{Basse fr\IeC {\'e}quence (LF)}{30}
 \contentsline {subsubsection}{Haute fr\IeC {\'e}quence}{30}
 \contentsline {subsubsection}{Ultra-haute fr\IeC {\'e}quence}{31}
-\contentsline {subsubsection}{Micro-ondes}{32}
+\contentsline {subsubsection}{Micro-ondes}{31}
 \contentsline {subsubsection}{Ultra-Wideband}{32}
-\contentsline {subsection}{\numberline {3.1.5}Fonctionnalit\IeC {\'e}}{33}
+\contentsline {subsection}{\numberline {3.1.5}Fonctionnalit\IeC {\'e}}{32}
 \contentsline {subsection}{\numberline {3.1.6}Normes}{33}
-\contentsline {subsection}{\numberline {3.1.7}Modes de transfert d\IeC {\textquoteright }\IeC {\'e}nergie et de communication}{34}
+\contentsline {subsection}{\numberline {3.1.7}Modes de transfert d\IeC {\textquoteright }\IeC {\'e}nergie et de communication}{33}
 \contentsline {subsection}{\numberline {3.1.8}Liaison montante et liaison descendante}{34}
-\contentsline {subsubsection}{Liaison montante ( forward link) de la base station vers le tag}{35}
+\contentsline {subsubsection}{Liaison montante ( forward link) de la base station vers le tag}{34}
 \contentsline {subsubsection}{Liaison descendante de la modulation}{35}
 \contentsline {section}{\numberline {3.2}LLRP}{36}
 \contentsline {section}{\numberline {3.3}SmartFlah}{36}
@@ -50,16 +50,18 @@
 \contentsline {subsection}{\numberline {3.4.3}Design du Tag}{38}
 \contentsline {subsection}{\numberline {3.4.4}Conception de mise en \IeC {\oe }uvre pratique}{40}
 \contentsline {subsection}{\numberline {3.4.5}Minaturisation des antenne CLA}{41}
+\contentsline {section}{\numberline {3.5}conslution}{45}
 \contentsline {chapter}{\numberline {4}R\IeC {\'e}alisaion et simulation du projet}{47}
 \contentsline {section}{\numberline {4.1}Outils de r\IeC {\'e}alisation et de simulation}{47}
 \contentsline {subsection}{\numberline {4.1.1}Visuel Studio et .net C sharp}{47}
 \contentsline {subsubsection}{Visuel Studio}{47}
 \contentsline {subsubsection}{.net C sharp}{47}
-\contentsline {subsubsection}{Android Studio}{47}
-\contentsline {subsubsection}{CST studio}{47}
+\contentsline {subsection}{\numberline {4.1.2}Android Studio}{47}
+\contentsline {subsection}{\numberline {4.1.3}CST studio}{47}
 \contentsline {section}{\numberline {4.2}R\IeC {\'e}alisation du projet}{47}
 \contentsline {subsection}{\numberline {4.2.1}Antenne UHF}{47}
-\contentsline {subsubsection}{Le premier prototype UHF}{47}
-\contentsline {subsubsection}{antenne a boucle circulaire (CLA)}{47}
-\contentsline {section}{\numberline {4.3}Test et v\IeC {\'e}rification }{47}
-\contentsline {section}{\numberline {4.4}Mise en \IeC {\oe }uvre et plan de de maintenance }{47}
+\contentsline {subsubsection}{Les param\IeC {\`e}tres de l'antenne}{47}
+\contentsline {subsubsection}{Le premier prototype UHF}{49}
+\contentsline {subsubsection}{antenne a boucle circulaire (CLA)}{50}
+\contentsline {section}{\numberline {4.3}Test et v\IeC {\'e}rification }{50}
+\contentsline {section}{\numberline {4.4}Mise en \IeC {\oe }uvre et plan de de maintenance }{50}
