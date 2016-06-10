@@ -11,24 +11,28 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Interaction du Lecteur RFID avec son environnement}}{27}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Mode de transfert d'\IeC {\'e}nergie non simultan\IeC {\'e}}}{34}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Mode de transfert d'\IeC {\'e}nergie simultan\IeC {\'e}}}{34}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces L'antenne propos\IeC {\'e}e}}{37}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces le circuit \IeC {\'e}quivalent pour (a) une antenne en boucle; (b) RFID tag puce}}{38}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Circuit d'adaptation L-shape}}{39}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Illustration RFID}}{40}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces UHF \IeC {\'e}tiquette consid\IeC {\'e}r\IeC {\'e}e}}{41}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces CLA - S11}}{42}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces far-field pattern avant miniaturisation}}{42}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces CLA apr\IeC {\`e}s miniaturisation}}{43}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces X-Ray du tag UHF}}{43}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Tag UHF am\IeC {\'e}liorer}}{44}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces S11 apres coupage de 2mm }}{44}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces S11du tag UHF am\IeC {\'e}liorer }}{45}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Organigramme de l'interface RFID}}{36}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Illustration du syst\IeC {\`e}me RFID}}{38}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Phase de n\IeC {\'e}gociation}}{39}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Phase d'ex\IeC {\'e}cution}}{40}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces L'antenne propos\IeC {\'e}e}}{41}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces le circuit \IeC {\'e}quivalent pour (a) une antenne en boucle; (b) RFID tag puce}}{42}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Circuit d'adaptation L-shape}}{43}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Illustration RFID}}{44}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces UHF \IeC {\'e}tiquette consid\IeC {\'e}r\IeC {\'e}e}}{45}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces CLA - S11}}{46}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces far-field pattern avant miniaturisation}}{46}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces CLA apr\IeC {\`e}s miniaturisation}}{47}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces X-Ray du tag UHF}}{47}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Tag UHF am\IeC {\'e}liorer}}{48}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces S11 apres coupage de 2mm }}{48}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces S11du tag UHF am\IeC {\'e}liorer }}{49}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Radiation pattern}}{48}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces r\IeC {\'e}flexion,conduction,perte de di\IeC {\'e}lectrique}}{49}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Paramettre de sumulation CLA}}{50}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Paramettre de sumulation CLA}}{50}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces antenne a boucle circulaire}}{51}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Paramettre de sumulation CLA}}{51}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces S11du tag UHF am\IeC {\'e}liorer }}{52}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Paramettre de sumulation CLA}}{52}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Radiation pattern}}{52}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces r\IeC {\'e}flexion,conduction,perte de di\IeC {\'e}lectrique}}{53}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Paramettre de sumulation CLA}}{54}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Paramettre de sumulation CLA}}{54}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces antenne a boucle circulaire}}{55}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Paramettre de sumulation CLA}}{55}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces S11du tag UHF am\IeC {\'e}liorer }}{56}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Paramettre de sumulation CLA}}{56}
