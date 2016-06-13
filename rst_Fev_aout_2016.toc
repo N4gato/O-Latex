@@ -42,32 +42,39 @@
 \contentsline {subsection}{\numberline {3.1.8}Liaison montante et liaison descendante}{34}
 \contentsline {subsubsection}{Liaison montante ( forward link) de la base station vers le tag}{34}
 \contentsline {subsubsection}{Liaison descendante de la modulation}{35}
-\contentsline {section}{\numberline {3.2}Le protocole de communication RFID}{36}
-\contentsline {subsection}{\numberline {3.2.1}R\IeC {\^o}le le d'interface}{36}
-\contentsline {subsection}{\numberline {3.2.2}Vue globale sur l'inerface RFID}{37}
-\contentsline {subsection}{\numberline {3.2.3}Chronologie de fonctionnement du protocole}{38}
-\contentsline {subsubsection}{Phase de n\IeC {\'e}gociation}{38}
-\contentsline {section}{\numberline {3.3}SmartFlah}{40}
-\contentsline {section}{\numberline {3.4}Antenne UHF}{41}
-\contentsline {subsection}{\numberline {3.4.1}Introduction}{41}
-\contentsline {subsection}{\numberline {3.4.2}Tag antenne et Base du die}{41}
-\contentsline {subsection}{\numberline {3.4.3}Design du Tag}{42}
-\contentsline {subsection}{\numberline {3.4.4}Conception de mise en \IeC {\oe }uvre pratique}{44}
-\contentsline {subsection}{\numberline {3.4.5}Minaturisation des antenne CLA}{45}
-\contentsline {section}{\numberline {3.5}conslution}{49}
-\contentsline {chapter}{\numberline {4}R\IeC {\'e}alisaion et simulation du projet}{51}
-\contentsline {section}{\numberline {4.1}Outils de r\IeC {\'e}alisation et de simulation}{51}
-\contentsline {subsection}{\numberline {4.1.1}Visuel Studio et .net C sharp}{51}
-\contentsline {subsubsection}{Visuel Studio}{51}
-\contentsline {subsubsection}{.net C sharp}{51}
-\contentsline {subsection}{\numberline {4.1.2}Android Studio}{51}
-\contentsline {subsection}{\numberline {4.1.3}CST studio}{51}
-\contentsline {section}{\numberline {4.2}R\IeC {\'e}alisation du projet}{51}
-\contentsline {subsection}{\numberline {4.2.1}Antenne UHF}{51}
-\contentsline {subsubsection}{Les param\IeC {\`e}tres de l'antenne}{51}
-\contentsline {subsubsection}{Le premier prototype UHF}{53}
-\contentsline {subsubsection}{L'antenne a boucle circulaire}{54}
-\contentsline {subsubsection}{L'antenne a boucle circulaire}{55}
-\contentsline {subsubsection}{antenne a boucle circulaire (CLA)}{56}
-\contentsline {section}{\numberline {4.3}Test et v\IeC {\'e}rification }{56}
-\contentsline {section}{\numberline {4.4}Mise en \IeC {\oe }uvre et plan de de maintenance }{56}
+\contentsline {chapter}{\numberline {4}La solution propose et \IeC {\'e}tude th\IeC {\'e}orique }{37}
+\contentsline {section}{\numberline {4.1}Le protocole de communication RFID}{37}
+\contentsline {subsection}{\numberline {4.1.1}R\IeC {\^o}le le d'interface}{37}
+\contentsline {subsection}{\numberline {4.1.2}Vue globale sur l'inerface RFID}{39}
+\contentsline {subsection}{\numberline {4.1.3}Chronologie de fonctionnement du protocole}{39}
+\contentsline {subsubsection}{Phase de n\IeC {\'e}gociation}{39}
+\contentsline {subsubsection}{Phase d'ex\IeC {\'e}cution}{40}
+\contentsline {section}{\numberline {4.2}SmartFlah}{42}
+\contentsline {subsection}{\numberline {4.2.1}La platforme android}{42}
+\contentsline {subsection}{\numberline {4.2.2}\IeC {\'E}tude du marcher de l'agriculture}{42}
+\contentsline {subsection}{\numberline {4.2.3}La conception de la base de donn\IeC {\'e}es}{42}
+\contentsline {subsubsection}{Cycle d'abstraction de conception des syst\IeC {\`e}mes d'information}{43}
+\contentsline {subsection}{\numberline {4.2.4}Fonctionnalit\IeC {\'e}}{44}
+\contentsline {section}{\numberline {4.3}Antenne UHF}{45}
+\contentsline {subsection}{\numberline {4.3.1}Introduction}{45}
+\contentsline {subsection}{\numberline {4.3.2}Tag antenne et Base du die}{46}
+\contentsline {subsection}{\numberline {4.3.3}Design du Tag}{47}
+\contentsline {subsection}{\numberline {4.3.4}Conception de mise en \IeC {\oe }uvre pratique}{48}
+\contentsline {subsection}{\numberline {4.3.5}Minaturisation des antenne CLA}{50}
+\contentsline {section}{\numberline {4.4}conslution}{54}
+\contentsline {chapter}{\numberline {5}R\IeC {\'e}alisaion et simulation du projet}{55}
+\contentsline {section}{\numberline {5.1}Outils de r\IeC {\'e}alisation et de simulation}{55}
+\contentsline {subsection}{\numberline {5.1.1}Visuel Studio et .net C\#}{55}
+\contentsline {subsubsection}{Visuel Studio}{55}
+\contentsline {subsubsection}{.net C \#}{56}
+\contentsline {subsection}{\numberline {5.1.2}Android Studio}{57}
+\contentsline {subsection}{\numberline {5.1.3}CST studio}{58}
+\contentsline {section}{\numberline {5.2}Test et v\IeC {\'e}rification }{59}
+\contentsline {subsection}{\numberline {5.2.1}RFID Desktop}{59}
+\contentsline {subsection}{\numberline {5.2.2}Antenne UHF}{59}
+\contentsline {subsubsection}{Les param\IeC {\`e}tres de l'antenne}{59}
+\contentsline {subsubsection}{Le premier prototype UHF}{61}
+\contentsline {subsubsection}{L'antenne a boucle circulaire}{62}
+\contentsline {subsubsection}{L'antenne a boucle circulaire}{62}
+\contentsline {subsubsection}{antenne a boucle circulaire (CLA)}{64}
+\contentsline {section}{\numberline {5.3}Mise en \IeC {\oe }uvre et plan de de maintenance }{64}

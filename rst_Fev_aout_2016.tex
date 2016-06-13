@@ -597,6 +597,8 @@ Contrairement à ce qu'on pourrait initialement penser, le transpondeur ne peut 
 Pour cela, les tags utilisent une modulation différente que l'on nomme modulation de charge (Load Modulation) qui consiste à faire varier la charge résistive du circuit. Effectivement, en faisant varier la charge, le tag fait varier l'intensité du courant dans son circuit et donc l'intensité qui circule dans l'antenne. La consommation d'énergie qu'il représente dans le champ magnétique s'en trouve alors également modifiée et, par couplage magnétique, cela influe sur l'intensité du courant dans l'antenne de la station de base. De proche en proche, les signaux RF reçus de la station de base, qui sont réfléchis par le transpondeur, permettent donc de transporter des réponses en faisant varier l'intensité du circuit du lecteur.\\
 
 Il s'agit ici d'un procédé assez complexe mais qui repose à la base sur de la modulation. Cette modulation de charge résistive à l'origine de la transmission de la réponse s'appuie sur une modulation courante appelée OOK \footnote{On Off Keying} et correspond à la modulation d'amplitude "tout ou rien". A l'aide d'une modulation de type OOK, comme présentée précédemment, on crée une modulation de charge qui fait varier la charge résistive du circuit et donc la tension aux bornes du circuit RF du transpondeur comme montré dans la figure 3.5.\\
+\chapter{La solution propose et étude théorique }
+Dans ce chapitre de vais présenter les trois projet de réalisation qu'on a put faire tout au long de ce stage. le premier consiste sur a faire un protocole de communication entre le serveur et le client,aussi développer un serveur de communication et mise en œuvre de la base de données. le deuxième projet est sur la plateforme androide,le projet consiste a développer une application androïde pour la les tag LF. L'application soit faire a gestion des identifiant. le troisième consiste a concevoir une antenne UHF pour la solution RFID. 
 \section{Le protocole de communication RFID}
 Dans cette section je vais décrire le rôle de l'interface entre les lecteurs RFID et les clients. Dans ce qui suite sont les responsabilités de cette interface:
 \begin{itemize}
@@ -630,7 +632,7 @@ Les opérations fondamentales d'un lecteur sur une population d'étiquette sont 
 Il est prévu que la performance globale du système peut être optimisé en réglant le RF, anti-colision et protocole d'air  au sein et entre les lecteurs. La performance peut encore être optimisé si le réglage fait conscient de l'environnement RF dans le voisinage du Reader.\\
 \subsection{Vue globale sur l'inerface RFID}
 l'inerface RFID concerne spécifiquement la fourniture des formats et des procédures de communication entre un client et un lecteur. Les unités de données de l'inerface RFID sont appelés messages. Les messages du client vers le Reader permettent d'obtenir et définir la configuration des lecteurs, des capacités de découverte de lecteurs et de gérer les opérations d'inventaire et d'accès aux lecteurs. Les messages du Reader pour le client comprennent trois portions du statut Reader, enquête RF, l'inventaire et l'accès des résultats. l'inerface RFID est un protocole de couche d'application et ne fournit pas de retransmission, ou des installations de remise en ordre. la cohérence de l'Etat entre le client et le lecteur est essentiel pour le bon fonctionnement du système. Utilisation de messages , le client met à jour l'état du lecteur qui comprend des paramètres de configuration du lecteur, des structures de données créées dynamiquement, et éventuellement des données des fournisseurs définis. Pour cette raison, le protocole exige des accusés de réception pour le client aux transactions Reader - cela fournit un mécanisme de sécurité à la couche application pour faire face à des situations d'erreur réseau. En outre, pour faire face à des connexions intermittentes, un client peut demander l'état de configuration d'un lecteur pour confirmer que l'état d'un lecteur est compatible avec le client. Les messages clients sont principalement des rapports, des notifications d'état ou keepalives. Seuls les keepalives sont reconnus par le Client.
-\begin{figure}[H]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=6cm,height=6cm]{lim}
 \caption{Illustration du système RFID}
@@ -644,12 +646,12 @@ Le fonctionnement du protocole ou d'une connexion comporte deux phases: la phase
 Un client et un lecteur devront négocier une version de protocole pris en charge mutuellement pour chaque connexion. Lorsqu'une connexion  est d'abord établi, à la fois le client et le Reader supposent  la version 1. A l'exception les messages de négociation de version, les messages sont envoyés par le Client  jusqu'à ce que le processus de négociation de version est complète. La négociation de la version est effectuée en utilisant des messages prédéfinit est initiée par le Client. Le client demande la version de protocole pris en charge par le Reader, puis détermine une version appropriée pour la connexion (type de message).
  
 Une fois qu'une version a été établie à l'aide de cette procédure, tous les messages suivants sont envoyés en utilisant les message prédéfinit par le lecteur. La chronologie de fonctionnement de la phase de négociation  entre un client et un lecteur est représenté sur la figure 3.
-\begin{figure}[H]
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\textwidth]{negotiation2}
 \caption{Phase de négociation}
 \end{figure}
-
+\subsubsection{Phase d'exécution}
 L'opération d'exécution comprend les phases d'exécution suivantes:
 \begin{itemize}
 \item découverte des capacités
@@ -661,15 +663,15 @@ L'opération d'exécution comprend les phases d'exécution suivantes:
 \item Rapports retournés au Client
 \end{itemize}
 
-La figure 3.9 illustre toutes les étape les message échanger entre le lecteur,client et les tags.
+La figure 4.4 illustre toutes les étape les message échanger entre le lecteur,client et les tags.
 
 Le protocole utilise des unités de données de protocole appelés messages pour communiquer entre le client et le Reader pour  les mises à jour des clients ou pour récupère la configuration du lecteur, en générale pour le contrôle du fonctionnement du lecteur. Cette section nous a donné un aperçu globale du modèle abstrait du protocole, dans le chapitre suivant on va présenter le logiciel qui mis en œuvre ce protocole.
-\begin{figure}[H]
+\begin{figure}[!h]
 \centering
 \includegraphics[height=12cm]{runtime}
 \caption{Phase d'exécution}
 \end{figure}
-
+\pagebreak
 
 
 
@@ -677,7 +679,86 @@ Le protocole utilise des unités de données de protocole appelés messages pour
 
 \section{SmartFlah}
 %describe everything you did in The Android
-\pagebreak
+Dans cette section on va parler du troisième projet qui consiste a développer une application android pour le tag LF.on va commencer par une petite présentation du plateforme Android puis on va parler de tout les fonctionnalité que que application nous permet. aussi une étude sur le domaine de agriculture qui nous a inspirer pour réaliser ce projet .\\
+\subsection{La platforme android}
+Android est le logiciel qui fait tourner plus d’un téléphone ou tablette sur deux dans le monde.
+il est de type système d’exploitation mobile comme « Windows » est un système d’exploitation sur PC.,Il fait tourner votre mobile. Il existe d’autres systèmes d’exploitation mobile concurrents comme iOS Apple, BlackBerry OS, Bada, Windows mobile… il est ouvert dont le code source est librement accessible (contrairement aux systèmes de Apple ou Microsoft) ce qui permet à n’importe quel fabricant de l’intégrer dans son système gratuitement. Ce modèle est opposé au modèle de Apple, et explique en grande partie la forte croissance. Android est basé sur Linux qui tourne sur une grande variété de marques de téléphones et de tablettes différentes telles que Samsung, Motorola, Sony, Google Nexus, Acer, LG, Dell et bien plus encore (liste complète sur android.com) Cette diversité représente à la fois un avantage (diversité et choix pour le consommateur) et un inconvénient (problèmes de compatibilité des applications avec les différents modèles, en particulier les plus exotiques)
+\subsection{Étude du marcher de l'agriculture}
+La majorité des éleveur au Maroc que sa soit dans l'enlevage pour la production ou pour l'amélioration du race en un besoin urgent pour des solution de gestion de leur production ou leur stock. Et avec le convention que l'état a lancer qui consiste a mettre une tag LF dans les oreilles des bette. Le rêves des éleveur pour des solution statistique qui va les aider a chamelier leur production ou de détecter les point faible dans leur maniéré de gérer leur ferme et devenu indispensable. L'état na pas présenter une solution informatique au éleveurs, elle a jus installer les tag affecter les ID au éleveur pour la sécurité, mais a quoi bon pour un éleveur qui ne compte pour lui que voire un maximum d;information concernant sa ferme.\\
+
+Ici montre un besoin énorme de penser a une solution pour informatiser notre domaine de production agricole. que ça soit la production du viande rouge ou du lait. c'est pour cela avec le soutien de MAscir on a put concevoir un prototype d'une solution informatique pour les éleveur marocaine. dans ce qui suit je vais faire une présentation globale de notre solution.
+
+\subsection{La conception de la base de données}
+Touts project informatique se base énormément sur une base de données puissante qui exprime le besoin derrière. la conception de notre base de données ce divise en trois étape indispensable.
+\begin{itemize}
+\item 
+Analyse de la situation existante et des besoins
+\item Création d'une série de modèles conceptuels (canonique et vues externes) qui permettent de représenter tous les aspects importants du problème
+\item Implémentation d'une base de données dans un SGBD, à partir du modèle logique
+\item Implémentation d'une base de données dans un SGBD, à partir du modèle logique
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm]{db}
+\caption{Etape de conception d'une base de données}
+\end{figure}
+
+\subsubsection{Cycle d'abstraction de conception des systèmes d'information}
+La conception du système d'information se fait par étapes, afin d'aboutir à un système d'information fonctionnel reflétant une réalité physique. Il s'agit donc de valider une à une chacune des étapes en prenant en compte les résultats de la phase précédente. D'autre part, les données étant séparées des traitements, il faut vérifier la concordance entre données et traitements afin de vérifier que toutes les données nécessaires aux traitements sont présentes et qu'il n'y a pas de données superflues.\\
+Cette succession d'étapes est appelée cycle d'abstraction pour la conception des systèmes d'information :
+
+L'expression des besoins aboutit au MCC (Modèle conceptuel
+de la communication) qui définit les flux d'informations à
+prendre compte.
+L'étape suivante consiste à mettre au point le MCD (Modèle conceptuel des données) et le
+MCT (Modèle conceptuel des traitements) décrivant les règles et les contraintes à prendre en
+compte.
+Le modèle organisationnel consiste à définir le MLD (Modèle logique des données) qui
+représente un choix logiciel pour le système d'information et le MOT (Modèle
+organisationnel des traitements) décrivant les contraintes dues à l'environnement
+(organisationnel, spatial et temporel).
+Enfin, le modèle physique reflète un choix matériel pour le système d'information. 
+
+
+\begin{longtable}{|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}| p{0.2\textwidth}|}
+\hline
+\textbf{Niveau } & \textbf{Statique (données) } & \textbf{Dynamique (traitements) } & \\
+\hline
+Conceptuel  & MCD & MCT  & Indépendant du système: QUOI ? \\
+\hline
+Organisationnel ou logique  & MLD
+(OU ?) & MOT
+(QUI ? QUAND ?) & Choix du SGBD:
+QUI ? QUAND ? OU ?   \\
+\hline
+Opérationnel
+ou physique  & MPD  & MOPT  & Haute connaissance du
+SGBD \\
+\hline
+\caption{rrrrr}
+\end{longtable}
+
+Notre conception pour cette solution résulte en trois table (tag,vaccin,doctor).Chaque tag représente un animale et un animale a une date de naissance, une race, un propriétaire. et bien sure pour des contrainte informatique on était obliger d'ajouter des information supplémentaire comme la latitude la longitude et la date une cette tag a était lu.
+
+Un animale doit faire d'une maniéré périodique des vaccin chez un docteur.Pour des raison informatique on a jouter des champ comme type de vaccin et la remarque. bine sur pour identifier un docteur on a besoin de son nom et son adresse. ces attribues seront utiliser ultérieurement pour la conception et la gestion des information.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=10cm,height=9cm]{ddb}
+\caption{Fonctionnalité de l'application}
+\end{figure}
+
+\subsection{Fonctionnalité}
+L'application nous permet de lire l'identifiant de la tag LF, cette étape consiste a faire un décodage du langage compris par le téléphone est ce qu'ont utiliser comme donnée au niveau de notre base de donnée et trainement de information.après cette étape deux scénario ce manifeste soit la tag est déjà dans notre base de donnée et donc ce cas on offre a utilisateur la possibilité de consulter les données relier a sont ID en parallèle application nous permette de visualiser l'historique de toutes les lecture effectuer. l'autre senior c;est celui ou la tag na jamais était dans notre base de donnée. dans ce cas on demande a utilisateur de remplier les information relier a animal et bien sur une autre possibilité est celle de remplier les informations dans le cas ou le docteur consul l'animale. finalement l'application permet de sauvegarder les donner en générant un rapport automatique au serveur.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=10cm,height=9cm]{fonc}
+\caption{Fonctionnalité de l'application}
+\end{figure}
+Les test et vérification seront présenter dans la chapitre suivant ainsi les captures et l'explication de l'interface utilisateur.
+
 \section{Antenne UHF}
 RFID a des nombreuses applications, une utilisation de cette technologie est pour l'identification des objets dans un stock. Les objets tels que palettes et les cartons sont étiquetés ce façon à lutter contre, le vole et la mauvaise gestion du stock. la détection des objets encapsuler dans les cartons a était une taches impossible sans ouverture des cartons, maintenant avec la RFID cette tâches et devenu une question de quelque seconds.
 \subsection{Introduction}
@@ -781,7 +862,7 @@ Notre conception UHF étiquette (figure 3.10) considérée est constituée d'une
 \caption{UHF étiquette considérée}
 \end{figure}
 
-Cependant, la piste d'inductance à travers le dipôle ne fournit pas d'inductance suffisante pour accorder à la capacité de la puce de l'étiquette. Le diagramme de rayonnement de l'antenne, avec un maximum de directivité de 1,83 dB. Comme on le voit sur la section de simulation, bien que la forme générale du motif de rayonnement du première et seconde étiquettes UHF est presque identique, la directivité maximale de ces deux balises se produisent à différentes directions par rapport au plan des étiquettes. Les deux tags UHF ne sont pas testés et les résultats théorique de la distance de lecture sont présentés dans le tableau 3.5.
+Cependant, la piste d'inductance à travers le dipôle ne fournit pas d'inductance suffisante pour accorder à la capacité de la puce de l'étiquette. Le diagramme de rayonnement de l'antenne, avec un maximum de directivité de 1,83 dB. Comme on le voit sur la section de simulation, bien que la forme générale du motif de rayonnement du première et seconde étiquettes UHF est presque identique, la directivité maximale de ces deux balises se produisent à différentes directions par rapport au plan des étiquettes. Les deux tags UHF ne sont pas testés et les résultats théorique de la distance de lecture sont présentés dans le tableau 3.5.\\
 
 \begin{longtable}[c]{| c | c | c |}
  \hline
@@ -870,13 +951,74 @@ Dans cette section on a discuter les notion théorique qui régie les antenne a 
 \chapter{Réalisaion et simulation du projet}
 Dans ce chapitre je présente les outils	de	réalisation	et de	simulation en suite la réalisation	du projet et les étape de test	 et vérification et finalement un plan de mise en œuvre et plan de maintenance.
 \section{Outils	de	réalisation	et de	simulation}
-\subsection{Visuel Studio et .net C sharp}
+\subsection{Visuel Studio et .net C\#}
 \subsubsection{Visuel Studio}
-\subsubsection{.net C sharp}
-\subsection{Android Studio}
-\subsection{CST studio}
+Microsoft Visual Studio est un environnement de développement intégré (IDE) de Microsoft. Il est utilisé pour développer des programmes informatiques pour Microsoft Windows, ainsi que des sites Web, des applications Web et des services Web. Visual Studio utilise les plates-formes de développement de logiciels Microsoft tels que l'API Windows, Windows Forms, Windows Presentation Foundation, Windows Store et Microsoft Silverlight. Il peut produire à la fois du code natif et le code managé.
 
-\section{Réalisation	du	projet}
+Visual Studio inclut un éditeur de code de support IntelliSense (le composant de complétion de code) ainsi que le code refactoring. Le débogueur intégré fonctionne à la fois comme un débogueur de niveau source et un débogueur de niveau de la machine. D'autres outils intégrés comprennent un concepteur de formulaires pour les applications bâtiment de l'interface graphique, web designer, concepteur de la classe, et concepteur de schéma de base de données. Il accepte les plug-ins qui améliorent la fonctionnalité à presque tous les niveaux, y compris l'ajout du support pour les systèmes de commande source (comme Subversion) et l'ajout de nouveaux jeux d'outils tels que les éditeurs et les concepteurs visuels pour les langues spécifiques au domaine ou toolsets pour d'autres aspects du cycle de vie du développement logiciel (comme le client Team Foundation Server: Team Explorer).
+
+Visual Studio supporte différents langages de programmation et permet à l'éditeur de code et débogueur pour support  presque tout langage de programmation, C, C ++, VB.NET (Visual Basic .NET), C sharp (via Visual C \#), et F \# (à partir de Visual Studio 2010  ). Le support d'autres langages tels que Python, Ruby, Node.js, et M entre autres est disponible via les services linguistiques installés séparément. Il prend également en charge XML / XSLT, HTML / XHTML, JavaScript et CSS. Java (et J \#) ont été pris en charge dans le passé.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{vs}
+\caption{Interface Visual studio }
+\end{figure}
+
+\subsubsection{.net C \#}
+C \# est un langage orienté objet élégant et de type sécurisé qui permet aux développeurs de créer une variété d'applications sûres et robustes qui fonctionnent sur le .NET Framework. Vous pouvez utiliser C \# pour créer des applications Windows client, les services Web XML, composants distribués, les applications client-serveur, les applications de base de données, et beaucoup, beaucoup plus. Visual C \# fournit un éditeur avancé de code, les concepteurs d'interface utilisateur pratique, débogueur intégré, et bien d'autres outils pour faciliter le développement d'applications basées sur le langage C \# et .NET Framework.\\
+
+programmes C \# exécuter sur le .NET Framework, une partie intégrante de Windows qui inclut un système d'exécution virtuel appelé le Common Language Runtime (CLR) et un ensemble unifié de bibliothèques de classes. Le CLR est la mise en œuvre commerciale par Microsoft de l'infrastructure de langage commun (CLI), une norme internationale qui est la base pour la création d'environnements d'exécution et de développement dans lequel les langues et les bibliothèques travaillent ensemble de façon transparente.\\
+
+Le code source écrit en C \# est compilé dans un langage intermédiaire (IL) qui est conforme à la spécification CLI. Le code et les ressources IL, tels que des bitmaps et des chaînes, sont stockées sur le disque dans un fichier exécutable appelé un ensemble, généralement avec une extension .exe ou .dll. Un assemblage contient un manifeste qui fournit des informations sur les types de l'assemblage, la version, la culture, et les exigences de sécurité.\\
+
+Lorsque le programme C \# est exécuté, l'ensemble est chargé dans le CLR, ce qui pourrait prendre diverses mesures basées sur les informations contenues dans le manifeste. Ensuite, si les conditions de sécurité sont remplies, le CLR effectue juste à temps (JIT) pour convertir le code IL aux instructions machine natives. Le CLR fournit également d'autres services liés à la collecte automatique des déchets, la gestion des exceptions, et la gestion des ressources. Le code qui est exécuté par le CLR est parfois appelé «code managé," contrairement à "code non managé» qui est compilé en langage machine natif qui cible un système spécifique. Le schéma suivant illustre la compilation et l'exécution des relations de fichiers source C \# de code, les bibliothèques de classes .NET Framework, les assemblages et le CLR.
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm,height=9cm]{net}
+\caption{Architecture du Framework .net}
+\end{figure}
+\subsection{Android Studio}
+Android Studio est l'environnement de développement intégré officiel (IDE) pour le développement de la plate-forme Android. Il a été annoncé le 16 mai 2013 à la conférence Google I / O. Android Studio est disponible gratuitement sous la licence Apache 2.0. Android Studio a été au début de l'étape accès à l'aperçu à partir de la version 0.1 en mai 2013, puis est entré phase bêta à partir de la version 0.8 qui a été publié en Juin 2014. La première version stable a été publié en Décembre 2014, à partir de la version 1.0.\\
+
+Basé sur le logiciel IntelliJ IDEA de JetBrains, Android Studio est conçu spécifiquement pour le développement Android. Il est disponible en téléchargement sur Windows, Mac OS X et Linux, et remplacé Outils Eclipse développement Android (HAA) comme IDE primaire de Google pour le développement d'applications Android native.\\
+
+
+Les nouvelles fonctionnalités devraient être déployé avec chaque version d'Android Studio. Les fonctions suivantes sont fournies dans la version stable actuelle: 
+\begin{itemize}
+\item Gradle-based  renforcer et soutien.
+\item Refactoring Android-spécifique et des solutions rapides.
+\item Outils de monitoring de performance, facilité d'utilisation et la compatibilité de version 
+\item Assistants basés sur des modèles pour créer des dessins et des composants 
+\item Un riche éditeur de mise en page qui permet aux utilisateurs de glisser-déposer les composants de l'interface
+\item Soutien pour la construction Porter les applications Android
+\item Support intégré pour Google Cloud Platform, intégration permettant à Google Cloud Messaging et App Engine.
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{as}
+\caption{Interface de Android Studio}
+\end{figure}
+
+
+\subsection{CST studio}
+CST MICROWAVE STUDIO (CST MWS) est un outil spécialisé pour la simulation 3D EM de composants à haute fréquence. une performance inégalée de CST MWS  ce qui en fait le lui premier choix dans la technologie de radio fréquence.\\
+
+CST MWS permet l'analyse rapide et précise de haute fréquence (HF) des dispositifs tels que des antennes, des filtres, coupleurs, plans et les structures multicouches. Exceptionnellement utilisateur conviviale, CST MWS vous donne rapidement un aperçu du comportement EM de nos conceptions à haute fréquence.\\
+
+CST support la technologie complète pour la 3D EM. Le solveur \emph{Time Domain} largement applicable et le solveur de \emph{domaine de fréquence}, CST MWS offre d'autres modules de solveurs pour des applications spécifiques. \\
+
+CST MICROWAVE STUDIO est vu par un nombre croissant d'ingénieurs comme un outil de développement standard de l'industrie.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{cst}
+\caption{Interface CST}
+\end{figure}
+
+\section{Test	 et vérification	}
+\subsection{RFID Desktop}
+Dans cette section je vais pre
+
 \subsection{Antenne UHF}
 
 Pour décrire la performance d'une antenne , les définitions des différents paramètres sont nécessaires . Certains paramètres sont interdépendants et pas tous d'entre eux doivent être indiquées pour une description complète de la performance de l'antenne. La définitions des paramètres seront donnés dans section suivante. Beaucoup de ceux sont des standard IEEE  ( IEEE Std 145-1983 ). Ensuite je vais présenter les différentes résultats et simulation sur les antennes RFID UHF. La puce utiliser est la H3 de Alien. Le logiciel de simulation est CST studio 2014 qui permet de calculer un grand nombre des paramètres d'antenne.\\
@@ -1007,8 +1149,6 @@ Les figures suivante représente les quatre importante paramétrés a prendre en
 % bandwith power related to s11, (feathers or capabilities)
 
 \subsubsection{antenne a boucle circulaire (CLA)}
-
-\section{Test	 et vérification	}
 \section{Mise en	œuvre	 et	plan	de	de maintenance	}
 		
 \begin{thebibliography}{9}
@@ -1040,6 +1180,10 @@ March 8, 2006
 \bibitem{air} EPC™ Radio-Frequency Identity Protocols Generation-2 UHF RFID
 Specification for RFID Air Interface Protocol for Communications at 860 MHz – 960 MHz 
 Version 2.0.0 Ratified
+
+\bibitem{merize}  La méthode Merise : H. Tardieu, A. Rochfeld, R. Coletti aux Ed. d’organisation
+AMC*Designor : Mise en œuvre de merise – Gilles GUEJ aux Editions Eyrolles
+www.commentcamarche.net: La méthode Merise. 
 
 \end{thebibliography}
 
