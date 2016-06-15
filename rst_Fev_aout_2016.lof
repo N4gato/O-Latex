@@ -5,6 +5,10 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Salle blanche}}{18}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Laboratoire de fiabilit\IeC {\'e} et analyse de d\IeC {\'e}fauts}}{18}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Bibliographie et r\IeC {\'e}solution des probl\IeC {\`e}mes}}{23}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Middleware et Interface graphique}}{23}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces D\IeC {\'e}veloppement de l'application Samrt}}{23}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Conception du transporteur}}{24}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Illustration du syst\IeC {\`e}me RFID}}{26}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Tag RFID}}{26}
@@ -37,10 +41,10 @@
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Interface de Android Studio}}{58}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Interface CST}}{59}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Radiation pattern}}{60}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces r\IeC {\'e}flexion,conduction,perte de di\IeC {\'e}lectrique}}{60}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Paramettre de sumulation CLA}}{61}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces r\IeC {\'e}flexion,conduction,perte de di\IeC {\'e}lectrique}}{61}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Paramettre de sumulation CLA}}{62}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Paramettre de sumulation CLA}}{62}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces antenne a boucle circulaire}}{62}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces antenne a boucle circulaire}}{63}
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Paramettre de sumulation CLA}}{63}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces S11du tag UHF am\IeC {\'e}liorer }}{63}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Paramettre de sumulation CLA}}{63}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces S11du tag UHF am\IeC {\'e}liorer }}{64}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Paramettre de sumulation CLA}}{64}
