@@ -17,30 +17,30 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Mode de transfert d'\IeC {\'e}nergie simultan\IeC {\'e}}}{34}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Rappel du system RFID}}{37}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Organigramme de l'interface RFID}}{39}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Emplacement de l'interface RFID}}{39}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Illustration du syst\IeC {\`e}me RFID}}{40}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Phase de n\IeC {\'e}gociation}}{41}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Phase d'ex\IeC {\'e}cution}}{42}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces \IeC {\'e}tape de conception d'une base de donn\IeC {\'e}es}}{44}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Fonctionnalit\IeC {\'e} de l'application}}{45}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \IeC {\'E}tape de conception d'une base de donn\IeC {\'e}es}}{44}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Mod\IeC {\`e}le de base de donn\IeC {\'e}es}}{45}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Fonctionnalit\IeC {\'e} de l'application}}{46}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces L'antenne propos\IeC {\'e}e}}{47}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces le circuit \IeC {\'e}quivalent pour (a) une antenne en boucle; (b) RFID tag puce}}{47}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Antenne filaire}}{47}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces (a) le circuit \IeC {\'e}quivalent pour une antenne en boucle; (b) RFID tag puce}}{47}
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Circuit d'adaptation L-shape}}{49}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Illustration RFID}}{50}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces UHF \IeC {\'e}tiquette consid\IeC {\'e}r\IeC {\'e}e}}{50}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces CLA - S11}}{52}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces far-field pattern avant miniaturisation}}{52}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Antenne a loup circulaire}}{50}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Antenne \IeC {\`a} inductance}}{50}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces La variation du S11 apr\IeC {\`e}s l'ajout du stub}}{51}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces far-field pattern de l'antenne avec stub}}{52}
 \contentsline {figure}{\numberline {4.16}{\ignorespaces CLA apr\IeC {\`e}s miniaturisation}}{52}
 \contentsline {figure}{\numberline {4.17}{\ignorespaces X-Ray du tag UHF}}{53}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Tag UHF am\IeC {\'e}lior\IeC {\'e}}}{53}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Antenne \IeC {\`a} boucle}}{53}
 \contentsline {figure}{\numberline {4.19}{\ignorespaces S11 apr\IeC {\`e}s coupage de 2mm }}{54}
-\contentsline {figure}{\numberline {4.20}{\ignorespaces S11du tag UHF am\IeC {\'e}liorer }}{55}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Antenne du X-ray}}{54}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Interface Visual studio }}{58}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Architecture du Framework .net}}{59}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Interface d'Android Studio}}{60}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Interface CST}}{61}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Interface CST studio}}{61}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Rappel du system RFID}}{61}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces L'interface utilisateur}}{62}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces LF RFID system}}{63}
@@ -49,9 +49,11 @@
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Premi\IeC {\`e}re layout}}{65}
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Radiation pattern}}{66}
 \contentsline {figure}{\numberline {5.12}{\ignorespaces r\IeC {\'e}flexion,conduction,perte de di\IeC {\'e}lectrique}}{66}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Paramettre de sumulation CLA}}{67}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Paramettre de sumulation CLA}}{68}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces antenne \IeC {\`a} boucle circulaire}}{68}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Paramettre de sumulation CLA}}{69}
-\contentsline {figure}{\numberline {5.17}{\ignorespaces S11du tag UHF am\IeC {\'e}liorer }}{69}
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Paramettre de sumulation CLA}}{70}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Antenne \IeC {\`a} inductance}}{67}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Paramettre de sumulation}}{68}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Antenne \IeC {\`a} boucle}}{68}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Paramettre de sumulation}}{69}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Antenne du X-Ray}}{69}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Paramettre de sumulation}}{70}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

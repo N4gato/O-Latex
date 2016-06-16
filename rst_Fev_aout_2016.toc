@@ -45,7 +45,7 @@
 \contentsline {chapter}{\numberline {4}Les solutions propos\IeC {\'e}es et \IeC {\'e}tude th\IeC {\'e}orique }{37}
 \contentsline {section}{\numberline {4.1}Client et interface RFID}{37}
 \contentsline {subsection}{\numberline {4.1.1}\IeC {\'E}tude du marche}{38}
-\contentsline {subsection}{\numberline {4.1.2}\emph {Middleware}/ et Protocole de communication}{38}
+\contentsline {subsection}{\numberline {4.1.2}\emph {Middleware} et Protocole de communication}{38}
 \contentsline {subsection}{\numberline {4.1.3}R\IeC {\^o}le le d'interface}{38}
 \contentsline {subsection}{\numberline {4.1.4}Vue globale sur l'inerface RFID}{40}
 \contentsline {subsection}{\numberline {4.1.5}Chronologie de fonctionnement du protocole}{41}
@@ -60,7 +60,7 @@
 \contentsline {section}{\numberline {4.3}Antenne UHF}{46}
 \contentsline {subsection}{\numberline {4.3.1}Introduction}{46}
 \contentsline {subsection}{\numberline {4.3.2}Tag antenne et Base du die}{47}
-\contentsline {subsection}{\numberline {4.3.3}Design du Tag}{48}
+\contentsline {subsection}{\numberline {4.3.3}Design du Tag}{47}
 \contentsline {subsection}{\numberline {4.3.4}Conception de mise en \IeC {\oe }uvre pratique}{49}
 \contentsline {subsection}{\numberline {4.3.5}Miniaturisation des antennes CLA}{51}
 \contentsline {chapter}{\numberline {5}R\IeC {\'e}alisation et simulation du projet}{57}
@@ -79,3 +79,6 @@
 \contentsline {subsubsection}{Les param\IeC {\`e}tres de l'antenne}{65}
 \contentsline {subsubsection}{Le premier prototype UHF}{67}
 \contentsline {subsubsection}{L'antenne \IeC {\`a} boucle circulaire}{68}
+\contentsline {section}{Conclusion}{71}
+\contentsline {chapter}{\numberline {A}Poster de SIAM}{75}
+\contentsline {chapter}{\numberline {B}Article IEEE}{77}
