@@ -444,11 +444,11 @@ Les bases de données RFID associent l'identifiant de tag avec un enregistrement
 
 Les bases de données supposé avoir une connexion sécurisée aux lecteurs. Bien qu'il existe des scénarios où les lecteurs peuvent ne pas être dignes de confiance, il est souvent utile de faire écrouler les notions de lecteur et la base de données en une seule entité. Par exemple, si les étiquettes contiennent toutes les informations du produits en cause, il n'y a pas besoin de faire un appel à une base de données hors site.\\
 
-On peut imaginer un système fédéré de bases de données back-end, où chaque fabricant de produit conserve son propre service de consultation produit. Dans ces paramètres, il peut être utile de déployer un (ONS) \footnote{service Object Naming} pour localiser les bases de données associées à une valeur d'identification d'étiquette. Un ONS permet au lecteur de trouver un ensemble de bases de données associées à une valeur d'identification d'étiquette particulière. Ceci est analogue à l'Internet avec le (DNS) \footnote{Domain Naming Service} qui renvoie les adresses des serveurs de noms qui peuvent traduire les noms de domaine en adresses IP \footnote{Internet Protocol}  numériques. ONS n'a pas encore été largement adopté dans la pratique.
+On peut imaginer un système fédéré de bases de données back-end, où chaque fabricant de produit conserve son propre service de consultation produit. Dans ces paramètres, il peut être utile de déployer un (ONS) \footnote{service Object Naming} pour localiser les bases de données associées à une valeur d'identification d'étiquette. Un ONS permet au lecteur de trouver un ensemble de bases de données associées à une valeur d'identification d'étiquette particulière. Ceci est analogue à l'Internet avec le (DNS) \footnote{Domain Naming Service} qui renvoie les adresses des serveurs de noms qui peuvent traduire les noms de domaine en adresses IP \footnote{Internet Protocol} numériques. ONS n'a pas encore été largement adopté dans la pratique.
 \subsection{Source d'énergie d'un Tag}
 Comme brièvement mentionné précédemment, les étiquettes peuvent obtenir leur pouvoir de plusieurs manières différentes. La source d'énergie est une propriété essentielle d'une étiquette, car il va déterminer la distance de lecture potentielle d'une balise, la durée de vie, le coût, et quel genre de fonctionnalités qu'elle peut offrir. La source d'énergie sera également importante pour déterminer comment une étiquette peut être orienté et quelles formes physiques qu'elle peut prendre.Il existe trois catégories principales de sources d'énergie de tag: actives, semi-passives, et passives.\\
 
- Les étiquettes actives ont leur propre source d'énergie, telle qu'une batterie, et peuvent initier une communication à un lecteur ou d'autres balises actives. Parce qu'elles contiennent leur propre source d'alimentation, les étiquettes actives ont généralement une plage de fonctionnement beaucoup plus large que passifs-tags. Une caractéristique clé de balises actives est qu'elles sont en mesure de lancer leur propre communication avec les lecteurs. Les balises actives avancées, pourraient même former des réseaux ad hoc les unes avec les autres. Une application utile et les balises actives dans des conteneurs d'expédition , qui peuvent tomber hors navires sur les mers agitées. Ces conteneurs manquants parfois ne sont pas reconnus jusqu'à ce que le navire à quai . Une étiquette à puce avec un capteur accéléromètre pouvait détecter quand il est tombé et distribuer un journal de sa disparition avant de sombrer dans l'océan.\\
+ Les étiquettes actives ont leur propre source d'énergie, telle qu'une batterie, et peuvent initier une communication à un lecteur ou d'autres balises actives. Parce qu'elles contienne-nt leur propre source d'alimentation, les étiquettes actives ont généralement une plage de fonctionnement beaucoup plus large que passifs-tags. Une caractéristique clé de balises actives est qu'elles sont en mesure de lancer leur propre communication avec les lecteurs. Les balises actives avancées, pourraient même former des réseaux ad hoc les unes avec les autres. Une application utile et les balises actives dans des conteneurs d'expédition , qui peuvent tomber hors navires sur les mers agitées. Ces conteneurs manquants parfois ne sont pas reconnus jusqu'à ce que le navire à quai . Une étiquette à puce avec un capteur accéléromètre pouvait détecter quand il est tombé et distribuer un journal de sa disparition avant de sombrer dans l'océan.\\
 
 Par contre, un semi-passif (ou semi-actif) tag a une batterie interne, mais n'est pas en mesure d'initier des communications. Cela garantit que les étiquettes semi-passives ne sont actives que lorsqu'elles sont interrogées par un lecteur. Parce que ces dernières ont une source d'énergie interne, elles offrent une lecture plus large que les passives, mais à un coût plus élevé.\\
 
@@ -546,30 +546,30 @@ Les avantages de l'UWB sont qu'il a une très longue portée en ligne de mire de
 Un inconvénient d'implémentations actuelles de UWB est qu'il doit être actif ou au moins semi-passif. Cependant, étant donné que les balises UWB diffusent des signaux très faibles, ils sont relativement de faible consommation d'énergie. En 2006, il est difficile de savoir si la technologie existe pour créer un UWB tag passif.
 La technologie RFID UWB est encore dans ses premières phases et il y a peu de produits disponibles dans le commerce. Les coûts de 50DH par tag en vrac sont raisonnables dans l'avenir proche .
 \subsection{Fonctionnalité}
-La fonctionnalité RFID de base est l'identification. Lorsqu'il a été interrogé par un lecteur, les balises retournent un autre identificateur qui peut être utilisé pour récupérer d'autres enregistrements de données. Cependant, les étiquettes peuvent offrir d'autres fonctionnalités utiles dans différentes applications. Les principes et les technologies de ces différents types de balises sous-jacentes sont si étroitement liés aux étiquettes RFID strictes, qu'ils ont souvent collectivement appelés «RFID». Bien que pas strictement RFID, nous discutons de plusieurs classes majeures d'appareils liés à la RFID.\\
+La fonctionnalité RFID de base est l'identification. Lorsqu'il a été interrogé par un lecteur, les balises retournent un autre identificateur qui peut être utilisé pour récupérer d'autres enregistrements de données. Cependant, les étiquettes peuvent offrir d'autres fonctionnalités utiles dans différentes applications. Les principes et les technologies de ces différentes types de balises sous-jacentes sont si étroitement liées aux étiquettes RFID strictes, qu'elles sont souvent collectivement appelées «RFID». Bien que pas strictement RFID, nous discutons de plusieurs classes majeures d'appareils liés à la RFID.\\
 
-Nous avons partagé des étiquettes RFID de style en cinq grandes catégories: EAS, en lecture seule EPC, EPC, étiquettes de capteurs, et motes. Ceux-ci seront appelés classes A à E. EPCglobal propose cinq classes similaires de tag basé sur la fonctionnalité baptisée classe 0 à la classe 4 [6]. Les classes EPCglobal aligner étroitement avec les nôtres, mais diffèrent quelque peu. Ces cinq classes sont résumés dans le tableau 3.
+Nous avons partagé des étiquettes RFID de style en cinq grandes catégories: EAS, en lecture seule EPC, étiquettes de capteurs, et motes. Ceux-ci seront appelés classes A à E. EPCglobal propose cinq classes similaires de tag basé sur la fonctionnalité baptisée classe 0 à la classe 4 [6]. Les classes EPCglobal alignées étroitement avec les notre, mais différentes quelque peu. Ces cinq classes sont résumées dans le tableau 3.
 
 \begin{longtable}{|p{0.1\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}| p{0.15\textwidth}|p{0.2\textwidth}|}
 \hline
 \textbf{Classe} & \textbf{Nom} & \textbf{Mémoire} & \textbf{Source d'énergie} & \textbf{Caractéristi-ques} \\
 \hline
-A & EAS & Aucun & Passif & article surveillance \\
+A & EAS & Aucun & Passive & article surveillance \\
 \hline
-B & Lecture seule EPC & Lecture seulement & Passif & identification seulement \\
+B & Lecture seule EPC & Lecture seulement & Passive & identification seulement \\
 \hline
-C & EPC & Lire et écrire & Passif & Enregistrement de données \\
+C & EPC & Lire et écrire & Passive & Enregistrement de données \\
 \hline
-D & capteur Balises & Lire écrire & Semi-passif & capteurs environnementaux \\
+D & capteur Balises & Lire écrire & Semi-passive & capteurs environnementaux \\
 \hline
-E & motes & Lire écrire & actif & Réseautage ad hoc \\
+E & motes & Lire écrire & active & Réseautage ad hoc \\
 \hline
 \caption{Classes de fonctionnalité des Tags}
 \end{longtable}
 
 \subsection{Normes}
 
-Les deux normes RFID les plus pertinents sont l'Organisation internationale de la norme ISO / IEC 18000 de normalisation norme [11] et les normes de EPCglobal [6]. Ces normes ne sont pas en concurrence, et il est concevable que la norme EPCglobal pourrait éventuellement être adopté dans une norme ISO.
+Les deux normes RFID les plus pertinentes sont l'organisation internationale de la norme ISO / IEC 18000 de normalisation norme [11] et les normes de EPCglobal [6]. Ces normes ne sont pas en concurrence, et il est concevable que la norme EPCglobal pourrait éventuellement être adopté dans une norme ISO.
 EPCglobal définit des spécifications pour les étiquettes de type EPC fonctionnant dans la gamme UHF.
 La norme ISO 18000 a 6 parties d'adressage différentes gammes de fréquences:
 \begin{itemize}
@@ -581,14 +581,14 @@ La norme ISO 18000 a 6 parties d'adressage différentes gammes de fréquences:
 \item Partie 6 - UHF\\
 \end{itemize}
 \subsection{Modes de transfert d’énergie et de communication}
-Dans ce premier cas ( figure 3.4) , l’onde RF se propageant de la base station vers le tag n’a pour but unique que de fournir de l’énergie au tag de façon à charger la  capacité d’alimentation  présente à son bord afin que celle-ci puisse être capable d’alimenter l’ensemble du tag pour assurer son bon fonctionnement. Aprés cette phase d'alimentation, le tag est apte à recevoir des ordres de commande provenant de la base station et de retourner des informations vers celle-ci. Puis le cycle recommence et il est à nouveau nécessaire de lui fournir de l'énergie pour continuer la communication et ainsi de suite. Bien évidemment, ceci prend du temps et manque parfois de souplesse.\\
+Dans ce premier cas ( figure 3.4) , l’onde RF se propage de la station de base vers le tag n’a pour but unique que de fournir de l’énergie au tag de façon à charger la  capacité d’alimentation  présente à son bord afin que celle-ci puisse être capable d’alimenter l’ensemble du tag pour assurer son bon fonctionnement. Après cette phase d'alimentation, le tag est apte à recevoir des ordres de commande provenant de la station de base et de retourner des informations vers celle-ci. Puis le cycle recommence et il est à nouveau nécessaire de lui fournir de l'énergie pour continuer la communication et ainsi de suite. Bien évidemment, ceci prend du temps et manque parfois de souplesse.\\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figa}
 \caption{Mode de transfert d'énergie non simultané}
 \end{figure}
 
-Dans ce deuxième cas ( figure 3.5), au travers des principes et types de modulation utilisés, l'onde provenant de la base station est capable pendant la phase de l'échange base station vers tag d'assurer simultanément la fourniture de l'énergie et l'échange des informations (données).\\
+Dans ce deuxième cas ( figure 3.5), au travers des principes et types de modulation utilisés, l'onde provenant de la station de base est capable pendant la phase de l'échange station de base vers tag d'assurer simultanément la fourniture de l'énergie et l'échange des informations (données).\\
 
 \begin{figure}[H]
 \centering
@@ -598,37 +598,37 @@ Dans ce deuxième cas ( figure 3.5), au travers des principes et types de modula
 
 \begin{center}
 \textbf{\emph{Note :}}\\
-\emph{À noter que la trés grande majorité des tags du commerce fonctionnent selon ce dernier principe.}
+\emph{À noter que la très grande majorité des tags sont en fonctionnement commercial selon ce dernier principe.}
 \end{center}
 
 \subsection{Liaison montante et liaison descendante}
-Intéressons-nous d’abord aux échanges ayant lieu entre bases stations et tags. Ils sont de deux sortes et seront définis une fois pour toutes dans cet ouvrage de la manière suivante :
+Intéressons-nous d’abord aux échanges ayant lieu entre la station de base et les tags. Ils sont de deux sortes et seront définis une fois pour toute dans cet ouvrage de la manière suivante :
 \begin{itemize}
-\item de la base station vers le tag, dits liaison montante ;
-\item du tag vers la base station, dits liaison descendante. \\
+\item de la station de base vers le tag, dite liaison montante ;
+\item du tag vers la station de base, dite liaison descendante. \\
 \end{itemize}
-De plus afin d’éviter quelques problèmes de compréhension, quelle que soit l’intelligence embarquée dans le tag, nous supposerons que celui-ci ne fonctionne que sous des ordres commandes provenant de la base station. 
-\subsubsection{Liaison montante ( forward link) de la base station vers le tag}
-La liaison montante (de la base station vers le tag) a pour mission :
+De plus afin d’éviter quelques problèmes de compréhension, quelle que soit l’intelligence embarquée dans le tag, nous supposerons que celui-ci ne fonctionne que sous des ordres commandes provenant de la station de base. 
+\subsubsection{Liaison montante ( forward link) de la station de base vers le tag}
+La liaison montante (de la station de base vers le tag) a pour mission :
 \begin{itemize}
-\item d'assurer, si cela est possible, le transport de l'énergie vers le tag afin que celui-ci puisse assurer la taÌ‚che qui lui incombe ;
-\item de servir de support à l'envoi de données de la base station vers le tag ;
-\item d'assurer, si cela est possible, le transport de l'énergie vers le tag afin que celui-ci puisse assurer
-\item dans le cas des systèmes fonctionnant en mode passif (voir définition un peu plus loin), lors de la phase de communication en liaison descendante, d'assurer la présence d'un support physique à la communication du tag vers la base station.\\
+\item d'assurer, si cela est possible, le transport de l'énergie vers le tag afin que celui-ci puisse assurer la tâche qui lui incombe ;
+\item de servir de support à l'envoi de données de la station de base vers le tag ;
+\item d'assurer, si cela est possible, le transport de l'énergie vers le tag afin que celui-ci puisse marcher
+\item dans le cas des systèmes fonctionnant en mode passif (voir la définition un peu plus loin), lors de la phase de communication en liaison descendante, d'assurer la présence d'un support physique à la communication du tag vers la station de base.\\
 \end{itemize}
 
-La communication montante est par principe assurée par un dispositif – la base station – qui émet une onde radiofréquence. Celle-ci est donc dotée d’un émetteur, un TRANSmitter. De par la présence de cet émetteur, la liaison montante est dite active. De plus, la base station comporte également à son bord un récepteur, un reCEIVER. La base station est donc un TRANSCEIVER. Dans le sens montant, la base station doit se faire comprendre par le tag au travers d’un co- dage numérique (binaire), d’un protocole de communication et d’un système de modulation de la fréquence porteuse ne devant pas ou peu affecter (le plus faiblement possible) la qualité d’une hypothétique télé-alimentation simultanée. Pour cela on peut employer des techniques de modulation de fréquence FSK \footnote{Frequency-Shift Keying}, ou encore de nombreuses méthodes de modulation d’amplitude ASK \footnote{Amplitude-Shift Keying}
+La communication montante est par principe assurée par un dispositif – la station de base – qui émet une onde radiofréquence. Celle-ci est donc dotée d’un émetteur et d'un transmetteur . De par la présence de cet émetteur, la liaison montante est dite active. De plus, la station de base comporte également à son bord un récepteur. La station de base est donc un transmetteur. Dans le sens montant, la station de base doit se faire comprendre par le tag au travers d’un codage numérique (binaire), d’un protocole de communication et d’un système de modulation de la fréquence porteuse ne doit pas ou peu affecter (le plus faiblement possible) la qualité d’une hypothétique télé-alimentation simultanée. Pour cela on peut employer des techniques de modulation de fréquence FSK \footnote{Frequency-Shift Keying}, ou encore de nombreuses méthodes de modulation d’amplitude ASK \footnote{Amplitude-Shift Keying}
 \subsubsection{Liaison descendante de la modulation}
-Contrairement à ce qu'on pourrait initialement penser, le transpondeur ne peut pas se comporter comme un émetteur de signaux RF. En effet, il ne dispose pas, dans son interface RF, des mécanismes permettant d'émettre un signal radio-fréquence vers la station de base.Les transpondeurs utilisent ce qu'on appelle la réflexion d'ondes pour se faire comprendre des lecteurs. \\
+Contrairement à ce qu'on pourrait initialement penser, le transpondeur ne peut pas se comporter comme un émetteur de signaux RF. En effet, il ne dispose pas, dans son interface RF, des mécanismes permettant d'émettre un signal radio-fréquence vers la station de base.Les transpondeurs utilisent ce qu'on appelle la réflexion d'ondes pour se faire comprendre par les lecteurs. \\
 
-Pour cela, les tags utilisent une modulation différente que l'on nomme modulation de charge (Load Modulation) qui consiste à faire varier la charge résistive du circuit. Effectivement, en faisant varier la charge, le tag fait varier l'intensité du courant dans son circuit et donc l'intensité qui circule dans l'antenne. La consommation d'énergie qu'il représente dans le champ magnétique s'en trouve alors également modifiée et, par couplage magnétique, cela influe sur l'intensité du courant dans l'antenne de la station de base. De proche en proche, les signaux RF reçus de la station de base, qui sont réfléchis par le transpondeur, permettent donc de transporter des réponses en faisant varier l'intensité du circuit du lecteur.\\
+Pour cela, les tags utilisent une modulation différente que l'on nomme modulation de charge (Load Modulation) qui consiste à faire varier la charge résistive du circuit. Effectivement, en faisant varier la charge, le tag fait varier l'intensité du courant dans son circuit et donc l'intensité qui circule dans l'antenne. La consommation d'énergie qu'il représente dans le champ magnétique est alors également modifiée et, par couplage magnétique, cela influence sur l'intensité du courant dans l'antenne de la station de base. De proche en proche, les signaux RF reçus de la station de base, qui sont réfléchis par le transpondeur, permettent donc de transporter des réponses en faisant varier l'intensité du circuit du lecteur.\\
 
-Il s'agit ici d'un procédé assez complexe mais qui repose à la base sur de la modulation. Cette modulation de charge résistive à l'origine de la transmission de la réponse s'appuie sur une modulation courante appelée OOK \footnote{On Off Keying} et correspond à la modulation d'amplitude "tout ou rien". A l'aide d'une modulation de type OOK, comme présentée précédemment, on crée une modulation de charge qui fait varier la charge résistive du circuit et donc la tension aux bornes du circuit RF du transpondeur comme montré dans la figure 3.5.\\
-\chapter{Les solution propose et étude théorique }
-Dans ce chapitre de vais présenter les trois projet de réalisation qu'on a put faire tout au long de ce stage. le premier consiste sur a faire un protocole de communication entre le serveur et le client,aussi développer un serveur de communication et mise en œuvre de la base de données. le deuxième projet est sur la plateforme androide,le projet consiste a développer une application androïde pour la les tag LF. L'application soit faire a gestion des identifiant. le troisième consiste a concevoir une antenne UHF pour la solution RFID. 
+Il s'agit ici d'un procédé assez complexe mais qui repose à la base sur de la modulation. Cette modulation de charge résistive à l'origine de la transmission de la réponse s'appuie sur une modulation courante appelée OOK \footnote{On Off Keying} et correspond à la modulation d'amplitude "tout ou rien". à l'aide d'une modulation de type OOK, comme présentée précédemment, on crée une modulation de charge qui fait varier la charge résistive du circuit et donc la tension aux bornes du circuit RF du transpondeur comme montré dans la figure 3.5.\\
+\chapter{Les solutions proposées et étude théorique }
+Dans ce chapitre de vais présenter les trois projet de réalisation qu'on a put faire tout au long de ce stage. le premier consiste à réaliser un protocole de communication entre le serveur et le client,aussi développer un serveur de communication et mettre en œuvre la base de données. le deuxième projet est sur la plate-forme android,le projet consiste à développer une application android pour les tags LF. L'application fait la gestion des identifiant. le troisième consiste a concevoir une antenne UHF pour la solution RFID. 
 \section{Client et interface RFID}
 
-L'application desktop  est un logiciel pour la gestion des entrée et sortie des palettes du stock. elle exécute au sein de lui le protocole de communication  qui a sont tours communique avec le lecteur et le commande  afin de bien gérer sont interface air. les détailles de ce protocole sont décrite dans la section suivante. L'interface utilisateur  permet  une visualisation des données organise et bien claire a l'utilisateur elle permet aussi  la gestion du serveur de base de donnée et les méthode de sécurité de cette communication aussi les ajout des dépendances comme l'état de tag (in ou out), elle permet aussi une d'ajouter la date la place ou le tag a était lu.\\
+******L'application desktop  est un logiciel pour la gestion des entrée et sortie des palettes du stock. elle exécute au sein de lui le protocole de communication  qui a sont tours communique avec le lecteur et le commande  afin de bien gérer sont interface air. les détailles de ce protocole sont décrite dans la section suivante. L'interface utilisateur  permet  une visualisation des données organise et bien claire a l'utilisateur elle permet aussi  la gestion du serveur de base de donnée et les méthode de sécurité de cette communication aussi les ajout des dépendances comme l'état de tag (in ou out), elle permet aussi une d'ajouter la date la place ou le tag a était lu.\\
 
 Dans la figure suivante je présente l'architecture globale d'un system RFID. Notre interface ce positionne entre le lecteur et la base de données. cette interface permet l'acquisition des données du lecteur et les présenter dans une forme logique au utilisateur.
 
@@ -644,10 +644,11 @@ Le besoin d'une telle solution est crucial aujourd'hui dans les entreprise. La m
 Notre solution propose une méthode simple et efficace afin de garantir une traçabilité claire et adapte. Dans la suite de cette section je vais décrire le rôle de l'interface entre les lecteurs RFID et les clients.
 \subsection{\emph{Middleware}/ et Protocole de communication}
 Le \emph{Middleware} est un protocole de couche quatre  c'est un moyen d'échange logique entre le lecteur et le client. Il géré l'interface physique du périphérique ou il est exécuter. Il Contrôle l'initiation de la communication au serveur et la rupture de cette dernière. Dans la suite de cette section je vais décrire le rôle du protocole entre le lecteur RFID et le client. Dans ce qui suite sont les responsabilités de cette interface:
+**********
 \begin{itemize}
 \item Fournir des moyens pour commander un lecteur RFID  (lire les codes EPC sur les étiquettes), lire les étiquettes (lire d'autres données sur les étiquettes en dehors du code EPC), écrire dans les tags, et exécuter d'autres commandes d'accès protocole dépendant.
 \item 
-Fournir un moyen de rapporté l'état et la gestion des erreurs lors des opérations d'accès d'étiquette.
+Fournir un moyen de rapporter l'état et la gestion des erreurs lors des opérations d'accès d'étiquette.
 \item 
 Fournir des moyens  nécessaires pour effectuer des commandes qui peuvent en avoir besoin, comme la commande 'Kill' dans le Protocole UHF Interface Air \cite{air}.
 \item 
@@ -657,39 +658,37 @@ Fournir des moyens pour faciliter l'ajout du support pour les nouveaux protocole
 \item 
 Fournir des moyens pour la récupération des capacités de l'appareil lecteur.\\
 \end{itemize}
-\subsection{Rôle le d'interface RFID}
-L'infrastructure RFID est constituée des éléments de réseau qui participent à la gestion (par exemple, lecture / écriture / verrouillage) et la transmission de données de l'étiquette. La destination des données d'étiquette sont les éléments de réseau clients (applications par exemple, l'utilisateur final, base de données). Les éléments de réseau entre l'étiquette et les clients forment le support pour transporter les données de l'étiquette sur le réseau et de transmettre les commandes opérationnelles des balises.
+\subsection{Rôle le d'interface}
+L'infrastructure RFID est constituée des éléments de réseau qui participent à la gestion (par exemple, lecture / écriture / verrouillage) et la transmission de données de l'étiquette. La destination des données d'étiquette sont les éléments de réseau clients (applications par exemple, l'utilisateur final, base de données). Les éléments du réseau entre l'étiquette et les clients forment le support pour transporter les données de l'étiquette sur le réseau et de transmettre les commandes opérationnelles des balises.
 \begin{figure}[H]
 \centering
 \includegraphics[width=6cm,height=8cm]{orga}
 \caption{Organigramme de l'interface RFID}
 \end{figure}
 
-La figure 3.6 illustre la position de l'interface RFID dans l'architecture de la pile entre le  rôle  du client  et le rôle du Tag. le rôle du client peuvent être classés en trois grands groupes fonctionnels: traitement des données d'étiquette, la gestion du lecteur  et le contrôle du lecteur et de la coordination. Avec l'avènement de protocoles d'air sophistiqués comme UHF Class 1 Gen-2 \cite{air}, et les déploiements du plus grand nombre de lecteurs, la nécessité d'un contrôle du lecteur et de la coordination  du réseau de lecteurs dans l'architecture devient importante. Cette Interface  facilite la fonction de contrôle en exposant le protocole d'air. À cet effet, cette interface est donc conçu pour être extensible en termes de supportant les protocoles d'air multiples.\\
+La figure 3.6 illustre la position de l'interface RFID dans l'architecture de la pile entre le  rôle  du client  et le rôle du Tag. les rôles du client peuvent être classés en trois grands groupes fonctionnels: traitement des données d'étiquette, la gestion du lecteur  et le contrôle du lecteur et de la coordination. Avec l'avènement de protocoles d'air sophistiqués comme UHF class 1 Gen-2 \cite{air}, et les déploiements du plus grand nombre de lecteurs, la nécessité d'un contrôle du lecteur et de la coordination  du réseau des lecteurs dans l'architecture devient importante. Cette Interface  facilite la fonction de contrôle en exposant le protocole d'air. En effet, cette interface est donc conçu pour être extensible en termes de supportant les protocoles d'air multiples.\\
 
-Les exigences physiques et logiques pour la communication entre le lecteur et l'étiquette  sont définies par le protocole de l'air. Plus précisément, le protocole d'air définit la couche de signalisation de la liaison de communication, les procédures et les commandes d'exploitation des lecteurs et étiquettes,et l'arbitrage de collision comme schéma pour identifier une balise spécifique  dans un environnement multi-tag.La mémoire de l'étiquette dans le protocole C1G2 est logiquement  séparé en quatre banques distinctes: la mémoire réservée, la mémoire de l'EPC, la mémoire TID et mémoire utilisateur. La carte mémoire physique de l'étiquette est spécifique au fournisseur. Le protocole de l'air commandes qui accèdent à la mémoire ont un paramètre qui sélectionne la banque, et un paramètre adresse pour sélectionner un emplacement de mémoire particulier au sein de cette banque.\\
+Les exigences physiques et logiques pour la communication entre le lecteur et l'étiquette  sont définies par le protocole de l'air. Plus précisément, le protocole d'air définit la couche de signalisation de la liaison de communication, les procédures et les commandes d'exploitation des lecteurs et étiquettes,et l'arbitrage de collision comme schéma pour identifier une balise spécifique  dans un environnement multi-tag.La mémoire de l'étiquette dans le protocole C1G2 est logiquement  divisée en quatre banques distinctes: la mémoire réservée, la mémoire de l'EPC, la mémoire TID et la mémoire utilisateur. La carte mémoire physique de l'étiquette est spécifique au fournisseur. Le protocole de l'air commande qui accèdent à la mémoire ils ont un paramètre qui sélectionne la banque, et un paramètre d'adresse pour sélectionner un emplacement de mémoire particulier au sein de cette banque.\\
 
 
-Les opérations fondamentales d'un lecteur sur une population d'étiquette sont l'inventaire et accès. L'inventaire est l'opération d'étiquettes d'identification. En utilisant le schéma d'anti-colision, le lecteur détecte une balise unique et demande le contenu de la mémoire de l'EPC de l'étiquette. L'accès est l'opération de  communication avec (lecture et / ou en écrivant à) et une balise. Une balise individuelle doit être identifié de manière unique avant l'accès. Semblable à l'opération d'inventaire, l'accès multiple comprend les commandes de protocole de l'air. En outre, un lecteur peut choisir un sous-ensemble de la balise de population pour l'inventaire et l'accès. Cette opération est appelée Sélectionnez dans le protocole C1G2. L'opération de sélection est utilisé pour sélectionner et / ou dé-sélectionner une population de balise particulière pour l'inventaire ultérieur et / ou opération d'accès. Cela permet de concentrer les opérations sur le sous-ensemble désiré de balises, et également la population d'étiquette participant à l'opération  d'anti-colision, améliorant ainsi le taux d'anti-colision globale.
+Les opérations fondamentales d'un lecteur sur une population d'étiquette sont l'inventaire et l'accès. L'inventaire est l'opération d'étiquettes d'identification. En utilisant le schéma d'anti-colision, le lecteur détecte une balise unique et demande le contenu de la mémoire de l'EPC de l'étiquette. L'accès est l'opération de  communication avec (lecture et / ou en écrivant à) et une balise. Une balise individuelle doit être identifié de manière unique avant l'accès. Semblable à l'opération d'inventaire, l'accès multiple comprend les commandes de protocole de l'air. En outre, un lecteur peut choisir un sous-ensemble de la balise de population pour l'inventaire et l'accès. Cette opération est appelée la sélection dans le protocole C1G2. L'opération de sélection est utilisé pour sélectionner et / ou dé-sélectionner une population de balise particulière pour l'inventaire ultérieur et / ou opération d'accès. Cela permet de concentrer les opérations sur le sous-ensemble désiré de balises, et également la population d'étiquette participant à l'opération  d'anti-colision, améliorant ainsi le taux d'anti-colision globale.
 
-Il est prévu que la performance globale du système peut être optimisé en réglant le RF, anti-colision et protocole d'air  au sein et entre les lecteurs. La performance peut encore être optimisé si le réglage fait conscient de l'environnement RF dans le voisinage du Reader.\\
+Il est prévu que la performance globale du système peut être optimisée en réglant le RF, anti-colision et protocole d'air  au sein et entre les lecteurs. La performance peut encore être optimisée si le réglage fait conscient de l'environnement RF dans le voisinage du Reader.\\
 \subsection{Vue globale sur l'inerface RFID}
-l'inerface RFID concerne spécifiquement la fourniture des formats et des procédures de communication entre un client et un lecteur. Les unités de données de l'inerface RFID sont appelés messages. Les messages du client vers le Reader permettent d'obtenir et définir la configuration des lecteurs, des capacités de découverte de lecteurs et de gérer les opérations d'inventaire et d'accès aux lecteurs. Les messages du Reader pour le client comprennent trois portions du statut Reader, enquête RF, l'inventaire et l'accès des résultats. l'inerface RFID est un protocole de couche d'application et ne fournit pas de retransmission, ou des installations de remise en ordre. la cohérence de l'Etat entre le client et le lecteur est essentiel pour le bon fonctionnement du système. Utilisation de messages , le client met à jour l'état du lecteur qui comprend des paramètres de configuration du lecteur, des structures de données créées dynamiquement, et éventuellement des données des fournisseurs définis. Pour cette raison, le protocole exige des accusés de réception pour le client aux transactions Reader - cela fournit un mécanisme de sécurité à la couche application pour faire face à des situations d'erreur réseau. En outre, pour faire face à des connexions intermittentes, un client peut demander l'état de configuration d'un lecteur pour confirmer que l'état d'un lecteur est compatible avec le client. Les messages clients sont principalement des rapports, des notifications d'état ou keepalives. Seuls les keepalives sont reconnus par le Client.
+l'inerface RFID concerne spécifiquement la fourniture des formats et des procédures de communication entre un client et un lecteur. Les unités de données de l'interface RFID sont appelés messages. Les messages du client vers le Reader permettent d'obtenir et définir la configuration des lecteurs, des capacités de découverte de lecteurs et de gérer les opérations d'inventaire et d'accès aux lecteurs. Les messages du Reader pour le client comprennent trois portions du statut Reader, enquête RF, l'inventaire et l'accès des résultats. l'interface RFID est un protocole de couche d'application et ne fournit pas de retransmission, ou des installations de remise en ordre. la cohérence de l'état entre le client et le lecteur est essentielle pour le bon fonctionnement du système. Utilisation de messages , le client met à jour l'état du lecteur qui comprend des paramètres de configuration du lecteur, des structures de données crées dynamiquement, et éventuellement des données des fournisseurs définis. Pour cette raison, le protocole exige des accusés de réception pour le client aux transactions Reader - cela fournit un mécanisme de sécurité à la couche application pour faire face à des situations d'erreur réseau. En outre, pour faire face à des connexions intermittentes, un client peut demander l'état de configuration d'un lecteur pour confirmer que l'état d'un lecteur est compatible avec le client. Les messages des clients sont principalement des rapports, des notifications d'état ou keepalives. Seuls les keepalives sont reconnus par le Client.
 \begin{figure}[!h]
 \centering
 \includegraphics[width=6cm,height=6cm]{lim}
 \caption{Illustration du système RFID}
 \end{figure}
-Comme on le voit sur la figure 3.7, du point de vue de notre protocole, un lecteur contient une collection d'une ou
-plusieurs antennes. De plus, les lecteurs employé dans le présent cahier des charges ne sont pas nécessairement en
-correspondance un à un avec les dispositifs matériels.
+Comme on le voit sur la figure 3.7, du point de vue de notre protocole, un lecteur contient une collection d'une ou plusieurs antennes. De plus, les lecteurs employés  présent dans le cahier des charges ne sont pas nécessairement en correspondance un à un avec les dispositifs matériels.
 \subsection{Chronologie de fonctionnement du protocole}
 Le fonctionnement du protocole ou d'une connexion comporte deux phases: la phase de négociation et la phase exécution.
 \subsubsection{Phase de négociation}
-Un client et un lecteur devront négocier une version de protocole pris en charge mutuellement pour chaque connexion. Lorsqu'une connexion  est d'abord établi, à la fois le client et le Reader supposent  la version 1. A l'exception les messages de négociation de version, les messages sont envoyés par le Client  jusqu'à ce que le processus de négociation de version est complète. La négociation de la version est effectuée en utilisant des messages prédéfinit est initiée par le Client. Le client demande la version de protocole pris en charge par le Reader, puis détermine une version appropriée pour la connexion (type de message).
+Un client et un lecteur devront négocier une version de protocole pris en charge mutuellement pour chaque connexion. Lorsqu'une connexion  est d'abord établie, à la fois le client et le Reader supposent  la version 1. A l'exception les messages de négociation de version, les messages sont envoyés par le Client  jusqu'à ce que le processus de négociation de version est complet. La négociation de la version est effectuée en utilisant des messages prédéfinis et initiés par le Client. Le client demande la version de protocole pris en charge par le Reader, puis détermine une version appropriée pour la connexion (type de message).
  
-Une fois qu'une version a été établie à l'aide de cette procédure, tous les messages suivants sont envoyés en utilisant les message prédéfinit par le lecteur. La chronologie de fonctionnement de la phase de négociation  entre un client et un lecteur est représenté sur la figure 3.
-\begin{figure}[H]
+Une fois qu'une version a été établie à l'aide de cette procédure, tous les messages qui suivent sont envoyés en utilisant les messages prédéfinis par le lecteur. La chronologie de fonctionnement de la phase de négociation  entre un client et un lecteur est représentée sur la figure 3.
+\begin{figure}[!h]
 \centering
 \includegraphics[width=\textwidth]{negotiation2}
 \caption{Phase de négociation}
@@ -700,15 +699,15 @@ L'opération d'exécution comprend les phases d'exécution suivantes:
 \item découverte des capacités
 \item Configuration de l'appareil
 \item opérations d'inventaire et d'accès cycles configuration d'inventaire exécutés
-\item Si les conditions d'étiquettes adaptées, les opérations d'accès seront exécutés pendant l'exécution du cycle des stocks.
-\item  opérations d'accès incluent la lecture, l'écriture et de verrouillage mémoire d'étiquette, étiquettes tuant, etc.
+\item Si les conditions d'étiquettes adaptées, les opérations d'accès seront exécutées pendant l'exécution du cycle des stocks.
+\item Les opérations d'accès incluent la lecture, l'écriture et de verrouillage mémoire d'étiquette, étiquettes tuant, etc.
 \item Les opérations RF
-\item Rapports retournés au Client
+\item Rapports retournés au client
 \end{itemize}
 
-La figure 4.4 illustre toutes les étape les message échanger entre le lecteur,client et les tags.
+La figure 4.4 illustre toutes les étape des messages échanger entre le lecteur,client et les tags.
 
-Le protocole utilise des unités de données de protocole appelés messages pour communiquer entre le client et le Reader pour  les mises à jour des clients ou pour récupère la configuration du lecteur, en générale pour le contrôle du fonctionnement du lecteur. Cette section nous a donné un aperçu globale du modèle abstrait du protocole, dans le chapitre suivant on va présenter le logiciel qui mis en œuvre ce protocole.
+Le protocole utilise des unités de données de protocole appelées messages pour communiquer entre le client et le Reader pour  les mises à jour des clients ou pour récupérer la configuration du lecteur, en générale pour le contrôle du fonctionnement du lecteur. Cette section nous a donné un aperçu globale du modèle abstrait du protocole, dans le chapitre suivant on va présenter le logiciel qui met en œuvre ce protocole.
 \begin{figure}[!h]
 \centering
 \includegraphics[height=12cm]{runtime}
@@ -722,45 +721,37 @@ Le protocole utilise des unités de données de protocole appelés messages pour
 
 \section{SmartFlah}
 %describe everything you did in The Android
-Dans cette section on va parler du troisième projet qui consiste a développer une application android pour le tag LF.on va commencer par une petite présentation du plateforme Android puis on va parler de tout les fonctionnalité que que application nous permet. aussi une étude sur le domaine de agriculture qui nous a inspirer pour réaliser ce projet .\\
-\subsection{La platforme android}
-Android est le logiciel qui fait tourner plus d’un téléphone ou tablette sur deux dans le monde.
-il est de type système d’exploitation mobile comme « Windows » est un système d’exploitation sur PC.,Il fait tourner votre mobile. Il existe d’autres systèmes d’exploitation mobile concurrents comme iOS Apple, BlackBerry OS, Bada, Windows mobile… il est ouvert dont le code source est librement accessible (contrairement aux systèmes de Apple ou Microsoft) ce qui permet à n’importe quel fabricant de l’intégrer dans son système gratuitement. Ce modèle est opposé au modèle de Apple, et explique en grande partie la forte croissance. Android est basé sur Linux qui tourne sur une grande variété de marques de téléphones et de tablettes différentes telles que Samsung, Motorola, Sony, Google Nexus, Acer, LG, Dell et bien plus encore (liste complète sur android.com) Cette diversité représente à la fois un avantage (diversité et choix pour le consommateur) et un inconvénient (problèmes de compatibilité des applications avec les différents modèles, en particulier les plus exotiques)
-\subsection{Étude du marcher de l'agriculture}
-La majorité des éleveur au Maroc que sa soit dans l'enlevage pour la production ou pour l'amélioration du race en un besoin urgent pour des solution de gestion de leur production ou leur stock. Et avec le convention que l'état a lancer qui consiste a mettre une tag LF dans les oreilles des bette. Le rêves des éleveur pour des solution statistique qui va les aider a chamelier leur production ou de détecter les point faible dans leur maniéré de gérer leur ferme et devenu indispensable. L'état na pas présenter une solution informatique au éleveurs, elle a jus installer les tag affecter les ID au éleveur pour la sécurité, mais a quoi bon pour un éleveur qui ne compte pour lui que voire un maximum d;information concernant sa ferme.\\
+Dans cette section on va parler du troisième projet qui consiste à développer une application Android pour le tag LF.on va commencer par une petite présentation du plate-forme Android puis on va parler de toutes les fonctionnalités que l'application nous permet de faire. aussi une étude sur le domaine d'agriculture qui nous a inspiré à réaliser ce projet .\\
+\subsection{La plate-forme Android}
+Android est le logiciel qui fait tourner plus d’un téléphone ou tablette dans le monde.
+il est de type système d’exploitation mobile comme « Windows » est un système d’exploitation sur PC.Il fait tourner votre mobile. Il existe d’autres systèmes d’exploitation mobile concurrents comme iOS Apple, BlackBerry OS, Bada, Windows mobile… il est ouvert donc le code source est librement accessible (contrairement aux systèmes de Apple ou Microsoft) ce qui permet à n’importe quel fabricant de l’intégrer dans son système gratuitement. Ce modèle est opposé au modèle de Apple, et explique en grande partie la forte croissance. Android est basé sur Linux qui tourne sur une grande variété de marques de téléphones et de tablettes différentes telles que Samsung, Motorola, Sony, Google Nexus, Acer, LG, Dell et bien plus encore (liste complète sur android.com) Cette diversité représente à la fois un avantage (diversité et choix pour le consommateur) et un inconvénient (problèmes de compatibilité des applications avec les différents modèles, en particulier les plus exotiques)
+\subsection{Étude du marché de l'agriculture}
+La majorité des éleveurs au Maroc que ça soit dans l'élevage pour la production ou pour l'amélioration d'une race ont un besoin urgent pour des solutions de gestion de leur production ou leur stock. Et avec la convention que l'état a lancé qui consiste à mettre un tag LF dans les oreilles des bêtes. Le rêve des éleveurs pour des solutions statistiques qui vont les aider à chamelier leur production ou de détecter les point faible dans leur maniéré de gérer leur ferme est devenu indispensable. L'état n'a pas présenté une solution informatique au éleveurs, il a juste installé les tags et affecté les ID au éleveurs pour la sécurité, mais à quoi bon pour un éleveur qui ne compte pour lui qu'avoir le maximum d'information concernant sa ferme.\\
 
-Ici montre un besoin énorme de penser a une solution pour informatiser notre domaine de production agricole. que ça soit la production du viande rouge ou du lait. c'est pour cela avec le soutien de MAscir on a put concevoir un prototype d'une solution informatique pour les éleveur marocaine. dans ce qui suit je vais faire une présentation globale de notre solution.
+Ici on montre un besoin énorme de penser à une solution pour informatiser notre domaine de production agricole. que ça soit la production du viande rouge ou du lait. c'est pour cela avec le soutien de MAscir on a put concevoir un prototype d'une solution informatique pour les éleveurs marocains. dans ce qui suit je vais faire une présentation globale de notre solution.
 
 \subsection{La conception de la base de données}
-Touts project informatique se base énormément sur une base de données puissante qui exprime le besoin derrière. la conception de notre base de données ce divise en trois étape indispensable.
+Tout project informatique se base énormément sur une base de données puissante qui exprime le besoin derrière la conception de notre base de données ce divise en trois étape indispensable.
 \begin{itemize}
-\item 
-Analyse de la situation existante et des besoins
+\item Analyse de la situation existante et des besoins
 \item Création d'une série de modèles conceptuels (canonique et vues externes) qui permettent de représenter tous les aspects importants du problème
 \item Implémentation d'une base de données dans un SGBD, à partir du modèle logique
-\item Implémentation d'une base de données dans un SGBD, à partir du modèle logique
+
 \end{itemize}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=8cm]{db}
-\caption{Etape de conception d'une base de données}
+\caption{étape de conception d'une base de données}
 \end{figure}
 
 \subsubsection{Cycle d'abstraction de conception des systèmes d'information}
-La conception du système d'information se fait par étapes, afin d'aboutir à un système d'information fonctionnel reflétant une réalité physique. Il s'agit donc de valider une à une chacune des étapes en prenant en compte les résultats de la phase précédente. D'autre part, les données étant séparées des traitements, il faut vérifier la concordance entre données et traitements afin de vérifier que toutes les données nécessaires aux traitements sont présentes et qu'il n'y a pas de données superflues.\\
+La conception du système d'information se fait par étapes, afin d'aboutir à un système d'information fonctionnel reflétant une réalité physique. Il s'agit donc de valider chacune des étapes en prenant en compte les résultats de la phase précédente. D'autre part, les données étant séparées des traitements, il faut vérifier la concordance entre les données et traitements afin de vérifier que toutes les données nécessaires aux traitements sont présentes et qu'il n'y a pas de données superflues.\\
 Cette succession d'étapes est appelée cycle d'abstraction pour la conception des systèmes d'information :
 
-L'expression des besoins aboutit au MCC (Modèle conceptuel
-de la communication) qui définit les flux d'informations à
-prendre compte.
-L'étape suivante consiste à mettre au point le MCD (Modèle conceptuel des données) et le
-MCT (Modèle conceptuel des traitements) décrivant les règles et les contraintes à prendre en
-compte.
-Le modèle organisationnel consiste à définir le MLD (Modèle logique des données) qui
-représente un choix logiciel pour le système d'information et le MOT (Modèle
-organisationnel des traitements) décrivant les contraintes dues à l'environnement
-(organisationnel, spatial et temporel).
+L'expression des besoins aboutit au MCC (Modèle conceptuel de la communication) qui définit les flux d'informations à prendre en compte.
+L'étape suivante consiste à mettre au point le MCD (Modèle conceptuel des données) et le MCT (Modèle conceptuel des traitements) décrivant les règles et les contraintes à prendre en compte.
+Le modèle organisationnel consiste à définir le MLD (Modèle logique des données) qui représente un choix logiciel pour le système d'information et le MOT (Modèle organisationnel des traitements) décrivant les contraintes dues à l'environnement (organisationnel, spatial et temporel).
 Enfin, le modèle physique reflète un choix matériel pour le système d'information. 
 
 
@@ -782,9 +773,9 @@ SGBD \\
 \caption{rrrrr}
 \end{longtable}
 
-Notre conception pour cette solution résulte en trois table (tag,vaccin,doctor).Chaque tag représente un animale et un animale a une date de naissance, une race, un propriétaire. et bien sure pour des contrainte informatique on était obliger d'ajouter des information supplémentaire comme la latitude la longitude et la date une cette tag a était lu.
+Notre conception pour cette solution résulte en trois tables (tag,vaccin,docteur).Chaque tag représente un animal et chaque un animale a une date de naissance, une race, un propriétaire. et bien sûr pour des contraintes informatique on a été obligé à ajouter des informations supplémentaire comme l'altitude la longitude et la date un tag a lu.
 
-Un animale doit faire d'une maniéré périodique des vaccin chez un docteur.Pour des raison informatique on a jouter des champ comme type de vaccin et la remarque. bine sur pour identifier un docteur on a besoin de son nom et son adresse. ces attribues seront utiliser ultérieurement pour la conception et la gestion des information.
+Un animal doit faire d'une maniéré périodique des vaccins chez un docteur.Pour des raisons informatique on a ajouté des champs comme type de vaccin et la remarque. bien sûr pour identifier un docteur on a besoin de son nom et son adresse. ces attribues seront utilisés ultérieurement pour la conception et la gestion des informations.
 
 \begin{figure}[!h]
 \centering
@@ -793,42 +784,42 @@ Un animale doit faire d'une maniéré périodique des vaccin chez un docteur.Pou
 \end{figure}
 
 \subsection{Fonctionnalité}
-L'application nous permet de lire l'identifiant de la tag LF, cette étape consiste a faire un décodage du langage compris par le téléphone est ce qu'ont utiliser comme donnée au niveau de notre base de donnée et trainement de information.après cette étape deux scénario ce manifeste soit la tag est déjà dans notre base de donnée et donc ce cas on offre a utilisateur la possibilité de consulter les données relier a sont ID en parallèle application nous permette de visualiser l'historique de toutes les lecture effectuer. l'autre senior c;est celui ou la tag na jamais était dans notre base de donnée. dans ce cas on demande a utilisateur de remplier les information relier a animal et bien sur une autre possibilité est celle de remplier les informations dans le cas ou le docteur consul l'animale. finalement l'application permet de sauvegarder les donner en générant un rapport automatique au serveur.
+L'application nous permet de lire l'identifiant du tag LF, cette étape consiste à faire un décodage du langage compris par le téléphone et ce qu'on a utilisé comme donnée au niveau de notre base de données et traitement de l'information.après cette étape deux scénarios se manifestent soit le tag est déjà dans notre base de données et dans ce cas on offre à utilisateur la possibilité de consulter les données relier à son ID en parallèle l' application nous permet de visualiser l'historique de toutes les lectures effectuées. l'autre scénario c'est celui ou le tag n'a jamais était dans notre base de données. dans ce cas on demande à utilisateur de remplir les informations reliées à l'animal et bien sûr une autre possibilité est celle de remplir les informations dans le cas ou le docteur consulte l'animal. finalement l'application permet de sauvegarder les données en générant un rapport automatique au serveur.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=10cm,height=9cm]{fonc}
 \caption{Fonctionnalité de l'application}
 \end{figure}
-Les test et vérification seront présenter dans la chapitre suivant ainsi les captures et l'explication de l'interface utilisateur.
+Les tests et vérification seront présentés dans la chapitre suivant ainsi que les captures et l'explication de l'interface d'utilisateur.
 
 \section{Antenne UHF}
-RFID a des nombreuses applications, une utilisation de cette technologie est pour l'identification des objets dans un stock. Les objets tels que palettes et les cartons sont étiquetés ce façon à lutter contre, le vole et la mauvaise gestion du stock. la détection des objets encapsuler dans les cartons a était une taches impossible sans ouverture des cartons, maintenant avec la RFID cette tâches et devenu une question de quelque seconds.
+RFID a de nombreuse applications, une utilisation de cette technologie est pour l'identification des objets dans un stock. Les objets tels que les palettes et les cartons sont étiquetés de façon à lutter contre, le vole et la mauvaise gestion du stock. la détection des objets encapsulés dans les cartons a été une tâche impossible sans ouverture des cartons, maintenant avec la RFID cette tâche et devenue une question de quelque secondes.
 \subsection{Introduction}
-Les étiquettes RFID utilisé au paravent pour cette application sont passifs et surtout opèrent dans le bas fréquence (LF). Cependant, les balises LF ne peuvent être lus qu'a courte portée et peuvent ne pas se comporte bien lorsque plusieurs balises sont simultanément présents dans le domaine.les solution se tourne maintenant vers l'utilisation des tags UHF. tags UHF non seulement donnent une meilleur distance de lecture, mais prennent également en charge des débits plus élevés. \\
+Les étiquettes RFID utilisées auparavant pour cette application sont passives et surtout opèrent dans la basse fréquence (LF). Cependant, les balises LF ne peuvent être lues qu'a courte portée et peuvent ne pas bien se comporter lorsque plusieurs balises sont simultanément présentes dans le domaine.les solutions se tournent maintenant vers l'utilisation des tags UHF.Les tags UHF non seulement donnent une meilleur distance de lecture, mais prennent également en charge des débits plus élevés. \\
 
-Dans cet section, une simple petite étiquette RFID passive opérant dans la fréquence de 915MHz (UHF) est présenté. Dans la section suivante, une brève théorie  sur l'antenne de l'étiquette et la puce utilisée dans notre conception, ainsi que la topologie de la conception théorique et pratique utilisée, suivie d'une discussion sur les points forts de la conception et les détails de sa mise en œuvre pratique avant que des conclusions sont présentées dans la dernière section.
+Dans cette section, une simple petite étiquette RFID passive opère dans la fréquence de 915MHz (UHF) est présente. Dans la section suivante, une bref  théorie  sur l'antenne de l'étiquette et la puce utilisée dans notre conception, ainsi que la topologie de la conception théorique et pratique utilisée, suivie d'une discussion sur les points forts de la conception et les détails de sa mise en œuvre pratique avant que des conclusions sont présentées dans la dernière section.
 \subsection{Tag antenne et Base du die}
-L'antenne choisie pour l'étiquette  est une antenne en boucle. La figure 1 montre une antenne en boucle ayant un diamètre D de la boucle et un fil de diamètre d. Une antenne en boucle est choisie car car elle dispose d'une structre circulaire qui permet de minimiser la taille par rapport au autre technologie comme les middredded et les Microstrip. 
+L'antenne choisie pour l'étiquette  est une antenne en boucle. La figure 1 montre une antenne en boucle ayant un diamètre D de la boucle et un fil de diamètre d. Une antenne en boucle est choisie car elle dispose d'une structure circulaire qui permet de minimiser la taille par rapport aux autres technologies comme les middredded et les Microstrip. 
 
-Une antenne dipôle électrique est  non plus possible. le problème du dipôle électrique  demi-onde pour la fréquence de fonctionnement qu'on utilise serait de trop grande taille alors qu'un  petit dipôle électrique peut être utilisé, mais l'expérience montre qu'il est difficile à l'adaptation.
+Une antenne à dipôle électrique est non plus possible.Pour la fréquence de fonctionnement qu'on utilise le problème du dipôle électrique à demi-onde  serait sa grande taille cependant un petit dipôle peut être utilisé, mais l'expérience a montré qu'il est difficile de l'adapter.
 \begin{figure}[H]
 \centering
 \includegraphics[width=4cm]{cla}
 \caption{L'antenne proposée}
 \end{figure}
 
-Le circuit équivalent de l'antenne est telle que représentée sur la Figure 3.7 a. En se référant à ce circuit, Rr est la résistance de rayonnement de l'antenne en boucle alors que L est l'inductance de l'antenne à boucle. Dans l'hypothèse de l'uniforme flux de courant, un tour de la résistance de rayonnement R, de l'antenne de la boucle peut être calculée en utilisant l'expression \cite{antennatheory}:
+Le circuit équivalent de l'antenne est tel que représentée sur la Figure 3.7 a. En se référant à ce circuit, Rr est la résistance de rayonnement de l'antenne alors que L est son inductance. Dans l'hypothèse du flux uniforme du courant, R de notre antenne  peut être calculée en utilisant l'expression \cite{antennatheory}:
 
 \begin{equation}
 R_{r}  = 20 (\pi)^{2}(\beta a)^{4}
 \end{equation}
-Sur l'hypothèse des courants circulant sur la la surface, l'inductance L de l'antenne peut être calculée en utilisant l'expression suivante \cite{antennatheory}:
+Sur l'hypothèse des courants circulant sur la surface, l'inductance L de l'antenne peut être calculée en utilisant l'expression suivante \cite{antennatheory}:
 \begin{equation}
 L  = \frac{\mu_{0}D}{2}[ln(\frac{8D}{d})-2]
 \end{equation}
 
-Dans la figue 3.7b montre le circuit équivalent de la puce RFID, qui peut être représenté par une résistance R et d'un condensateur  C en parallèle . R et C utilisé dans l'analyse et la conception de l'étiquette sont 1.3 k\(\Omega\) et 1.15 pF respectivement.
+Dans la figue 3.7 b le circuit équivalent de la puce RFID, qui peut être représenté par une résistance R et un condensateur  C en parallèle . R et C utilisés dans l'analyse et la conception de l'étiquette sont respectivement 1.3 k\(\Omega\) et 1.15 pF .
 
 \begin{figure}[H]
 \centering
@@ -838,27 +829,27 @@ Dans la figue 3.7b montre le circuit équivalent de la puce RFID, qui peut être
 
 \subsection{Design du Tag}
 La fréquence de fonctionnement de l'étiquette se trouve dans la bande UHF.
-Aux fins des calculs de conception, la fréquence de 915 MHz a été choisie. Dans la conception initiale, le diamètre de l'antenne de la boucle a été d'environ 2,2 cm à l'aide de 0,2 cm de diamètre fil rond (D = 2.2cmandd = 0.2cm).
+La fréquence de 915 MHz a été choisie. Dans la conception initiale, le diamètre de l'antenne en boucle a été d'environ 2,2 cm avec un fil rond de O.2 cm de diamètre  (D = 2.2cm d = 0.2cm).
 
-En se référant à la figure 3.7a et se référant à l'équation (3.1) et (3.2), la résistance de rayonnement R de l'antenne en boucle peut être calculée pour être de 0,39  \(\Omega\) et la valeur de l'inductance L pour être nH 34,24.\\
+En se référant à la figure 3.7a et se référant à l'équation (3.1) et (3.2), la résistance de rayonnement R de l'antenne en boucle peut être calculée pour être de 0,39  \(\Omega\) et la valeur de l'inductance L pour être  34,24 nH.\\
 
-Le circuit RC parallèle pour le circuit équivalent de la puce RFID, comme représenté sur la Figure 3.7 b peut être transformer en circuit équivalent en série constitué d'une résistance  R' et une capacité localisée C'. les valeurs R' et C'  peuvent être calculées à environ 17.36 \(\Omega\) et 1,17 pF respectivement sur la base des valeurs R et C indiqué ci-dessus.\\
+Le circuit RC équivalent de la puce RFID, comme représenté sur la Figure 3.7 b peut être transformé en circuit équivalent en série constitué d'une résistance  R' et une capacité C'. les valeurs R' et C'  peuvent être calculées à environ 17.36 \(\Omega\) et 1,17 pF respectivement sur la base des valeurs R et C indiqué ci-dessus.\\
 
 
-Par conséquent, à 915 MHz, l'impédance de source, l'impédance à savoir l'antenne, \(Z_{antenne} \) est est de 0,39 ± j199 \(\Omega\) tandis que l'impédance de charge, \(Z_{charge} \) est 17.36-jl49.2 \(\Omega\). On sait que le transfert de puissance maximale se produire lorsque l'impédance de source est égale au conjugué de l'impédance de charge. Par conséquent, un réseau d'adaptation est nécessaire pour obtenir un transfert de puissance raisonnable.\\
+Par conséquent, à 915 MHz, l'impédance de source \(Z_{antenne} \) est de 0,39 ± j199 \(\Omega\) tandis que l'impédance de charge \(Z_{charge} \) est 17.36-j149.2 \(\Omega\). On sait que le transfert de puissance maximale se produit lorsque l'impédance de source est égale au conjugué de l'impédance de charge. Par conséquent, un réseau d'adaptation est nécessaire pour obtenir un transfert de puissance raisonnable.\\
 
-Il existe trois réseaux d'adaptation de base utilisés dans les conceptions RF - ils sont L, \(\Pi\) et la configuration T. Chacun d'eux a ses avantages et ses inconvénients. Le réseau d'adaptation plus couramment utilisés est le circuit de L. Les raisons sont les suivantes:
+Il existe trois réseaux d'adaptations de base utilisés dans les conceptions RF sont \emph{L-shape}, \(\Pi\) et la configuration T. Chacun d'eux a ses avantages et ses inconvénients. Le réseau d'adaptation le plus couramment utilisé est \emph{L-shape} . Les raisons sont les suivantes:
 \begin{itemize}
 \item Simplicité - Facile à construire des réseaux d'adaptation automatique. Il n'a que deux éléments à contrôler pour ajuster la partie réelle et imaginaire de l'impédance.
-\item valeurs de composantes pratiques - certaines des configurations nécessitent soit des valeurs d'inductance très basses ou très hautes valeurs de capacité qui est impossible à faire surtout quand vous devez concevoir réseau d'adaptation automatique avec une gamme très large.\\
+\item valeurs de composantes pratiques - certaines des configurations nécessitent soit des valeurs d'inductance très basses ou très hautes valeurs de capacité qui est impossible à réaliser surtout quand vous devez concevoir un réseau d'adaptation automatique avec une gamme très large.\\
 \end{itemize}
 
-Le facteur de qualité Q du circuit est déterminée uniquement à partir de la source (générateur) et la charge (impédance du Circuit d'impédance) et ne dépend pas de composants externes - ce qui est peut-être la propriété la plus importante du circuit. Ce que cela signifie est que pour certaine impédance de charge il n'y a qu'une combinaison de L et C pour correspondre à cette charge.
+Le facteur de qualité Q du circuit est déterminé uniquement à partir de la source (générateur) et la charge (impédance du Circuit d'impédance) et ne dépend pas des composants externes - ce qui est peut-être la propriété la plus importante du circuit. Cela signifie que pour certaine impédances de charges il n'y a pas qu'une combinaison de L et C correspondante à cette charge.
 \begin{equation}
 Q = \sqrt{\dfrac{R_{source}}{R_{charge}}-1}
 \end{equation}
 
-Maintenant, en utilisant la définition de Q à vide pour trouver les séries et parallèles branches.
+Maintenant, en utilisant la définition de Q à vide pour trouver les branches en séries et en parallèles .
 \begin{equation}
 X_{1}=QR_{source}
 \end{equation}
@@ -866,14 +857,14 @@ X_{1}=QR_{source}
 X_{2}=\dfrac{R_{p}}{Q}
 \end{equation}
 
-T et le réseau \(\Pi\) nécessitent une algorithme de contrôle plus complexe pour la conception automatique de réseau d'adaptation. Elle Nécessité de contrôler de trois composants qui le rend plus cher. Et l'inconvénient du circuit de L est qu'elle peut correspondre à des charges égale ou inférieure à 50 Ohm. Si le circuit de L est inversé, il peut correspondre à des charges égale ou supérieure à 50 Ohm. Il ne peut pas correspondre aux des deux côtés. Par exemple, si la charge est en train de changer de 35 à 100 ohms, le réseau de L inversé correspond uniquement à partir de 50 à 100 ohms et ne correspondra pas à 35-50 ohms.
+Le réseau d'adaptation T et \(\Pi\) nécessitent un algorithme de contrôle plus complexe pour la conception automatique du réseau d'adaptation. il nécessite le contrôle de trois composants qui le rend plus cher. Et l'inconvénient du circuit en L est qu'il peut correspondre qu'aux charges égale ou inférieure à 50 Ohm. Si le circuit de L est inversé, il ne peut correspondre qu'à des charges égale ou supérieure à 50 Ohm. Il ne peut pas correspondre aux deux côtés. Par exemple, si la charge est en train de se changer de 35 à 100 ohms, le réseau en L inversé correspond uniquement à partir de 50 à 100 ohms et ne correspondra pas à 35-50 ohms.
 \begin{figure}[H]
 \centering
 \includegraphics[width=8cm]{matcha}
 \includegraphics[width=8cm]{matchb}
 \caption{Circuit d'adaptation L-shape}
 \end{figure}
-La figures 3.8 montre deux différents réseaux d'adaptation qui sont utilisés dans notre  design.C1 et C2 peuvent être calculées numériquement ou en utilisant \emph {Smith Chart}. Les valeurs calculées de C1 et C2 pour ces deux topologies que nous considérions sont présentés dans tableau 3.4.\\
+La figures 3.8 montre deux différents réseaux d'adaptation qui sont utilisés dans notre  design.C1 et C2 peuvent être calculés numériquement ou en utilisant \emph {Smith Chart}. Les valeurs calculées de C1 et C2 pour ces deux topologies que nous considérions sont présentés dans le tableau 3.4.\\
 \begin{longtable}[c]{| c | c | c |}
  \hline
   & Figure 3.8a & Figure 3.8b\\
@@ -885,7 +876,7 @@ La figures 3.8 montre deux différents réseaux d'adaptation qui sont utilisés 
 \caption{Réseau d'adaptation}
 \end{longtable}
 \subsection{Conception de mise en œuvre pratique}
-La conception a été démarré à l'aide d'une antenne en boucle et un réseau d'adaptation conçu comme indiqué dans les sections précédentes. L'étape suivante a consisté à examiner la mise en œuvre pratique de l'étiquette. Il a été décidé de mettre en œuvre la conception sur une très mince substrat avec une couche de cuivre sur l'avant côtés. La vue d'arrière du produit final est montré dans la conception figure 3.9. En utilisant le réseau d'adaptation représenté sur la figure. 3.8 b. Cela ne signifie pas que le réseau de d'adaptation représenté sur la figure 3.8a est meilleur que l'autre. Les deux réseaux d'adaptation sont équivalents à la fréquence de résonance, les raisons pour lesquelles l'une représentée sur la figure 3.8b a été choisi était parce qu'il est plus facile à mettre en œuvre par la méthode utilisée ici.
+La conception a été démarré à l'aide d'une antenne en boucle et un réseau d'adaptation conçu comme indiqué dans les sections précédentes. L'étape suivante a consisté à examiner la mise en œuvre pratique de l'étiquette. Il a été décidé de mettre en œuvre la conception sur une très mince substrat avec une couche de cuivre sur l'avant côtés. La vue d'arrière du produit final est montrée dans la conception figure 3.9. En utilisant le réseau d'adaptation représenté dans la figure. 3.8 b. Cela ne signifie pas que le réseau d'adaptation représenté sur la figure 3.8a est meilleur que l'autre. Les deux réseaux d'adaptation sont équivalents à la fréquence de résonance, les raisons pour lesquelles l'une représentée sur la figure 3.8b a été choisi était parce qu'il est plus facile à mettre en œuvre par la méthode utilisée ici.
 
 \begin{figure}[H]
 \centering
@@ -894,18 +885,18 @@ La conception a été démarré à l'aide d'une antenne en boucle et un réseau 
 \caption{Illustration RFID}
 \end{figure}
 
-Cette conception UHF de tag est constitué d'une antenne de boucle circulaire avec un réseau d'adaptation à deux éléments pour faire correspondre les impédances de l'antenne de l'étiquette et l'étiquette puce. Cependant, l'étiquette a été rendue légèrement plus grand diamètre par rapport à celui présenté dans la figure 3.10 en fonction de l'application étudiée. 
+Cette conception UHF de tag est constituée d'une antenne de boucle circulaire avec un réseau d'adaptation à deux éléments pour correspondre les impédances de l'antenne de l'étiquette et la puce. Cependant, l'étiquette a été rendue légèrement plus grande en diamètre par rapport à celui présenté dans la figure 3.10 en fonction de l'application étudiée. 
 
-Notre conception UHF étiquette (figure 3.10) considérée est constituée d'une antenne à dipôle électrique avec une piste courbe d'inductance à travers le dipôle à des fins d'adaptation d'impédance. La structure et les dimensions de cette balise est représenté sur la figure 3. Cette balise est faite en utilisant une carte FR4 avec une épaisseur de substrat h = 1,6 mm et de permittivité diélectrique \(\epsilon_{r}\) = 4,4. Cette conception de l'étiquette est de simple face.
+Notre conception UHF étiquette (figure 3.10) considérée est constituée d'une antenne à dipôle électrique avec une piste courbe d'inductance à travers le dipôle à des fins d'adaptation d'impédance. La structure et les dimensions de cette balise sont représentés sur la figure 3. Cette balise est faite en utilisant une carte FR4 avec une épaisseur de substrat h = 1,6 mm et de permittivité diélectrique \(\epsilon_{r}\) = 4,4. Cette conception de l'étiquette est de simple face.
 
- La structure d'antenne est simulée en utilisant CST studio 2014 et l'impédance simulée est de 20 + j152 \(\Omega\). Comme on peut le voir, l'impédance de la structure d'antenne de l'étiquette est pas exactement le conjugué de l'impédance de la puce \cite{alien} et donc, l'étiquette et l'impédance de la puce ne sont pas tout à fait adapté.
+ La structure d'antenne est simulée en utilisant CST studio 2014 et l'impédance simulée est de 20 + j152 \(\Omega\). Comme on peut le voir, l'impédance de la structure d'antenne de l'étiquette n'est pas exactement le conjugué de l'impédance de la puce \cite{alien} et donc, l'étiquette et l'impédance de la puce ne sont pas tout à fait adaptées.
 \begin{figure}[H]
 \centering
 \includegraphics[width=6cm]{dofi}
 \caption{UHF étiquette considérée}
 \end{figure}
 
-Cependant, la piste d'inductance à travers le dipôle ne fournit pas d'inductance suffisante pour accorder à la capacité de la puce de l'étiquette. Le diagramme de rayonnement de l'antenne, avec un maximum de directivité de 1,83 dB. Comme on le voit sur la section de simulation, bien que la forme générale du motif de rayonnement du première et seconde étiquettes UHF est presque identique, la directivité maximale de ces deux balises se produisent à différentes directions par rapport au plan des étiquettes. Les deux tags UHF ne sont pas testés et les résultats théorique de la distance de lecture sont présentés dans le tableau 3.5.\\
+Cependant, la piste d'inductance à travers le dipôle ne fournit pas d'inductance suffisante pour accorder à la capacité de la puce de l'étiquette. Le diagramme de rayonnement de l'antenne, avec un maximum de directivité de 1,83 dB. Comme on le voit sur la section de simulation, bien que la forme générale du motif de rayonnement du première et seconde étiquettes UHF est presque identique, la directivité maximale de ces deux balises se produisent à différentes directions par rapport au plan des étiquettes. Les deux tags UHF ne sont pas testés et les résultats théoriques de la distance de lecture sont présentés dans le tableau 3.5.\\
 
 \begin{longtable}[c]{| c | c | c |}
  \hline
@@ -917,11 +908,11 @@ Cependant, la piste d'inductance à travers le dipôle ne fournit pas d'inductan
  \hline
 \caption{Distance de lecture}
 \end{longtable}
-\subsection{Minaturisation des antenne CLA}
-Le cahier de charge impose par la nature de la solution  a concevoir une antenne de petite taille (>2cm), la radiation doit être dans la bande autorise par l'ANRT et la puissance reçu au niveau de la puce doit êtres suffisante pour alimenter le circuit. Les deux antenne précédemment présenter en une taille relativement grand et les résultat de la simulation prédicte une mauvaise alimentation du circuit de la puce. donc on a était obliger de penser a une solution pour réduire la taille et améliorer les performance de l'antenne. La littérature \cite{stub}  propose une solution possible qui peut
-miniaturiser une antenne en boucle circulaire (CLA) à l'aide de \emph{short stubs} insérés dans la partie interne de la boucle. Dans le cas d'une longueur d'onde et une demi-longueur d'onde, respectivement, l'antenne est réduite jusqu'à 83\% et 92,1\% de sa taille par rapport au type CLA général. Par ailleurs la perte de retour, la bande passante -10dB et le gain d'une longueur d'onde et une demi-longueur d'onde sont de 12MHz (1,3\%), et de 48MHz (5\%). la deuxième méthode sera présenter dans avec la partie simulation dans le chapitre suivant.\\
+\subsection{Miniaturisation des antennes CLA}
+Le cahier de charge impose par la nature de la solution à concevoir une antenne de petite taille (<2cm), la radiation doit être dans la bande autorisée par l'ANRT et la puissance reçu au niveau de la puce doit être suffisante pour alimenter le circuit. Les deux antennes précédemment présentés ont une taille relativement grande et les résultats de la simulation prédisent une mauvaise alimentation du circuit de la puce. donc on a été obligé de penser à une solution pour réduire la taille et améliorer les performance de l'antenne. La littérature \cite{stub}  propose une solution possible qui peut
+miniaturiser une antenne en boucle circulaire (CLA) à l'aide de \emph{short stubs} insérés dans la partie interne de la boucle. Dans le cas d'une longueur d'onde et une demi-longueur d'onde, respectivement, l'antenne est réduite jusqu'à 83\% et 92,1\% de sa taille par rapport au type CLA général. Par ailleurs la perte de retour, la bande passante -10dB et le gain d'une longueur d'onde et une demi-longueur d'onde sont respectivement de 12MHz (1,3\%), et de 48MHz (5\%). la deuxième méthode sera présentée dans avec la partie simulation dans le chapitre suivant.\\
 
-La figure 3.11 présente des caractéristiques de changement de fréquence de résonance lorsqu'un \emph{short stubs} est mis en œuvre à l'intérieur de la boucle de l'antenne. La longueur du  \emph{short stubs} est de 20 mm et la fréquence de résonance chute 30MHz (3,3\%) à partir de 911.25MHz à 881.25MHz lorsque l'écart de la ligne est 2mm. En effet, le courant est distribué le long la longueur totale de la boucle est augmentée à 13\%. En outre, non seulement les capacitances sont augmentées par la dilatation de la longueur de la boucle, mais aussi les inductances sont augmentées par la structure de \emph{short stubs}. Par conséquent, l'impédance de l'antenne permet une adaptation d'impédance que la longueur de boucle est supérieure à une longueur d'onde,de sorte que la fréquence est éventuellement diminuée. Si elle est résonant à la même fréquence, le diamètre total de la boucle devient plus petit, de sorte que l'antenne cadre est miniaturisé par les bouts joints.
+La figure 3.11 présente des caractéristiques de changement de fréquence de résonance lorsqu'un \emph{short stubs} est mis en œuvre à l'intérieur de la boucle de l'antenne. La longueur du  \emph{short stubs} est de 20 mm et la fréquence de résonance chute 30MHz (3,3\%) à partir de 911.25MHz à 881.25MHz lorsque l'écart de la ligne est 2mm. En effet, le courant est distribué le long la longueur totale de la boucle est augmentée à 13\%. En outre, non seulement les capacités sont augmentées par la dilatation de la longueur de la boucle, mais aussi les inductances sont augmentées par la structure de \emph{short stubs}. Par conséquent, l'impédance de l'antenne permet une adaptation d'impédance que la longueur de boucle est supérieure à une longueur d'onde,de sorte que la fréquence est éventuellement diminuée. Si elle est résonante à la même fréquence, le diamètre total de la boucle devient plus petit, de sorte que le cadre l'antenne est miniaturisé par les bouts des joints.
 
 
 \begin{figure}[H]
@@ -945,7 +936,7 @@ Au moyen du procédé de miniaturisation de l'antenne en boucle, l'antenne de la
 \caption{CLA après miniaturisation}
 \end{figure}
 
-Une autre méthode a était conçu après des expérience de \emph{Reverse Engineering} des tag UHF acheté du marche. cette méthode consiste a boucle l'antenne en interne de tell sorte a minimiser le diamètre sans changer la longueur les deux pôles. la figure suivante présente les résultats de l'analyse par  \emph{X-RAY Reverse engineering} qui permet de voire en interne sans massacre la pièce. Le figure suivante présente les résultats du \emph{Reverse engineering}. L'étiquète est constituer de deux couche de cuivre, la puce est fixé sur l'antenne fixage avec \emph{wire bonding}. la simulation de cette antenne sera présenter dans le chapitre suivant. \\
+Une autre méthode a été conçu après des expériences de \emph{Reverse Engineering} des tags UHF achetés du marché. cette méthode consiste à boucler l'antenne en interne de tel sorte à minimiser le diamètre sans changer la longueur des deux pôles. la figure suivante présente les résultats de l'analyse par  \emph{X-RAY Reverse engineering} qui permet de voire en interne sans massacrer la pièce. Le figure suivante présente les résultats du \emph{Reverse engineering}. L'étiquète est constituée de deux couches de cuivre, la puce est fixée sur l'antenne le fixage est avec \emph{wire bonding}. la simulation de cette antenne sera présentée dans le chapitre suivant. \\
 
 \begin{figure}[H]
 \centering
@@ -953,14 +944,14 @@ Une autre méthode a était conçu après des expérience de \emph{Reverse Engin
 \caption{X-Ray du tag UHF}
 \end{figure}
 
-On c'est inspirer de cette méthode qu'on appellerait dans ce rapport \emph{bouclage interne} pour améliorer notre antenne et l'optimiser au niveaux de taille. le figure suivante montre la nouvelle version de l'antenne en figure 3.15. la taille a était réduite de 30 \% on a passé de 28 mm a 22 mm. la nouvelle structure permet un contrôle facile de fréquence et d'impédance. dans les section qui suite on présente une étude détaille sur les avantage de cette nouvelle structure et aussi quelque amélioration qui nous a permise de descendre encore plus base en terme de diamètre de l'antenne. Une étude plus parfondis a était consacre sur cette base a fin de relever toutes les secrètes de cette méthode.\\
+On c'est inspiré de cette méthode qu'on appellera dans ce rapport \emph{bouclage interne} pour améliorer notre antenne et l'optimiser au niveau de la taille. la figure suivante montre la nouvelle version de l'antenne en figure 3.15. la taille a été réduite de 30 \% on a passé de 28 mm a 22 mm. la nouvelle structure permet un contrôle facile de fréquence et d'impédance. dans les sections qui suivent on présente une étude détaillée sur les avantages de cette nouvelle structure et aussi quelques améliorations qui nous ont permis de descendre encore plus bas en terme de diamètre de l'antenne. Une étude plus approfondis a été consacrée sur cette base à fin de relever touts les secrets de cette méthode.\\
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=6cm]{1STee}
-\caption{Tag UHF améliorer}
+\caption{Tag UHF amélioré}
 \end{figure}
-Comme le montre la figure 3.15 la taille a était énormément améliorer et les performance de cette antenne gardant les même. cette structure nous a permit un bon contrôle de fréquence. toute variation de longueur de 2mm nous donne un décalage de fréquence de 10MHz. La figure 3.16 est le S11 après chaque coupage de boucle intérieur de 2mm.plus de détail sur la simulation seront présenter dans le chapitre suivant.\\
+Comme le montre la figure 3.15 la taille a été énormément améliorée et les performances de cette antenne restent les mêmes. cette structure nous a permit un bon contrôle de fréquence. toute variation de longueur de 2mm nous donne un décalage de fréquence de 10MHz. La figure 3.16 est le S11 après chaque coupage de boucle intérieur de 2mm.plus de détails sur la simulation seront présentés dans le chapitre suivant.\\
 
 \begin{figure}[H]
 \centering
@@ -968,17 +959,17 @@ Comme le montre la figure 3.15 la taille a était énormément améliorer et les
 \includegraphics[width=6cm]{22}\\
 \includegraphics[width=6cm]{33}
 \includegraphics[width=6cm]{44}
-\caption{S11 apres coupage de 2mm }
+\caption{S11 après coupage de 2mm }
 \end{figure}
 
-La troisième étape  consiste a réaliser l'antenne de la figure 3.17. 
-Avant de concevoir un prototype de tag RFID destiné à la traçabilité des palettes, un modèle a été mis à notre disponibilité pour être analysé dans les laboratoires de MAScIR.Le but de cette analyse est de caractériser le produit et de déterminer les différents matériaux utilisés.\\
+La troisième étape  consiste à réaliser l'antenne de la figure 3.17. 
+Avant de concevoir un prototype de tag RFID destiné à la traçabilité des palettes, un modèle a été mis à notre disponibilité pour être analysé dans les laboratoires de MAScIR.Le but de cette analyse est de caractérisé le produit et de déterminer les différents matériaux utilisés.\\
 
-Pour faire on comance pare une Analyse non destructive qui consiste a faire une analyse générale  du boitier puis une description générale du package vu de l’extérieur,Puis avec les Rayons X comme illustre la figure 3.14. En suite on procede a une l'analyse destructive qui consiste a décapsulation le package puis faire une décapsulation du System.
+On commence pare une Analyse non destructive qui consiste à faire une analyse générale  du boîtier puis une description générale du package vu de l’extérieur,Puis avec les Rayons X comme illustré dans la figure 3.14. En suite on procède à l'analyse destructive qui consiste à décapsuler le package puis une décapsulation du système.
 
 
 
-Dans la figure suivante.Cette structure a était inspire de l'analyse avec x-ray d'une antenne acheté du marche qui rayonne dans la fréquence 915MHz. l'expérience montre que sa distance de lecture est de 2m.plus de détail sur la simulation seront présenter dans le chapitre suivant.\\
+Dans la figure suivante.Cette structure a été inspirée de l'analyse avec x-ray d'une antenne achetée du marché qui rayonne dans la fréquence 915MHz. l'expérience montre que sa distance de lecture est de 2m.plus de détail sur la simulation seront présenter dans le chapitre suivant.\\
 
 \begin{figure}[H]
 \centering
@@ -987,18 +978,18 @@ Dans la figure suivante.Cette structure a était inspire de l'analyse avec x-ray
 \caption{S11du tag UHF améliorer }
 \end{figure}
 
-Dans cette section on a discuter les notion théorique qui régie les antenne a boucle circulaire qui représente une excellente solution pour les antenne de petite taille. Une étude sur les méthode d'optimisation on était détaille dans cette section comme le \emph{Short stub} et le bouclage interne qui permettent de réduire la taille et garder le caractère omnidirectionnel, après cette étape on a élaboré un plan d'expérience qui consiste a examiner une tag achète du marche et puis l'analyser avec un \emph{X-RAY} pour s'inspirer de sa structure. le produit final de cette étude est une tag UHF marocaine d'excellente performance.
+Dans cette section on a discuté les notions théorique qui régie les antennes à boucle circulaire qui représente une excellente solution pour les antennes de petite taille. Une étude sur les méthodes d'optimisation ont été détailler dans cette section comme le \emph{Short stub} et le bouclage interne qui permettent de réduire la taille et garder le caractère omnidirectionnel, après cet étape on a élaboré un plan d'expérience qui consiste à examiner un tag acheté du marché et puis l'analyser avec les \emph{X-RAYs} pour s'inspirer de sa structure. le produit final de cet étude est un tag UHF marocain d'excellente performance.
 
-\chapter{Réalisaion et simulation du projet}
-Dans ce chapitre je présente les outils	de	réalisation	et de	simulation en suite la réalisation	du projet et les étape de test	 et vérification et finalement un plan de mise en œuvre et plan de maintenance.
+\chapter{Réalisation et simulation du projet}
+Dans ce chapitre je présente d'abord les outils de réalisation ,de	simulation en suite la réalisation	du projet puis les étapes de test ,la vérification et en fin un plan de mise en œuvre et plan de maintenance.
 \section{Outils	de	réalisation	et de	simulation}
-\subsection{Visuel Studio et .net C\#}
-\subsubsection{Visuel Studio}
-Microsoft Visual Studio est un environnement de développement intégré (IDE) de Microsoft. Il est utilisé pour développer des programmes informatiques pour Microsoft Windows, ainsi que des sites Web, des applications Web et des services Web. Visual Studio utilise les plates-formes de développement de logiciels Microsoft tels que l'API Windows, Windows Forms, Windows Presentation Foundation, Windows Store et Microsoft Silverlight. Il peut produire à la fois du code natif et le code managé.
+\subsection{Visual Studio et .net C\#}
+\subsubsection{Visual Studio}
+Microsoft Visual Studio est un environnement de développement intégré (IDE) de Microsoft. Il est utilisé pour développer des programmes informatiques pour Microsoft Windows, ainsi que des sites Web, des applications Web et des services Web. Visual Studio utilise les plates-formes de développement de logiciels Microsoft tels que l'API Windows, Windows Forms, Windows Presentation Foundation, Windows Store et Microsoft Silverlight. Il peut produire à la fois le code natif et le code managé.
 
 Visual Studio inclut un éditeur de code de support IntelliSense (le composant de complétion de code) ainsi que le code refactoring. Le débogueur intégré fonctionne à la fois comme un débogueur de niveau source et un débogueur de niveau de la machine. D'autres outils intégrés comprennent un concepteur de formulaires pour les applications bâtiment de l'interface graphique, web designer, concepteur de la classe, et concepteur de schéma de base de données. Il accepte les plug-ins qui améliorent la fonctionnalité à presque tous les niveaux, y compris l'ajout du support pour les systèmes de commande source (comme Subversion) et l'ajout de nouveaux jeux d'outils tels que les éditeurs et les concepteurs visuels pour les langues spécifiques au domaine ou toolsets pour d'autres aspects du cycle de vie du développement logiciel (comme le client Team Foundation Server: Team Explorer).
 
-Visual Studio supporte différents langages de programmation et permet à l'éditeur de code et débogueur pour support  presque tout langage de programmation, C, C ++, VB.NET (Visual Basic .NET), C sharp (via Visual C \#), et F \# (à partir de Visual Studio 2010  ). Le support d'autres langages tels que Python, Ruby, Node.js, et M entre autres est disponible via les services linguistiques installés séparément. Il prend également en charge XML / XSLT, HTML / XHTML, JavaScript et CSS. Java (et J \#) ont été pris en charge dans le passé.
+Visual Studio supporte différents langages de programmation et permet à l'éditeur de code et débogueur pour support  presque tout langage de programmation, C, C ++, VB.NET (Visual Basic .NET), C sharp (via Visual C \#), et F \# (à partir de Visual Studio 2010  ). Le support d'autres langages tels que Python, Ruby, Node.js, et autres est disponible via les services linguistiques installés séparément. Il prend également en charge XML / XSLT, HTML / XHTML, JavaScript et CSS. Java (et J \#) ont été pris en charge dans le passé.
 
 \begin{figure}[H]
 \centering
@@ -1007,11 +998,12 @@ Visual Studio supporte différents langages de programmation et permet à l'édi
 \end{figure}
 
 \subsubsection{.net C \#}
-C \# est un langage orienté objet élégant et de type sécurisé qui permet aux développeurs de créer une variété d'applications sûres et robustes qui fonctionnent sur le .NET Framework. Vous pouvez utiliser C \# pour créer des applications Windows client, les services Web XML, composants distribués, les applications client-serveur, les applications de base de données, et beaucoup, beaucoup plus. Visual C \# fournit un éditeur avancé de code, les concepteurs d'interface utilisateur pratique, débogueur intégré, et bien d'autres outils pour faciliter le développement d'applications basées sur le langage C \# et .NET Framework.\\
+C \# est un langage orienté objet élégant et sécurisé qui permet aux développeurs de créer une variété d'applications robustes qui fonctionnent sur le .NET Framework. Vous pouvez utiliser C \# pour créer des applications Windows client, les services Web XML, composants distribués, les applications client-serveur, les applications de base de données, et beaucoup, beaucoup plus. Visual C \# fournit un éditeur avancé de code, les concepteurs d'interface utilisateur pratique, débogueur intégré, et bien d'autres outils pour faciliter le développement d'applications basées sur le langage C \# et .NET Framework.\\
 
-programmes C \# exécuter sur le .NET Framework, une partie intégrante de Windows qui inclut un système d'exécution virtuel appelé le Common Language Runtime (CLR) et un ensemble unifié de bibliothèques de classes. Le CLR est la mise en œuvre commerciale par Microsoft de l'infrastructure de langage commun (CLI), une norme internationale qui est la base pour la création d'environnements d'exécution et de développement dans lequel les langues et les bibliothèques travaillent ensemble de façon transparente.\\
+Les programmes C \# exécutés sur le .NET Framework, une partie intégrante de Windows qui inclut un système d'exécution virtuel appelé le Common Language Runtime (CLR) et un ensemble unifié de bibliothèques de classes. Le CLR est la mise en œuvre commerciale par Microsoft de l'infrastructure de langage commun (CLI), une norme internationale qui est la base pour la création des
+environnements d'exécution et de développement dans lequel les langues et les bibliothèques travaillent ensemble de façon transparente.\\
 
-Le code source écrit en C \# est compilé dans un langage intermédiaire (IL) qui est conforme à la spécification CLI. Le code et les ressources IL, tels que des bitmaps et des chaînes, sont stockées sur le disque dans un fichier exécutable appelé un ensemble, généralement avec une extension .exe ou .dll. Un assemblage contient un manifeste qui fournit des informations sur les types de l'assemblage, la version, la culture, et les exigences de sécurité.\\
+Le code source écrit en C \# est compilé dans un langage intermédiaire (IL) qui est conforme à la spécification CLI. Le code et les ressources IL, tels que des bitmaps et des chaînes, sont stockés sur le disque dans un fichier exécutable appelé un ensemble, généralement avec une extension .exe ou .dll. Un assemblage contient un manifeste qui fournit des informations sur les types de l'assemblage, la version, la culture, et les exigences de sécurité.\\
 
 Lorsque le programme C \# est exécuté, l'ensemble est chargé dans le CLR, ce qui pourrait prendre diverses mesures basées sur les informations contenues dans le manifeste. Ensuite, si les conditions de sécurité sont remplies, le CLR effectue juste à temps (JIT) pour convertir le code IL aux instructions machine natives. Le CLR fournit également d'autres services liés à la collecte automatique des déchets, la gestion des exceptions, et la gestion des ressources. Le code qui est exécuté par le CLR est parfois appelé «code managé," contrairement à "code non managé» qui est compilé en langage machine natif qui cible un système spécifique. Le schéma suivant illustre la compilation et l'exécution des relations de fichiers source C \# de code, les bibliothèques de classes .NET Framework, les assemblages et le CLR.
 \begin{figure}[H]
@@ -1020,42 +1012,40 @@ Lorsque le programme C \# est exécuté, l'ensemble est chargé dans le CLR, ce 
 \caption{Architecture du Framework .net}
 \end{figure}
 \subsection{Android Studio}
-Android Studio est l'environnement de développement intégré officiel (IDE) pour le développement de la plate-forme Android. Il a été annoncé le 16 mai 2013 à la conférence Google I / O. Android Studio est disponible gratuitement sous la licence Apache 2.0. Android Studio a été au début de l'étape accès à l'aperçu à partir de la version 0.1 en mai 2013, puis est entré phase bêta à partir de la version 0.8 qui a été publié en Juin 2014. La première version stable a été publié en Décembre 2014, à partir de la version 1.0.\\
+Android Studio est l'environnement de développement intégré officiel (IDE) pour le développement de la plate-forme Android. Il a été annoncé le 16 mai 2013 à la conférence Google I / O. Android Studio est disponible gratuitement sous la licence Apache 2.0. Android Studio a été au début de l'étape accès à l'aperçu à partir de la version 0.1 en mai 2013, puis il est entré en phase bêta à partir de la version 0.8 qui a été publié en Juin 2014. La première version stable a été publié en Décembre 2014, à partir de la version 1.0.\\
 
 Basé sur le logiciel IntelliJ IDEA de JetBrains, Android Studio est conçu spécifiquement pour le développement Android. Il est disponible en téléchargement sur Windows, Mac OS X et Linux, et remplacé Outils Eclipse développement Android (HAA) comme IDE primaire de Google pour le développement d'applications Android native.\\
 
 
-Les nouvelles fonctionnalités devraient être déployé avec chaque version d'Android Studio. Les fonctions suivantes sont fournies dans la version stable actuelle: 
+Les nouvelles fonctionnalités devraient être déployées avec chaque version d'Android Studio. Les fonctions suivantes sont fournies dans la version stable actuelle: 
 \begin{itemize}
 \item Gradle-based  renforcer et soutien.
 \item Refactoring Android-spécifique et des solutions rapides.
 \item Outils de monitoring de performance, facilité d'utilisation et la compatibilité de version 
 \item Assistants basés sur des modèles pour créer des dessins et des composants 
 \item Un riche éditeur de mise en page qui permet aux utilisateurs de glisser-déposer les composants de l'interface
-\item Soutien pour la construction Porter les applications Android
+\item Soutien pour la construction des applications Android
 \item Support intégré pour Google Cloud Platform, intégration permettant à Google Cloud Messaging et App Engine.
 \end{itemize}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{as}
-\caption{Interface de Android Studio}
+\caption{Interface d'Android Studio}
 \end{figure}
 
-
 \subsection{CST studio}
-CST MICROWAVE STUDIO (CST MWS) est un outil spécialisé pour la simulation 3D EM de composants à haute fréquence. une performance inégalée de CST MWS  ce qui en fait le lui premier choix dans la technologie de radio fréquence.\\
+CST MICROWAVE STUDIO (CST MWS) est un outil spécialisé pour la simulation 3D EM de composants à haute fréquence. une performance inégale de CST MWS  ce qui fait de lui le premier choix dans la technologie de radio fréquence.\\
 
-CST MWS permet l'analyse rapide et précise de haute fréquence (HF) des dispositifs tels que des antennes, des filtres, coupleurs, plans et les structures multicouches. Exceptionnellement utilisateur conviviale, CST MWS vous donne rapidement un aperçu du comportement EM de nos conceptions à haute fréquence.\\
+CST MWS permet l'analyse rapide et précise de haute fréquence (HF) des dispositifs comme des antennes, des filtres, coupleurs, plans et les structures multicouches.  CST MWS vous donne rapidement un aperçu du comportement EM de nos conceptions à haute fréquence.\\
 
-CST support la technologie complète pour la 3D EM. Le solveur \emph{Time Domain} largement applicable et le solveur de \emph{domaine de fréquence}, CST MWS offre d'autres modules de solveurs pour des applications spécifiques. \\
+CST support la technologie complète pour la 3D EM. Le solveur \emph{Time Domain} est largement applicable et le solveur de \emph{domaine de fréquence}, CST MWS offre d'autres modules de solveurs pour des applications spécifiques. \\
 
-CST MICROWAVE STUDIO est vu par un nombre croissant d'ingénieurs comme un outil de développement standard de l'industrie.
+CST MICROWAVE STUDIO est vu par un nombre croissant d'ingénieurs comme un outil du développement standard de l'industrie.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{cst}
 \caption{Interface CST}
 \end{figure}
-
 \section{Test	 et vérification	}
 \subsection{RFID Desktop}
 L'application desktop  est un logiciel pour la gestion des entrée et sortie des palettes du stock. elle exécute au sein d'elle le protocole qu'on appel l'interface RFID qui a sont tours communique avec le lecteur et le commande  afin de bine gérer sont interface air. les détaille de cette interface sont décrite dans le chapitre précédant. 
@@ -1127,17 +1117,18 @@ L'application permet aussi de sauvegarder les donner dans une base de données i
 
 \subsection{Antenne UHF}
 
-Pour décrire la performance d'une antenne , les définitions des différents paramètres sont nécessaires . Certains paramètres sont interdépendants et pas tous d'entre eux doivent être indiquées pour une description complète de la performance de l'antenne. La définitions des paramètres seront donnés dans section suivante. Beaucoup de ceux sont des standard IEEE  ( IEEE Std 145-1983 ). Ensuite je vais présenter les différentes résultats et simulation sur les antennes RFID UHF. La puce utiliser est la H3 de Alien. Le logiciel de simulation est CST studio 2014 qui permet de calculer un grand nombre des paramètres d'antenne.\\
+Pour décrire la performance d'une antenne , les définitions des différents paramètres sont nécessaires . Certains paramètres sont interdépendants et  
+tous entre eux doivent être indiquées pour une description complète de la performance de l'antenne. La définition des paramètres sera donnée dans la section suivante. Beaucoup de paramètres sont des standard IEEE  ( IEEE Std 145-1983 ). Ensuite je vais présenter les différentes résultats et simulations sur les antennes RFID UHF. La puce utilisée est la H3 de Alien. Le logiciel  simulation est CST studio 2014 qui permet de calculer un grand nombre des paramètres d'antenne.\\
 \subsubsection{Les paramètres de l'antenne}
 \begin{itemize}
 \item \emph{RADIATION PATTERN}
-Un motif de motif ou une antenne rayonnement de l'antenne est définie comme : une fonction mathématique ou d'une représentation graphique des propriétés de rayonnement de l' antenne en fonction des coordonnées spatiales. Dans la plupart des cas, le diagramme de rayonnement est déterminée dans la région de champ \emph{Far-Field} est représentée comme une fonction des coordonnées de direction . Propriétés de rayonnement comprennent la densité de flux de puissance , l'intensité du rayonnement, l'intensité du champ , directivité , de phase ou de polarisation.
+Un motif de motif ou une antenne rayonnement de l'antenne est définie comme : une fonction mathématique ou d'une représentation graphique des propriétés de rayonnement de l' antenne en fonction des coordonnées spatiales. Dans la plupart des cas, le diagramme de rayonnement est déterminé dans la région de champ \emph{Far-Field} est représenté comme une fonction des coordonnées de direction .Les propriétés du rayonnement comprennent la densité du flux de puissance , l'intensité du rayonnement, l'intensité du champ , directivité et de phase ou de polarisation.
 \begin{figure}[H]
 \centering
 \includegraphics[width=5cm,height=5cm]{radpa}
 \caption{Radiation pattern}
 \end{figure}
-\item \emph{la directivité} la directivité d'une antenne est définie comme: le rapport de l'intensité du rayonnement dans une direction donnée de l'antenne à l'intensité de rayonnement moyenne de toutes les directions. L'intensité de rayonnement moyenne est égale à la puissance totale rayonnée par l'antenne divisée par 4\(\pi\) .En forme mathématique elle peut être écrit comme:
+\item \emph{la directivité} la directivité d'une antenne est définie comme: le rapport de l'intensité du rayonnement dans une direction donnée de l'antenne à l'intensité de rayonnement moyen de toutes les directions. L'intensité du rayonnement moyen est égale à la puissance totale rayonnée par l'antenne divisée par 4\(\pi\) .En forme mathématique elle peut être écrite comme:
 
 \begin{equation}
 D = \dfrac{U}{U_{0}} = \dfrac{4 \pi U}{P_{rad}}
@@ -1156,7 +1147,7 @@ U = intensité du rayonnement ( W / unité d'angle solide )\\
 
 \item \emph{EFFICACITÉ}
 
-elle peut êtres définit comme suite: \emph{comment bien l' antenne rayonne la puissance qui lui est donné.} Le total efficacité de l'antenne est utilisée pour prendre en compte les pertes au niveau des bornes d'entrée et à l'intérieur de la structure de l'antenne. Ces pertes peuvent être dues  à la réfection en raison de mal adaptation entre la ligne de transmission et la source de l'antenne, la conduction et diélectrique
+elle peut être définit comme suite: \emph{comment bien l' antenne rayonne la puissance qui lui est donné.} Efficacité totale de l'antenne est utilisée pour prendre en compte les pertes au niveau des bornes d'entrée et à l'intérieur de la structure de l'antenne. Ces pertes peuvent être dues  à la réflexion en raison de mal adaptation entre la ligne de transmission et la source de l'antenne, la conduction et diélectrique
 
 \begin{figure}[H]
 \centering
@@ -1175,21 +1166,21 @@ e_{0}=e_{r}e_{c}e_{d}
 \(e_{d}\) = efficacité diélectrique ( sans dimension)\\
 
 \item \emph{VSWR} 
-Pour une radio ( émetteur ou récepteur ) pour délivrer une puissance à une antenne , l'impédance de la ligne de transmission radio et doit être bien adaptée à l'impédance de l'antenne . Le paramètre ROS ou VSWR est une mesure qui décrit numériquement la façon dont l' antenne a une adaptation d'impédance à la ligne de la radio ou de la transmission , il est connecté.
+Pour une radio ( émetteur ou récepteur ) pour délivrer une puissance à une antenne , l'impédance de la ligne de transmission radio doit être bien adaptée à l'impédance de l'antenne . Le paramètre ROS ou VSWR est une mesure qui décrit numériquement la façon dont l'antenne a une adaptation d'impédance à la ligne de la radio ou de la transmission quand elle est connectée.
 \begin{equation}
 VSWR = \dfrac{1+ |\Gamma|}{1-|\Gamma|}
 \end{equation}
 
 \item \emph{S paramètres}
-décrivent la relation d' entrée-sortie entre les ports (ou terminaux) dans un système électrique . Par exemple, si nous avons 2 ports ( intelligemment appelé Port 1 et Port 2), puis S12 représente la puissance transférée de Port 2 à Port 1. S21 représente la puissance transférée de Port 1 à Port 2. En général, SNM représente la puissance transférés de Port M à Port N dans un réseau multi- port.
+décrivent la relation d'entrée-sortie entre les ports (ou terminaux) dans un système électrique . Par exemple, si nous avons 2 ports ( intelligemment appelé Port 1 et Port 2), puis S12 représente la puissance transférée de Port 2 à Port 1. S21 représente la puissance transférée de Port 1 à Port 2. En général, SNM représente la puissance transférés de Port M à Port N dans un réseau multi- port.
 \end{itemize}
 
 \subsubsection{Le premier prototype UHF}
 
 
-La conception UHF étiquette considérée est constituée d’une antenne à dipôle électrique avec une piste courbe d’inductance à travers le dipôle à des fins d'adaptation d'impédance. La structure et les dimensions de cette balise est représenté sur la figure 3. Cette balise est faite en utilisant une carte FR4 avec une épaisseur de substrat h = 1,6 mm et de permittivité diélectrique \(\epsilon_{r}\) = 4,4. Cette conception de l’étiquette est de simple face.
+La conception UHF étiquette considérée est constituée d’une antenne à dipôle électrique avec une piste courbe d’inductance à travers le dipôle à des fins d'adaptation d'impédance. La structure et les dimensions de cette balise sont représentées sur la figure 3. Cette balise est faite en utilisant une carte FR4 avec une épaisseur de substrat h = 1,6 mm et de permittivité diélectrique \(\epsilon_{r}\) = 4,4. Cette conception de l’étiquette est de simple face.
 
- l'impédance simulée est de 20 + j152 \(\Omega\).l'impédance de la structure d'antenne de l'étiquette est pas exactement le conjugué de l'impédance de la puce [6] et donc, l'étiquette et l'impédance de la puce ne sont pas tout à fait adapté.\\
+ l'impédance simulée est de 20 + j152 \(\Omega\).l'impédance de la structure d'antenne de l'étiquette n'est pas exactement le conjugué de l'impédance de la puce [6] et donc, l'étiquette et l'impédance de la puce ne sont pas tout à fait adaptées.\\
  
  \begin{figure}[H]
 \centering
@@ -1197,7 +1188,7 @@ La conception UHF étiquette considérée est constituée d’une antenne à dip
 \caption{Paramettre de sumulation CLA}
 \end{figure} 
 
-Les figures suivante représente les quatre importante paramétrés a prendre en considération pour le jugement d'une antenne. la première valeur est la s11
+Les figures suivantes représente les quatre paramétrés importante  à prendre en considération pour le jugement d'une antenne. la première valeur est la s11
 \begin{figure}[h]
 \centering
 \includegraphics[width=6cm,height=3cm]{clas11}
@@ -1209,15 +1200,15 @@ Les figures suivante représente les quatre importante paramétrés a prendre en
 %talke about seuille values and compared them to what we got
 % bandwith power related to s11, (feathers or capabilities)
 
-\subsubsection{L'antenne a boucle circulaire}
-La structure suivante représente  la forme améliorer de l'antenne précedante, cette structure nous a permit de réduire la taille et donner la main sur un contrôle totale de fréquence. l'impédance de l'antenne simuler est  de 27 + j180\(\Omega\)
+\subsubsection{L'antenne à boucle circulaire}
+La structure suivante représente  la forme améliorée de l'antenne précédente, cette structure nous a permis de réduire la taille et mettre la main sur un contrôle totale de fréquence. l'impédance de l'antenne simulée est  de 27 + j180\(\Omega\)
 .
 \begin{figure}[H]
 \centering
 \includegraphics[width=6cm]{1STee}
-\caption{antenne a boucle circulaire}
+\caption{antenne à boucle circulaire}
 \end{figure}
-Les figures suivante représente les quatre importante paramétrés a prendre en considération pour le jugement d'une antenne.
+Les figures suivantes représente les quatre paramétrés importante à prendre en considération pour le jugement d'une antenne.
 
 \begin{figure}[H]
 \centering
@@ -1230,7 +1221,7 @@ Les figures suivante représente les quatre importante paramétrés a prendre en
 %talke about seuille values and compared them to what we got
 % bandwith power related to s11, (feathers or capabilities)
 
-la figure suivante présente les résultats de l'analyse par  \emph{X-RAY Reverse engineering} qui permet de voire en interne sans massacre la pièce. Le figure suivante présente les résultats du \emph{Reverse engineering}. L'étiquète est constituer de deux couche de cuivre, la puce est fixé sur l'antenne fixage avec \emph{wire bonding}. la simulation de cette antenne sera présenter dans le chapitre suivant. \\
+la figure suivante présente les résultats de l'analyse par  \emph{X-RAY Reverse engineering} qui permet de voire en interne sans massacrer la pièce. La figure suivante présente les résultats du \emph{Reverse engineering}. L’étiquette est constituer de deux couches de cuivre, la puce est fixée sur l'antenne fixage avec \emph{wire bonding}. la simulation de cette antenne sera présenter dans le chapitre suivant. \\
 
 \begin{figure}[H]
 \centering

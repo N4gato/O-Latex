@@ -21,7 +21,7 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Illustration du syst\IeC {\`e}me RFID}}{40}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Phase de n\IeC {\'e}gociation}}{41}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Phase d'ex\IeC {\'e}cution}}{42}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Etape de conception d'une base de donn\IeC {\'e}es}}{44}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \IeC {\'e}tape de conception d'une base de donn\IeC {\'e}es}}{44}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Fonctionnalit\IeC {\'e} de l'application}}{45}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Fonctionnalit\IeC {\'e} de l'application}}{46}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces L'antenne propos\IeC {\'e}e}}{47}
@@ -33,13 +33,13 @@
 \contentsline {figure}{\numberline {4.15}{\ignorespaces far-field pattern avant miniaturisation}}{52}
 \contentsline {figure}{\numberline {4.16}{\ignorespaces CLA apr\IeC {\`e}s miniaturisation}}{52}
 \contentsline {figure}{\numberline {4.17}{\ignorespaces X-Ray du tag UHF}}{53}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Tag UHF am\IeC {\'e}liorer}}{53}
-\contentsline {figure}{\numberline {4.19}{\ignorespaces S11 apres coupage de 2mm }}{54}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Tag UHF am\IeC {\'e}lior\IeC {\'e}}}{53}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces S11 apr\IeC {\`e}s coupage de 2mm }}{54}
 \contentsline {figure}{\numberline {4.20}{\ignorespaces S11du tag UHF am\IeC {\'e}liorer }}{55}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Interface Visual studio }}{58}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Architecture du Framework .net}}{59}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Interface de Android Studio}}{60}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Interface d'Android Studio}}{60}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Interface CST}}{61}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Rappel du system RFID}}{61}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces L'interface utilisateur}}{62}
@@ -51,7 +51,7 @@
 \contentsline {figure}{\numberline {5.12}{\ignorespaces r\IeC {\'e}flexion,conduction,perte de di\IeC {\'e}lectrique}}{66}
 \contentsline {figure}{\numberline {5.13}{\ignorespaces Paramettre de sumulation CLA}}{67}
 \contentsline {figure}{\numberline {5.14}{\ignorespaces Paramettre de sumulation CLA}}{68}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces antenne a boucle circulaire}}{68}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces antenne \IeC {\`a} boucle circulaire}}{68}
 \contentsline {figure}{\numberline {5.16}{\ignorespaces Paramettre de sumulation CLA}}{69}
 \contentsline {figure}{\numberline {5.17}{\ignorespaces S11du tag UHF am\IeC {\'e}liorer }}{69}
 \contentsline {figure}{\numberline {5.18}{\ignorespaces Paramettre de sumulation CLA}}{70}
