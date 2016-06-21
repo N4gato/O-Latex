@@ -4,7 +4,7 @@
 \contentsline {section}{Introduction}{13}
 \contentsline {chapter}{\numberline {1}Pr\IeC {\'e}sentation de l'entreprise d'accueil}{15}
 \contentsline {section}{\numberline {1.1}Pr\IeC {\'e}sentation g\IeC {\'e}n\IeC {\'e}rale de MAScIR}{15}
-\contentsline {subsection}{\numberline {1.1.1}Partenaires de la foundation}{16}
+\contentsline {subsection}{\numberline {1.1.1}Client de la fondation}{16}
 \contentsline {subsection}{\numberline {1.1.2}Structure et hi\IeC {\'e}rarchie}{16}
 \contentsline {section}{\numberline {1.2}Pr\IeC {\'e}sentation du d\IeC {\'e}partement micro\IeC {\'e}lectronique}{17}
 \contentsline {subsection}{\numberline {1.2.1}Mission}{17}
@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {1.2.3}\IeC {\'E}quipements}{18}
 \contentsline {section}{\numberline {1.3}Description et d\IeC {\'e}roulement du stage}{19}
 \contentsline {subsection}{\numberline {1.3.1}Activit\IeC {\'e}s exerc\IeC {\'e}es}{19}
-\contentsline {subsection}{\numberline {1.3.2}R\IeC {\'e}partition des t\IeC {\^a}ches}{19}
+\contentsline {subsection}{\numberline {1.3.2}R\IeC {\'e}partitions des t\IeC {\^a}ches}{19}
 \contentsline {chapter}{\numberline {2}Contexte G\IeC {\'e}n\IeC {\'e}ral du projet}{21}
 \contentsline {section}{\numberline {2.1}Cahier des charges}{21}
 \contentsline {subsection}{\numberline {2.1.1}Objectif}{21}
@@ -22,10 +22,10 @@
 \contentsline {subsection}{\numberline {2.2.1}\IeC {\'E}tapes de r\IeC {\'e}alisation}{22}
 \contentsline {subsection}{\numberline {2.2.2}Diagrammes de Gantt}{23}
 \contentsline {section}{\numberline {2.3}D\IeC {\'e}composition du projet}{24}
-\contentsline {chapter}{\numberline {3}\IeC {\'E}tude d\IeC {\'e}taill\IeC {\'e}e du Projet}{25}
+\contentsline {chapter}{\numberline {3}\IeC {\'E}tude d\IeC {\'e}taill\IeC {\'e}e du projet}{25}
 \contentsline {section}{\numberline {3.1}Description de la solution}{25}
 \contentsline {subsection}{\numberline {3.1.1}Le system de base RFID}{25}
-\contentsline {subsection}{\numberline {3.1.2}Les composants essential d'un system RFID}{26}
+\contentsline {subsection}{\numberline {3.1.2}Les composants essentiels d'un syst\IeC {\`e}me RFID}{26}
 \contentsline {subsubsection}{Les tags}{26}
 \contentsline {subsubsection}{Reader/Lecteur}{27}
 \contentsline {subsubsection}{La base de donn\IeC {\'e}es}{27}
@@ -37,14 +37,13 @@
 \contentsline {subsubsection}{Micro-ondes}{32}
 \contentsline {subsubsection}{Ultra-Wideband}{32}
 \contentsline {subsection}{\numberline {3.1.5}Fonctionnalit\IeC {\'e}}{33}
-\contentsline {subsection}{\numberline {3.1.6}Normes}{33}
-\contentsline {subsection}{\numberline {3.1.7}Modes de transfert d\IeC {\textquoteright }\IeC {\'e}nergie et de communication}{34}
-\contentsline {subsection}{\numberline {3.1.8}Liaison montante et liaison descendante}{34}
-\contentsline {subsubsection}{Liaison montante ( forward link) de la station de base vers le tag}{35}
+\contentsline {subsection}{\numberline {3.1.6}Modes de transfert d\IeC {\textquoteright }\IeC {\'e}nergie et de communication}{33}
+\contentsline {subsection}{\numberline {3.1.7}Liaison montante et liaison descendante}{34}
+\contentsline {subsubsection}{Liaison montante ( forward link) de la station de base vers le tag}{34}
 \contentsline {subsubsection}{Liaison descendante de la modulation}{35}
 \contentsline {chapter}{\numberline {4}Les solutions propos\IeC {\'e}es et \IeC {\'e}tude th\IeC {\'e}orique }{37}
 \contentsline {section}{\numberline {4.1}Client et interface RFID}{37}
-\contentsline {subsection}{\numberline {4.1.1}\IeC {\'E}tude du marche}{38}
+\contentsline {subsection}{\numberline {4.1.1}\IeC {\'E}tude du march\IeC {\'e}}{38}
 \contentsline {subsection}{\numberline {4.1.2}\emph {Middleware} et Protocole de communication}{38}
 \contentsline {subsection}{\numberline {4.1.3}R\IeC {\^o}le le d'interface}{38}
 \contentsline {subsection}{\numberline {4.1.4}Vue globale sur l'inerface RFID}{40}
@@ -59,8 +58,8 @@
 \contentsline {subsection}{\numberline {4.2.4}Fonctionnalit\IeC {\'e}}{45}
 \contentsline {section}{\numberline {4.3}Antenne UHF}{46}
 \contentsline {subsection}{\numberline {4.3.1}Introduction}{46}
-\contentsline {subsection}{\numberline {4.3.2}Tag antenne et Base du die}{47}
-\contentsline {subsection}{\numberline {4.3.3}Design du Tag}{47}
+\contentsline {subsection}{\numberline {4.3.2}Antenne \IeC {\`a} boucle circulaire et puce alien}{47}
+\contentsline {subsection}{\numberline {4.3.3}Design du Tag}{48}
 \contentsline {subsection}{\numberline {4.3.4}Conception de mise en \IeC {\oe }uvre pratique}{49}
 \contentsline {subsection}{\numberline {4.3.5}Miniaturisation des antennes CLA}{51}
 \contentsline {chapter}{\numberline {5}R\IeC {\'e}alisation et simulation du projet}{57}
@@ -72,7 +71,7 @@
 \contentsline {subsection}{\numberline {5.1.3}CST studio}{60}
 \contentsline {section}{\numberline {5.2}Test et v\IeC {\'e}rification }{61}
 \contentsline {subsection}{\numberline {5.2.1}RFID Desktop}{61}
-\contentsline {subsubsection}{Interface utilisateur et option}{61}
+\contentsline {subsubsection}{Interface utilisateur et option de stockage}{61}
 \contentsline {subsection}{\numberline {5.2.2}Application Android - SmartFlah}{63}
 \contentsline {subsubsection}{Interface Android et Fonctionnalit\IeC {\'e}}{63}
 \contentsline {subsection}{\numberline {5.2.3}Antenne UHF}{65}
@@ -80,5 +79,5 @@
 \contentsline {subsubsection}{Le premier prototype UHF}{67}
 \contentsline {subsubsection}{L'antenne \IeC {\`a} boucle circulaire}{68}
 \contentsline {section}{Conclusion}{71}
-\contentsline {chapter}{\numberline {A}Poster de SIAM}{75}
-\contentsline {chapter}{\numberline {B}Article IEEE}{77}
+\contentsline {chapter}{\numberline {A}Poster de SIAM}{74}
+\contentsline {chapter}{\numberline {B}Article IEEE}{76}
