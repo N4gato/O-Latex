@@ -101,16 +101,16 @@ Ce projet porte alors, sur l'étude et la réalisation d’une solution RFID UHF
 Le rapport que je présenterai est organisé en 5 chapitres.
 
 \begin{itemize}
-\item Chapitre 1: Présentation de l'entreprise d'accueil ainsi qu'une description du déroulement du stage.
-\item Chapitre 2: Contexte général du Projet.
-\item Chapitre 3: Étude détaillée du projet 
-\item Chapitre 4: Les solutions proposées et étude théorique
-\item Chapitre 5: Réalisation et simulation
+\item Chapitre 1: En premier lieux je vais commencer par une présentation de l'entreprise d'accueil, les services crée pour répondre au besoin de l'industrie marocaine et les clients les plus importants de Mascir. Ensuite je vais introduire la structure hiérarchique et le département microélectronique ou mon stage a eu lieux, notre mission, nos laboratoires et nos équipements. Finalement une description du contexte général du projet et déroulement du stage.
+
+\item Chapitre 2: Étude détaillée du projet 
+\item Chapitre 3: Les solutions proposées et étude théorique
+\item Chapitre 4: Réalisation et simulation
 \end{itemize}
 
 \pagestyle{plain}
 
-\chapter{Présentation de l'entreprise d'accueil}
+\chapter{Entreprise d'accueil et déroulement du stage}
 \pagestyle{headings}
 \section{Présentation générale de MAScIR}
 MAScIR\footnote{Moroccan foundation for Advanced Science, Innovation and Research} est un organisme de recherche à caractère scientifique et technologique. Il est voué à la recherche en nanotechnologie, en biotechnologie, en technologie numérique, en micro-électronique, en énergie et en environnement. La fondation se veut présenter là où les enjeux de la société l’exigent.\\
@@ -172,7 +172,7 @@ Le département microélectronique de MAScIR possède plusieurs laboratoires éq
 \begin{itemize}
 \item Salle blanche
 \item Laboratoire de fiabilité et analyse de défauts
-\item Laboratoire électronique
+\item Laboratoire électronique\\\\\\\\\\\\\\\\\\\\
 \end{itemize}
 
 \begin{figure}[H]
@@ -198,7 +198,83 @@ Le département microélectronique de MAScIR possède plusieurs laboratoires éq
 
 Pour plus d'informations, visiter le site de l'entreprise : \texttt{http://www.mascir.ma}.
 
-\section{Description et déroulement du stage}
+
+\section{Contexte Général du projet}
+Le but de cette section est de présenter la problématique du projet, le cahier des charges, la démarche suivie pour répondre au besoin de l’ensemble des parties prenantes du projet et le plan d’action.
+
+\subsection{Objectif}
+L’objectif de ce projet est l'étude et la réalisation d’une solution RFID UHF qui assure l’identification et la traçabilité des entrées et sorties des palettes. Choisir les tags et type de lecteur adaptés aux besoins en respectant les conditions d’utilisation et  développer un logiciel de gestion des palettes. 
+Et comme deuxième axe,la réalisation d’un transpondeur RFID UHF et une application Android pour la gestion du secteur d'agriculture qui permet à
+l’utilisateur de profiter des fonctions offertes par les systèmes à distance. \\
+\subsection{Cahier des charges}
+Assurer l’identification et la traçabilité des entrées et sorties des palettes
+\begin{itemize}
+\item Choix des tags adaptés aux besoins et conditions d’utilisation et type de lecteur.
+\item Établir un programme de gestion des palettes en assurant la traçabilité de leur mouvement.
+\item Réalisation et test d’un prototype.\\
+\end{itemize}
+\subsection{Mise au point de la problématique}
+Ce projet consiste à développer un système de traçabilité des entrées et sorties des palettes. Trouver les causes racines et choisir des solutions optimales pour un problème ou une situation nécessitent une grande compréhension du problème. Dans ce sens, la méthode QQOQCP \footnote{Qui ? Quoi ? Où ? Quand ? Comment ?  Pourquoi ?} et le diagramme pieuvre permettent d'avoir des informations élémentaires suffisantes sur toutes les dimensions du problème, pour identifier ses aspects essentiels.\\\\\\\
+        
+\begin{longtable}{|l|c|}
+  \hline
+  Quoi & Activité : Développement d’un un système de traçabilité \\
+       &  Produit : logiciel , Application Android, Tag UHF \\
+  \hline
+  Qui & Client MAcIR\\
+  \hline
+  Où & MAcIR\\
+  \hline
+  Quand & Du 15/02/2016 au 30/06/2016\\
+  \hline
+  Comment & État d’art sur les techniques RFID \\
+          &  existantes afin de développer une autre plus adaptée.\\
+  \hline
+  Pourquoi & Fournir un système de traçabilité des entrées et sorties des palettes.\\
+  \hline
+  
+\caption{QQOQCP}
+\end{longtable}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=9cm,height=8cm]{pieuvre}
+\caption{Diagramme pieuvre}
+\end{figure}
+
+
+\begin{longtable}{|c|c|}
+\hline
+\textbf{Fonction} & \textbf{Description} \\
+\hline
+FP & Assurer la traçabilité des palettes de l'entrer vers la sortie  \\
+\hline
+FC2 & Produire un produit de petite taille  \\
+\hline
+FC3 & Élaborer un plan de de support et maintenance  \\
+\hline
+FC4 & Réduire la coute   \\
+\hline
+FC5 & Respecter la réglementation et le loi marocaine \\
+\hline
+FC6 & Simple et claire à utiliser \\
+\hline
+FC7 & Assurer le stockage des données et facilite l'accès a ces informations \\
+\hline
+\caption{Table des fonctions}
+\end{longtable}
+
+
+
+\section{Décomposition du projet}
+Le projet est décomposé principalement en 3 parties :
+\begin{itemize}
+\item Développement du Middleware et de l'interface graphique: une partie qui consiste à assurer la communication entre le client et le lecteur RFID ,puis visualiser les données lues au utilisateur.
+\item Développement de l'application SmartFlah pour la gestion des tags animal.
+\item Le transpondeur : la conception d'un transpondeur UHF RFID de petite taille.\\
+\end{itemize}
+
+\section{Activités et déroulement chronologique du stage}
 \subsection{Activités exercées}
 Durant ce stage de fin d’études, j’ai eu l’opportunité de côtoyer le monde industriel et plus précisément de la microélectronique ce qui m’a permis d’assister et participer à plusieurs missions et projets que ça soit au sein de MAScIR ou à l’extérieur.\\
 
@@ -256,6 +332,10 @@ Par ailleurs, j’ai pu bénéficier d’un encadrement étroit en préparant de
 \item simulation sur CST studio du 3ème prototype d'antenne
 \item Rédaction du rapport
 \end{itemize}
+<<<<<<< HEAD
+\pagebreak
+\subsection{Étapes	de réalisation}
+=======
 
 
 
@@ -299,6 +379,7 @@ Ce projet consiste à développer un système de traçabilité des entrées et s
 \section{Déroulement chronologique du stage}
 Durant les 4 mois de mon stage, les tâches relatives à mon projet de stage sont organisées de la façon suivante:
 \subsection{Étapes	de	réalisation}
+>>>>>>> origin/master
 \begin{longtable}{|p{0.35\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}| p{0.15\textwidth}|}
 \hline
 \textbf{Tâche} & \textbf{Date de début} & \textbf{Date de fin} & \textbf{Durée} \\
@@ -372,6 +453,8 @@ Cette section est pour représenter visuellement l'état d'avancement des diffé
 
 \end{figure}
 
+<<<<<<< HEAD
+=======
 \section{Décomposition du projet}
 Le projet est composé principalement de 3 parties :
 \begin{itemize}
@@ -379,10 +462,11 @@ Le projet est composé principalement de 3 parties :
 \item Développement de l'application SmartFlah pour la gestion des tags animal.
 \item Le transpondeur : la conception d'un transpondeur UHF RFID de petite taille.\\
 \end{itemize}
+>>>>>>> origin/master
 
 Chaque partie sera étudiée indépendamment dans les chapitres qui suivent.
 
-\chapter{Étude	détaillée du projet}
+\chapter{Étude	détaillée de la technologie RFID}
 RFID ou identification par fréquence radio, est une technologie en croissance rapide qui a le potentiel de faire de grands impacts économiques sur plusieurs industries. Bien que la RFID est une technologie relativement ancienne, les progrès les plus récents dans la technologie de fabrication de puces RFID font pratique pour de nouvelles applications et paramètres.\\
 Ce chapitre est dédié à l'étude	 détaillée de la solution RFID.
 \section{Description de la solution}
