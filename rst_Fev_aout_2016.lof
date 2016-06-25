@@ -6,8 +6,8 @@
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Laboratoire de fiabilit\IeC {\'e} et analyse de d\IeC {\'e}fauts}}{18}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Diagramme pieuvre}}{20}
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Bibliographie et r\IeC {\'e}solution des probl\IeC {\`e}mes}}{23}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Middleware et Interface graphique}}{23}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces D\IeC {\'e}veloppement de l'application Samrt}}{23}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Middleware et interface graphique}}{23}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces D\IeC {\'e}veloppement de l'application SmartFlah}}{23}
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Conception du transporteur}}{23}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration du syst\IeC {\`e}me RFID}}{26}
@@ -16,7 +16,7 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Mode de transfert d'\IeC {\'e}nergie non simultan\IeC {\'e}}}{33}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Mode de transfert d'\IeC {\'e}nergie simultan\IeC {\'e}}}{34}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Rappel du system RFID}}{37}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Rappel du syst\IeC {\`e}me RFID}}{37}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Emplacement de l'interface RFID}}{39}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Illustration du syst\IeC {\`e}me RFID}}{40}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Phase de n\IeC {\'e}gociation}}{41}
@@ -41,7 +41,7 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture du Framework .net}}{59}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Interface d'Android Studio}}{60}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Interface CST studio}}{61}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Rappel du system RFID}}{61}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Rappel du syst\IeC {\`e}me RFID}}{61}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces L'interface utilisateur}}{62}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces LF RFID system}}{63}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Premi\IeC {\`e}re layout}}{64}
@@ -60,8 +60,8 @@
 \contentsline {figure}{\numberline {4.21}{\ignorespaces VSWR de l'antenne \IeC {\`a} boucle circulaire}}{70}
 \contentsline {figure}{\numberline {4.22}{\ignorespaces Efficacit\IeC {\'e} de l'antenne \IeC {\`a} boucle circulaire}}{70}
 \contentsline {figure}{\numberline {4.23}{\ignorespaces Antenne du X-Ray}}{71}
-\contentsline {figure}{\numberline {4.24}{\ignorespaces S-param\IeC {\`e}tres de antenne X-Ray}}{71}
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Diagramme de rayonnement de antenne X-Ray}}{71}
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Efficacit\IeC {\'e} de antenne X-Ray}}{72}
+\contentsline {figure}{\numberline {4.24}{\ignorespaces S-param\IeC {\`e}tres de l'antenne X-Ray}}{71}
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Diagramme de rayonnement de l'antenne X-Ray}}{71}
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Efficacit\IeC {\'e} de l'antenne X-Ray}}{72}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
