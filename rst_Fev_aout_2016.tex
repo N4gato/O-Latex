@@ -476,7 +476,7 @@ En l'absence d'une source d'énergie interne dicte de nombreuses propriétés de
 \hline
 \textbf{Communication} & Réponse seulement & Répondre seulement & Répondre et/ou initier \\
 \hline
-\textbf{Max Range} & 10 M & 100 M &  100 M \\
+\textbf{Max Range} & 10 Mètres & 100 Mètres &  100 Mètres \\
 \hline
 \textbf{Coût relatif} & Le moins cher & Plus cher & Très cher \\
 \hline
@@ -564,24 +564,24 @@ A & EAS & Aucun & Passive & article surveillance \\
 \hline
 B & Lecture seule EPC & Lecture seulement & Passive & identification seulement \\
 \hline
-C & EPC & Lire et écrire & Passive & Enregistrement de données \\
+C & EPC & Lecture et écriture & Passive & Enregistrement de données \\
 \hline
-D & capteur Balises & Lire écrire & Semi-passive & capteurs environnementaux \\
+D & capteur Balises & Lecture et écriture & Semi-passive & capteurs environnementaux \\
 \hline
-E & motes & Lire écrire & active & Réseautage ad hoc \\
+E & motes & Lecture et écriture & active & Réseautage ad hoc \\
 \hline
 \caption{Classes de fonctionnalité des tags}
 \end{longtable}
 
 \subsection{Modes de transfert d’énergie et de communication}
-Dans le premier cas (figure 3.4) . L’onde RF qui se propage de la station de base vers le tag n’a pour but unique que de fournir de l’énergie au tag de façon à charger la capacité d’alimentation afin que celle-ci puisse être capable d’alimenter l’ensemble du tag pour assurer son bon fonctionnement. Après cette phase d'alimentation, le tag est apte à recevoir des ordres de commande provenant de la station de base et de retourner des informations vers celle-ci. Puis le cycle recommence et il est à nouveau nécessaire de lui fournir de l'énergie pour continuer la communication et ainsi de suite. Bien évidemment, ceci prend du temps et manque parfois de souplesse.\\
+Dans le premier cas (figure 2.4) . L’onde RF qui se propage de la station de base vers le tag n’a pour but unique que de fournir de l’énergie au tag de façon à charger la capacité d’alimentation afin que celle-ci puisse être capable d’alimenter l’ensemble du tag pour assurer son bon fonctionnement. Après cette phase d'alimentation, le tag est apte à recevoir des ordres de commande provenant de la station de base et de retourner des informations vers celle-ci. Puis le cycle recommence et il est à nouveau nécessaire de lui fournir de l'énergie pour continuer la communication et ainsi de suite. Bien évidemment, ceci prend du temps et manque parfois de souplesse.\\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figa}
 \caption{Mode de transfert d'énergie non simultané}
 \end{figure}
 
-Dans le deuxième cas (figure 3.5), au travers des principes et types de modulation utilisés, l'onde provenant de la station de base est capable pendant la phase de l'échange station de base vers tag d'assurer simultanément la fourniture de l'énergie et l'échange des informations (données).\\
+Dans le deuxième cas (figure 2.5), au travers des principes et types de modulation utilisés, l'onde provenant de la station de base est capable pendant la phase de l'échange station de base vers tag d'assurer simultanément la fourniture de l'énergie et l'échange des informations (données).\\
 
 \begin{figure}[H]
 \centering
@@ -609,18 +609,18 @@ La liaison montante (de la station de base vers le tag) a pour mission :
 \item d'assurer, si cela est possible, le transport de l'énergie vers le tag afin que celui-ci puisse répondre
 \item dans le cas des systèmes fonctionnant en mode passif (voir la définition), lors de la phase de communication en liaison descendante avant d'assurer la présence d'un support physique à la communication du tag vers la station de base.\\
 \end{itemize}
-La communication montante est par principe assurée par la station de base qui émet une onde radiofréquence. Celle-ci est donc dotée d’un émetteur et d'un transmetteur . De part la présence de cet émetteur, la liaison montante est dite active. De plus, la station de base comporte également à son bord un récepteur. La station de base est donc un transmetteur. Dans le sens montant, la station de base doit se faire comprendre par le tag au travers d’un codage numérique (binaire), d’un protocole de communication et d’un système de modulation de la fréquence porteuse qui ne doit pas ou peu affecter (le plus faiblement possible) la qualité des données. Pour cela on peut employer des techniques de modulation de fréquence FSK \footnote{Frequency-Shift Keying}, ou encore de nombreuses méthodes de modulation d’amplitude ASK \footnote{Amplitude-Shift Keying}
+La communication montante est par principe assurée par la station de base qui émet une onde radiofréquence. Celle-ci est donc dotée d’un émetteur et d'un récepteur . De part la présence de cet émetteur, la liaison montante est dite active. De plus, la station de base comporte également à son bord un récepteur. La station de base est donc un transmetteur. Dans le sens montant, la station de base doit se faire comprendre par le tag au travers d’un codage numérique (binaire), d’un protocole de communication et d’un système de modulation de la fréquence porteuse qui ne doit pas ou peu affecter (le plus faiblement possible) la qualité des données. Pour cela on peut employer des techniques de modulation de fréquence FSK \footnote{Frequency-Shift Keying}, ou encore de nombreuses méthodes de modulation d’amplitude ASK \footnote{Amplitude-Shift Keying}
 \subsubsection{Liaison descendante de la modulation}
 Contrairement à ce qu'on pourrait initialement penser, le transpondeur ne peut pas se comporter comme un émetteur de signaux RF. En effet, il ne dispose pas, dans son interface RF, des mécanismes permettant d'émettre un signal radio-fréquence vers la station de base. Les transpondeurs utilisent ce qu'on appelle la réflexion d'ondes pour se faire comprendre par les lecteurs. \\
 
 Pour cela, les tags utilisent une modulation différente que l'on nomme modulation de charge (Load Modulation) qui consiste à varier la charge résistive du circuit. Effectivement, en variant la charge, le tag varie l'intensité du courant dans son circuit et donc l'intensité qui circule dans l'antenne. La consommation d'énergie qu'il représente dans le champ magnétique est alors également modifiée et, par couplage magnétique, cela influence sur l'intensité du courant dans l'antenne de la station de base. De proche en proche, les signaux RF reçus de la station de base, qui sont réfléchis par le transpondeur, permettent donc de transporter des réponses en faisant varier l'intensité du circuit du lecteur.\\
 
-Il s'agit ici d'un procédé assez complexe mais qui repose à la base sur de la modulation. Cette modulation de charge résistive à l'origine de la transmission de la réponse s'appuie sur une modulation courante appelée OOK \footnote{On Off Keying} et correspond à la modulation d'amplitude "tout ou rien". à l'aide d'une modulation de type OOK, comme présentée précédemment, on crée une modulation qui varie la charge résistive du circuit et donc la tension aux bornes du circuit RF du transpondeur comme montré dans la figure 3.5.\\
+Il s'agit ici d'un procédé assez complexe mais qui repose à la base sur de la modulation. Cette modulation de charge résistive à l'origine de la transmission de la réponse s'appuie sur une modulation courante appelée OOK \footnote{On Off Keying} et correspond à la modulation d'amplitude "tout ou rien". à l'aide d'une modulation de type OOK, comme présentée précédemment, on crée une modulation qui varie la charge résistive du circuit et donc la tension aux bornes du circuit RF du transpondeur comme montré dans la figure 2.5.\\
 \chapter{Les solutions proposées et étude théorique }
-Dans ce chapitre je vais présenter les trois projets qu'on a pu réaliser tout au long de ce stage, les solutions proposées et l'étude théorique . La première étape consiste à développer un middleware et un protocole de communication entre le lecteur et le client ,une base de données étant indisponible dans ce projet pour l'enregistrement des données. La deuxième étape consiste à réaliser une application Android pour la gestion des tags animal . Finalement la conception et la miniaturisation d'un transpondeur UHF.
+Dans ce chapitre je vais présenter les trois projets qu'on a pu réaliser tout au long de ce stage, les solutions proposées et l'étude théorique . La première étape consiste à développer un middleware le protocole de communication entre le lecteur et le client et une base de données étant indisponible dans ce projet pour l'enregistrement des données. La deuxième étape consiste à réaliser une application Android pour la gestion des tags animal . Finalement, la conception et la miniaturisation d'un transpondeur UHF.
 \section{Client et interface RFID}
 
-L'application desktop  est un logiciel pour la gestion des entrées et sorties des palettes du stock. Elle exécute au sein d'elle le protocole de communication qui à son tour communique avec le lecteur et le commande afin de bien gérer son interface air. Les détails de ce protocole sont décrites dans la section suivante. L'interface utilisateur permet une visualisation clair des données enregistrées, la gestion du serveur de base de données et les méthodes de sécurité de cette communication , les ajouts des dépendances comme l'état des palettes (in ou out).\\
+L'application desktop  est un logiciel pour la gestion des entrées et sorties des palettes du stock. Elle exécute au sein d'elle le protocole de communication qui à son tour communique avec le lecteur et la commande afin de bien gérer son interface air. Les détails de ce protocole sont décrites dans la section suivante. L'interface utilisateur permet une visualisation clair des données enregistrées, la gestion du serveur de base de données et les méthodes de sécurité de cette communication , les ajouts des dépendances comme l'état des palettes (in ou out).\\
 
 Dans la figure suivante je présente l'architecture globale d'un système RFID. Notre interface se positionne entre le lecteur et la base de données. Cette interface permet l'acquisition des données du lecteur et les présenter sous une forme logique au utilisateur.
 
@@ -630,10 +630,6 @@ Dans la figure suivante je présente l'architecture globale d'un système RFID. 
 \caption{Rappel du système RFID}
 \end{figure}
 
-\subsection{Étude du marché}
-Le besoin concernant le produit étudié constitue un appel exigeant et irremplaçable, surtout pour les entreprises dont leur produit initial est livré dans des palettes ou des contenaires afin de garder sa qualité et faciliter la logistique . Ces palettes sont après rendues au fournisseur et dans des cas elles sont perdues, d'où la nécessité d'une solution optimale et automatique afin de garantir la traçabilité des palettes.
-
-Notre solution propose une méthode simple et efficace pour une traçabilité claire et adéquate.
 \subsection{\emph{Middleware} et Protocole de communication}
 Le \emph{Middleware} est un protocole de couche application c'est un moyen d'échange logique entre le lecteur et le client. Il gère l'interface physique du périphérique ou il est exécuté. Il Contrôle l'initiation de la communication au serveur et la rupture de cette dernière. Dans la suite de cette section je vais décrire le rôle de ce protocole. Les responsabilités de cette interface sont les suivantes:
 \begin{itemize}
@@ -650,7 +646,7 @@ Fournir des moyens pour faciliter l'ajout du support pour des nouveaux protocole
 Fournir des moyens pour la récupération des capacités du lecteur.\\
 \end{itemize}
 \subsection{Rôle de l'interface}
-L'infrastructure RFID est constituée des éléments de réseau qui participent à la gestion (par exemple, lecture / écriture / verrouillage) et la transmission des données de l'étiquette. Las destinations des données sont les éléments du réseau clients (applications par exemple, l'utilisateur final, base de données). Les éléments du réseau entre l'étiquette et les clients forment le support pour transporter les données de l'étiquette sur le réseau et de transmettre les commandes opérationnelles des balises.\\\\\\\\\\\\\\\\\\
+L'infrastructure RFID est constituée des éléments de réseau qui participent à la gestion (par exemple, lecture / écriture / verrouillage) et la transmission des données de l'étiquette. Les destinations des données sont les éléments du réseau clients (applications par exemple, l'utilisateur final, base de données). Les éléments du réseau entre l'étiquette et les clients forment le support pour transporter les données de l'étiquette sur le réseau et de transmettre les commandes opérationnelles des balises.\\\\\\\\\\\\\\\\\\
 \begin{figure}[H]
 \centering
 \includegraphics[width=6cm,height=8cm]{orga}
@@ -697,7 +693,7 @@ L'opération d'exécution comprend les phases suivantes:
 \item Rapports retournés au client
 \end{itemize}
 
-La figure 3.5 illustre toutes les étape des messages échangés entre le lecteur, client et les tags.
+La figure 3.5 illustre toutes les étapes des messages échangés entre le lecteur, client et les tags.
 
 Le protocole utilise des unités des données appelées messages pour communiquer entre le client et le Reader pour les mises à jour des clients ou pour récupérer la configuration du lecteur, en générale pour le contrôle du fonctionnement du lecteur. Cette section nous a donné un aperçu globale du modèle abstrait du protocole, dans le chapitre suivant on va présenter le logiciel qui met en œuvre ce protocole.
 \begin{figure}[!h]
