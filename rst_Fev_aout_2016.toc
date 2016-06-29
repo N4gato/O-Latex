@@ -41,11 +41,10 @@
 \contentsline {subsubsection}{Liaison descendante de la modulation}{35}
 \contentsline {chapter}{\numberline {3}Les solutions propos\IeC {\'e}es et \IeC {\'e}tude th\IeC {\'e}orique }{37}
 \contentsline {section}{\numberline {3.1}Client et interface RFID}{37}
-\contentsline {subsection}{\numberline {3.1.1}\IeC {\'E}tude du march\IeC {\'e}}{38}
-\contentsline {subsection}{\numberline {3.1.2}\emph {Middleware} et Protocole de communication}{38}
-\contentsline {subsection}{\numberline {3.1.3}R\IeC {\^o}le de l'interface}{38}
-\contentsline {subsection}{\numberline {3.1.4}Vue globale sur l'inerface RFID}{40}
-\contentsline {subsection}{\numberline {3.1.5}Chronologie de fonctionnement du protocole}{41}
+\contentsline {subsection}{\numberline {3.1.1}\emph {Middleware} et Protocole de communication}{38}
+\contentsline {subsection}{\numberline {3.1.2}R\IeC {\^o}le de l'interface}{38}
+\contentsline {subsection}{\numberline {3.1.3}Vue globale sur l'inerface RFID}{40}
+\contentsline {subsection}{\numberline {3.1.4}Chronologie de fonctionnement du protocole}{41}
 \contentsline {subsubsection}{Phase de n\IeC {\'e}gociation}{41}
 \contentsline {subsubsection}{Phase d'ex\IeC {\'e}cution}{41}
 \contentsline {section}{\numberline {3.2}SmartFlah}{43}
@@ -80,4 +79,3 @@
 \contentsline {subsection}{\numberline {4.2.4}Conclusion}{72}
 \contentsline {section}{Conclusion}{73}
 \contentsline {chapter}{\numberline {A}Poster de SIAM}{76}
-\contentsline {chapter}{\numberline {B}Article IEEE}{78}
